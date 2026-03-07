@@ -1,0 +1,580 @@
+{
+  "spans": [
+    {
+      "id": "0a2ebfc1-552b-451f-b0b9-798acb4cfa18",
+      "title": "Covid-19 Pandemic and Lockdowns",
+      "startYear": 2020,
+      "endYear": 2021,
+      "spanType": "Politics",
+      "subEvents": [],
+      "causalImpacts": []
+    },
+    {
+      "id": "467cf973-ce34-483f-a496-fab0c4fc2651",
+      "title": "The Deep Learning Revolution is quietly underway",
+      "startYear": 2012,
+      "endYear": 2020,
+      "spanType": "Technology",
+      "subEvents": [
+        {
+          "id": "e7eac929-d7e9-4f47-94bd-25c232a9a97c",
+          "date": 2012,
+          "label": "AlexNet wins the ImageNet Challenge"
+        },
+        {
+          "id": "a79fe93b-b5d1-4395-b782-42caaf3c39c5",
+          "date": 2016,
+          "label": "AlphaGo Beats Lee Sedol"
+        },
+        {
+          "id": "941b9d18-145e-430d-be7d-12baec011c5b",
+          "date": 2020,
+          "label": "GPT-3 announced "
+        },
+        {
+          "id": "a87498da-9b2c-464a-95dc-22ded10b87e2",
+          "date": 2017,
+          "label": "The transformer architecture is invented"
+        }
+      ],
+      "causalImpacts": [
+        {
+          "id": "931f8012-cc2c-4943-9b9e-6b5fc40dd379",
+          "targetSpanId": "867cdaa2-c377-46f9-9acf-3c93e5398008",
+          "sourceAttachment": "end",
+          "targetAttachment": "start",
+          "annotation": ""
+        }
+      ]
+    },
+    {
+      "id": "caeee581-afd3-451d-bf68-a96d033ed042",
+      "title": "Effective Altruism",
+      "startYear": 2010,
+      "endYear": "ongoing",
+      "spanType": "Subculture",
+      "subEvents": [
+        {
+          "id": "11b85a6f-f2aa-4dcb-8bb6-a79895281b1e",
+          "date": 2014,
+          "label": "GiveWell labs (what becomes OpenPhilanthropy/ Coefficient Giving) is announced"
+        },
+        {
+          "id": "3e884422-7377-4228-a3e2-152890438fac",
+          "date": 2013,
+          "label": "First EA Summit"
+        },
+        {
+          "id": "2a5538cd-2194-44fc-b790-80f821d1c56c",
+          "date": 2015,
+          "label": "First EAG"
+        },
+        {
+          "id": "a93e9675-9c75-4053-9bdb-d35542407749",
+          "date": 2022,
+          "label": "FTX is revealed to have stolen customer deposits and collapses; EA's public perception declines "
+        }
+      ],
+      "causalImpacts": []
+    },
+    {
+      "id": "d782ce4b-971e-4408-910e-4a02d81b5753",
+      "title": "Global Financial Collapse and Great Recession",
+      "startYear": 2008,
+      "endYear": 2013,
+      "spanType": "Economics",
+      "subEvents": [],
+      "causalImpacts": []
+    },
+    {
+      "id": "43eefd45-a801-49a9-8a36-a9ef7f47bb94",
+      "title": "The Mobile Computing S-curve",
+      "startYear": 2007,
+      "endYear": 2018,
+      "spanType": "Technology",
+      "subEvents": [
+        {
+          "id": "98b5ca5b-24f2-4bb4-8281-a5ebe97d988c",
+          "date": 2007,
+          "label": "The first iPhone is released"
+        },
+        {
+          "id": "ede1b9d6-71d5-45eb-83b6-739947790285",
+          "date": 2012,
+          "label": "Half of all Americans own a smartphone"
+        }
+      ],
+      "causalImpacts": []
+    },
+    {
+      "id": "8a7878af-21d7-44ee-82ab-d5ff8259b585",
+      "title": "The LessWrong and Bay Area Rationality Community",
+      "startYear": 2007,
+      "endYear": 2021,
+      "spanType": "Subculture",
+      "subEvents": [
+        {
+          "id": "ca1ae7b1-acc6-4ec7-a23e-40d64a60592c",
+          "date": 2007,
+          "label": "Yudkowsky begins blogging daily on OvercomingBias"
+        },
+        {
+          "id": "1bd40b61-9256-4383-94c0-2bc00a6fb0af",
+          "date": 2009,
+          "label": "Yudkowsky finishes the Sequences"
+        },
+        {
+          "id": "9d12163a-52dd-4fb3-ad86-28e5e2107033",
+          "date": 2012,
+          "label": "CFAR is founded"
+        },
+        {
+          "id": "009ea92c-c627-4bf8-ae23-7b93a5f9db1d",
+          "date": 2021,
+          "label": "By 2021 most of the energy that had driven the growth of the rationality community had been used up, and new young people are more likely to associate with the EA and AI safety communities. The community-driven funding model is largely displaced by institutional philanthropy."
+        }
+      ],
+      "causalImpacts": [
+        {
+          "id": "34336f70-248c-4cb1-8cd7-a8f6d56a6fcd",
+          "targetSpanId": "caeee581-afd3-451d-bf68-a96d033ed042",
+          "sourceAttachment": "middle",
+          "targetAttachment": "middle",
+          "annotation": "LessWrong was one of the original three intellectual communities that fed into early EA, along with the Oxford utilitarians who were influenced by Parfit, and GiveWell coming out of Birdgewater"
+        },
+        {
+          "id": "7ff2dcc4-8b6b-43d1-95cb-af3381ec158b",
+          "targetSpanId": "867cdaa2-c377-46f9-9acf-3c93e5398008",
+          "sourceAttachment": "middle",
+          "targetAttachment": "middle",
+          "annotation": "The ideas that Yudkowsky promoted, and which were discussed on LessWrong lead to the founding of OpenAI"
+        }
+      ]
+    },
+    {
+      "id": "36fcbf40-1cf1-4cdc-a6f7-774e7c603557",
+      "title": "Software is eating the world",
+      "startYear": 2005,
+      "endYear": 2026,
+      "spanType": "Technology",
+      "subEvents": [],
+      "causalImpacts": [
+        {
+          "id": "5de1fca4-8cc5-40e6-bf33-f5eae68bbea7",
+          "targetSpanId": "8a7878af-21d7-44ee-82ab-d5ff8259b585",
+          "sourceAttachment": 2010,
+          "targetAttachment": "middle",
+          "annotation": "In the 2010s and early 2020s, SAAS business models are lucrative and software engineering is highly lucrative profession for smart nerds. Most members of the rationality community are software engineers; the early MIRI and CFAR were largely funded by donations from community members."
+        },
+        {
+          "id": "c2854fcf-ff42-4311-8f37-bc9993096e42",
+          "targetSpanId": "",
+          "sourceAttachment": "middle",
+          "targetAttachment": "middle",
+          "annotation": ""
+        }
+      ]
+    },
+    {
+      "id": "270dc16e-b0aa-4ac1-9891-677fe4c66fcc",
+      "title": "Facebook's product lifecycle s-curve",
+      "startYear": 2004,
+      "endYear": 2016,
+      "spanType": "Culture",
+      "subEvents": [],
+      "causalImpacts": [
+        {
+          "id": "b2e38021-f3d5-4741-b26f-a68c47155734",
+          "targetSpanId": "caeee581-afd3-451d-bf68-a96d033ed042",
+          "sourceAttachment": "middle",
+          "targetAttachment": "middle",
+          "annotation": "Dustin Moskovitz cofounder of facebook, funds OpenPhilanthropy (and through OP much of the EA movement)"
+        }
+      ]
+    },
+    {
+      "id": "27f1f023-05ec-40fb-894b-e594e45a66bd",
+      "title": "Iraq War",
+      "startYear": 2003,
+      "endYear": 2011,
+      "spanType": "Politics",
+      "subEvents": [],
+      "causalImpacts": []
+    },
+    {
+      "id": "2ba2ed14-c4d4-4bd1-b979-1a093128bd43",
+      "title": "The Open Web / The Golden Age of Blogging",
+      "startYear": 2000,
+      "endYear": 2015,
+      "spanType": "Culture",
+      "subEvents": [],
+      "causalImpacts": [
+        {
+          "id": "9ba75d3f-f744-4786-8002-29762c90207a",
+          "targetSpanId": "8a7878af-21d7-44ee-82ab-d5ff8259b585",
+          "sourceAttachment": "middle",
+          "targetAttachment": "middle",
+          "annotation": ""
+        }
+      ]
+    },
+    {
+      "id": "0c86e8f9-a948-4be6-9f58-e5835d1b8f55",
+      "title": "China becoming an industrial powerhouse",
+      "startYear": 2000,
+      "endYear": "ongoing",
+      "spanType": "Economics",
+      "subEvents": [
+        {
+          "id": "5764a43f-7f30-48a4-94f4-1e6df6e9306b",
+          "date": 2010,
+          "label": "Chinese electricity production surpasses US electricity production"
+        }
+      ],
+      "causalImpacts": []
+    },
+    {
+      "id": "b7d4c772-f631-48f2-a125-7711b2273a46",
+      "title": "The Personal Computer S-curve",
+      "startYear": 1984,
+      "endYear": 2000,
+      "spanType": "Technology",
+      "subEvents": [
+        {
+          "id": "26c654df-1bed-4c07-8f42-2af5b95d665f",
+          "date": 1984,
+          "label": "The First Macintosh is Released"
+        },
+        {
+          "id": "948f4e59-5217-4faa-8a5a-83c36a06fd25",
+          "date": 2000,
+          "label": "Half of all households in the US have a personal computer"
+        }
+      ],
+      "causalImpacts": [
+        {
+          "id": "44548315-562d-4960-ad52-b3b1945ed1a0",
+          "targetSpanId": "2ba2ed14-c4d4-4bd1-b979-1a093128bd43",
+          "sourceAttachment": "end",
+          "targetAttachment": "start",
+          "annotation": ""
+        }
+      ]
+    },
+    {
+      "id": "94d2be48-0a96-4b92-8343-c694574a7322",
+      "title": "China's Economic Miracle: China is industrializing and pulling itself out of poverty",
+      "startYear": 1975,
+      "endYear": 2010,
+      "spanType": "Economics",
+      "subEvents": [],
+      "causalImpacts": [
+        {
+          "id": "e247b7c3-643b-4823-935d-b236e94e2c29",
+          "targetSpanId": "0c86e8f9-a948-4be6-9f58-e5835d1b8f55",
+          "sourceAttachment": "middle",
+          "targetAttachment": "middle",
+          "annotation": ""
+        }
+      ]
+    },
+    {
+      "id": "80d13747-a48a-46d7-81b1-35acc8edae69",
+      "title": "The Era of Television",
+      "startYear": 1960,
+      "endYear": 2010,
+      "spanType": "Culture",
+      "subEvents": [],
+      "causalImpacts": []
+    },
+    {
+      "id": "ff50f5fb-e680-4305-9319-3b01b32950b7",
+      "title": "Exponential increase in semiconductor manufacture and computing capacity",
+      "startYear": 1947,
+      "endYear": "ongoing",
+      "spanType": "Technology",
+      "subEvents": [
+        {
+          "id": "dfe10542-080f-46c2-b954-c1869aed84ee",
+          "date": 1947,
+          "label": "The transistor is invented"
+        },
+        {
+          "id": "9516fe6f-c25e-4f3e-b13a-45f9cb18bfb5",
+          "date": 1955,
+          "label": "Shockley Semiconductor is founded"
+        }
+      ],
+      "causalImpacts": [
+        {
+          "id": "b3c3a00b-7edd-4e7f-adca-980dd2e7d181",
+          "targetSpanId": "b7d4c772-f631-48f2-a125-7711b2273a46",
+          "sourceAttachment": "middle",
+          "targetAttachment": "middle",
+          "annotation": ""
+        },
+        {
+          "id": "eae0c81f-7e2f-4700-82b2-bf14a9639282",
+          "targetSpanId": "43eefd45-a801-49a9-8a36-a9ef7f47bb94",
+          "sourceAttachment": "middle",
+          "targetAttachment": "middle",
+          "annotation": ""
+        },
+        {
+          "id": "183261cd-2acc-493b-9203-99d515e4fec0",
+          "targetSpanId": "467cf973-ce34-483f-a496-fab0c4fc2651",
+          "sourceAttachment": "middle",
+          "targetAttachment": "middle",
+          "annotation": ""
+        },
+        {
+          "id": "2d0dee67-1951-4701-8606-78d3cb3732a1",
+          "targetSpanId": "36fcbf40-1cf1-4cdc-a6f7-774e7c603557",
+          "sourceAttachment": "middle",
+          "targetAttachment": "middle",
+          "annotation": ""
+        },
+        {
+          "id": "475874aa-5d46-4461-9ccd-0e2e9a545af9",
+          "targetSpanId": "867cdaa2-c377-46f9-9acf-3c93e5398008",
+          "sourceAttachment": "middle",
+          "targetAttachment": "middle",
+          "annotation": ""
+        }
+      ]
+    },
+    {
+      "id": "5a765ce6-2396-4575-898a-ba1d5aaecf39",
+      "title": "The Cold War",
+      "startYear": 1945,
+      "endYear": 1989,
+      "spanType": "Politics",
+      "subEvents": [
+        {
+          "id": "2afe27f8-78e2-40dc-aa7b-77d70a8380f5",
+          "date": 1989,
+          "label": "Fall of the Berlin Wall"
+        }
+      ],
+      "causalImpacts": [
+        {
+          "id": "304b2f77-420d-4f43-ad72-3a5cce9a0a18",
+          "targetSpanId": "ff50f5fb-e680-4305-9319-3b01b32950b7",
+          "sourceAttachment": 1955,
+          "targetAttachment": 1965,
+          "annotation": "The early market for computer chips is almost entirely government contracts, especially from the air force (for Minuteman missiles) and NASA (for the Apollo Program)"
+        },
+        {
+          "id": "81bcbe3e-8c2b-4fb8-897a-90ea3ceb355b",
+          "targetSpanId": "18279e61-e302-4495-89c9-ae1df8c0d5cc",
+          "sourceAttachment": "middle",
+          "targetAttachment": "middle",
+          "annotation": ""
+        }
+      ]
+    },
+    {
+      "id": "53af27b6-0754-4976-8bf8-31b3e02be734",
+      "title": "Postwar low interest rates and expansion of consumer credit",
+      "startYear": 1945,
+      "endYear": 1965,
+      "spanType": "Economics",
+      "subEvents": [],
+      "causalImpacts": []
+    },
+    {
+      "id": "004116c9-d3b7-44f8-b389-8045a75d7cba",
+      "title": "World War II",
+      "startYear": 1939,
+      "endYear": 1945,
+      "spanType": "Politics",
+      "subEvents": [],
+      "causalImpacts": [
+        {
+          "id": "5df0cdcc-dd03-433e-beba-83a0c2339fdd",
+          "targetSpanId": "5a765ce6-2396-4575-898a-ba1d5aaecf39",
+          "sourceAttachment": "end",
+          "targetAttachment": "start",
+          "annotation": ""
+        },
+        {
+          "id": "8482dabd-bdbf-4bc4-a4be-ffe4a2255416",
+          "targetSpanId": "53af27b6-0754-4976-8bf8-31b3e02be734",
+          "sourceAttachment": "end",
+          "targetAttachment": "middle",
+          "annotation": "The US Fed keeps interest rates low to help with the paying back of war debts"
+        }
+      ]
+    },
+    {
+      "id": "607d570b-1713-456f-a13c-78ca52d84dc9",
+      "title": "The Great Depresion",
+      "startYear": 1929,
+      "endYear": 1939,
+      "spanType": "Economics",
+      "subEvents": [],
+      "causalImpacts": []
+    },
+    {
+      "id": "de414cb2-bdb0-45a0-96f1-92c88e0c2175",
+      "title": "World War I",
+      "startYear": 1914,
+      "endYear": 1917,
+      "spanType": "Politics",
+      "subEvents": [],
+      "causalImpacts": []
+    },
+    {
+      "id": "ccb4a663-99c9-4946-9197-592632dad1e0",
+      "title": "Automobile Revolution s-curve [America]",
+      "startYear": 1900,
+      "endYear": 1950,
+      "spanType": "Technology",
+      "subEvents": [],
+      "causalImpacts": []
+    },
+    {
+      "id": "bc444142-438c-4c0e-8b9a-e5a36966e868",
+      "title": "The American Civil War",
+      "startYear": 1861,
+      "endYear": 1865,
+      "spanType": "Politics",
+      "subEvents": [],
+      "causalImpacts": []
+    },
+    {
+      "id": "3ed566fc-46b7-4669-bdac-5ff876bd6b5a",
+      "title": "The Exponential Part of the Coal Production S-curve",
+      "startYear": 1840,
+      "endYear": 1900,
+      "spanType": "Technology",
+      "subEvents": [],
+      "causalImpacts": []
+    },
+    {
+      "id": "3eedf15a-aff4-44e2-8c93-add8e5be1ae0",
+      "title": "Railroad Revolution s-curve",
+      "startYear": 1804,
+      "endYear": 1916,
+      "spanType": "Technology",
+      "subEvents": [],
+      "causalImpacts": [
+        {
+          "id": "fb2af40b-6341-4bd6-aa3a-9740fbe15716",
+          "targetSpanId": "de414cb2-bdb0-45a0-96f1-92c88e0c2175",
+          "sourceAttachment": "middle",
+          "targetAttachment": "start",
+          "annotation": "Railroads change the dynamics of military mobilization—because it's possible to mobilize and attack in days without long transit delays, mobilizing fast becomes imperative. This is one of the reasons why the Great Powers rushed into WWI—each country didn't want to risk being swiftly defeated by their rivals before their own army had mobilized.  "
+        }
+      ]
+    },
+    {
+      "id": "b4768f0a-2492-44a0-9c8e-e47fc97edb91",
+      "title": "The slave population in the American South is expanding exponentially",
+      "startYear": 1700,
+      "endYear": 1860,
+      "spanType": "Politics",
+      "subEvents": [],
+      "causalImpacts": []
+    },
+    {
+      "id": "2c41fc33-fb98-4331-badc-87cdaae1a3d4",
+      "title": "Google's search business model",
+      "startYear": 2000,
+      "endYear": 2023,
+      "spanType": "Economics",
+      "subEvents": [],
+      "causalImpacts": [
+        {
+          "id": "567bef35-ef90-46db-9bc4-61aefd61d748",
+          "targetSpanId": "2ba2ed14-c4d4-4bd1-b979-1a093128bd43",
+          "sourceAttachment": "middle",
+          "targetAttachment": "middle",
+          "annotation": ""
+        }
+      ]
+    },
+    {
+      "id": "970f6b2e-6517-480a-9ea5-c1b899836e8e",
+      "title": "American Revolution",
+      "startYear": 1765,
+      "endYear": 1783,
+      "spanType": "Politics",
+      "subEvents": [],
+      "causalImpacts": []
+    },
+    {
+      "id": "c1abc2e3-f8eb-4cb0-9d10-da881ca15ef0",
+      "title": "Industrialization of textile manufacture in Britain",
+      "startYear": 1760,
+      "endYear": 1840,
+      "spanType": "Technology",
+      "subEvents": [],
+      "causalImpacts": [
+        {
+          "id": "2e04f2b8-4482-4fde-944c-294580bc82b6",
+          "targetSpanId": "b4768f0a-2492-44a0-9c8e-e47fc97edb91",
+          "sourceAttachment": "middle",
+          "targetAttachment": "middle",
+          "annotation": ""
+        }
+      ]
+    },
+    {
+      "id": "867cdaa2-c377-46f9-9acf-3c93e5398008",
+      "title": "The Singularity",
+      "startYear": 2022,
+      "endYear": "ongoing",
+      "spanType": "Technology",
+      "subEvents": [
+        {
+          "id": "5d509d94-6859-4eeb-9144-515ab057c3d7",
+          "date": 2022,
+          "label": "ChatGPT launched"
+        },
+        {
+          "id": "8615a051-a5c6-4fd7-95f0-53c96f5de3bb",
+          "date": 2023,
+          "label": "GPT-4 launched"
+        },
+        {
+          "id": "609838e9-4311-40f3-9977-41cfc6e075af",
+          "date": 2024,
+          "label": "o1 anounced"
+        },
+        {
+          "id": "ff1f5f0d-74e8-405c-bb86-a3f5fee19166",
+          "date": 2026,
+          "label": "Agentic coding begins to work with Claude Opus 4.5"
+        }
+      ],
+      "causalImpacts": []
+    },
+    {
+      "id": "122043b1-6fdf-4540-8c81-7f2f3f98a8ec",
+      "title": "The French Revolution",
+      "startYear": 1789,
+      "endYear": 1799,
+      "spanType": "Politics",
+      "subEvents": [],
+      "causalImpacts": []
+    },
+    {
+      "id": "18279e61-e302-4495-89c9-ae1df8c0d5cc",
+      "title": "The Apollo Progam",
+      "startYear": 1961,
+      "endYear": 1972,
+      "spanType": "Technology",
+      "subEvents": [],
+      "causalImpacts": [
+        {
+          "id": "20704166-f2c7-41cc-bd9d-5b4e73ba7581",
+          "targetSpanId": "ff50f5fb-e680-4305-9319-3b01b32950b7",
+          "sourceAttachment": "middle",
+          "targetAttachment": "middle",
+          "annotation": ""
+        }
+      ]
+    }
+  ]
+}
