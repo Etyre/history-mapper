@@ -1,22 +1,13 @@
 import type { CausalImpact, AttachmentPoint, Span, Action } from '../../types';
-import React, { useState } from 'react';
+import React from 'react';
 
-function AnnotationInput({ value, onCommit }: { value: string; onCommit: (val: string) => void }) {
-  const [draft, setDraft] = useState(value);
-  // Sync draft when external value changes (e.g. undo/redo)
-  const [prevValue, setPrevValue] = useState(value);
-  if (value !== prevValue) {
-    setDraft(value);
-    setPrevValue(value);
-  }
+function AnnotationInput({ value, onChange }: { value: string; onChange: (val: string) => void }) {
   return (
     <input
       type="text"
-      value={draft}
+      value={value}
       placeholder="Annotation"
-      onChange={(e) => setDraft(e.target.value)}
-      onBlur={() => { if (draft !== value) onCommit(draft); }}
-      onKeyDown={(e) => { if (e.key === 'Enter') { (e.target as HTMLInputElement).blur(); } }}
+      onChange={(e) => onChange(e.target.value)}
       className="annotation-input"
     />
   );
@@ -130,7 +121,7 @@ export function CausalImpactEditor({ spanId, causalImpacts, allSpans, dispatch }
           </div>
           <AnnotationInput
             value={ci.annotation}
-            onCommit={(val) =>
+            onChange={(val) =>
               dispatch({ type: 'UPDATE_CAUSAL_IMPACT', spanId, impactId: ci.id, updates: { annotation: val } })
             }
           />

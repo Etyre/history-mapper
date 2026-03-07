@@ -98,9 +98,9 @@ export function renderTimeline(
     .attr('font-size', 11)
     .text((d) => String(d));
 
-  // Arrow marker
-  svg
-    .append('defs')
+  // Arrow markers
+  const defs = svg.append('defs');
+  defs
     .append('marker')
     .attr('id', 'arrowhead')
     .attr('viewBox', '0 0 10 7')
@@ -112,6 +112,19 @@ export function renderTimeline(
     .append('polygon')
     .attr('points', '0 0, 10 3.5, 0 7')
     .attr('fill', '#aaa');
+
+  defs
+    .append('marker')
+    .attr('id', 'arrowhead-highlight')
+    .attr('viewBox', '0 0 10 7')
+    .attr('refX', 10)
+    .attr('refY', 3.5)
+    .attr('markerWidth', 6)
+    .attr('markerHeight', 5)
+    .attr('orient', 'auto')
+    .append('polygon')
+    .attr('points', '0 0, 10 3.5, 0 7')
+    .attr('fill', '#f0c040');
 
   // Arrows (causal impacts)
   // Collect all arrows for rendering
@@ -432,7 +445,7 @@ export function renderTimeline(
       .attr('fill', 'none')
       .attr('stroke', '#f0c040')
       .attr('stroke-width', 3)
-      .attr('marker-end', 'url(#arrowhead)')
+      .attr('marker-end', 'url(#arrowhead-highlight)')
       .attr('opacity', 0)
       .attr('pointer-events', 'none');
 
