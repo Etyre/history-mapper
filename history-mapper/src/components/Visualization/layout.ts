@@ -17,12 +17,15 @@ const CURRENT_YEAR = new Date().getFullYear();
 const ONGOING_OVERFLOW_PX = 15;
 
 interface LayoutItem {
+  // For super-spans, `span` is the first span in the chain (used only for index tracking)
   span: Span;
   index: number;
   top: number;
   bottom: number;
   height: number;
   column: number;
+  // Member span indices (for super-spans); empty for independent spans
+  memberIndices: number[];
 }
 
 // Check if two vertical ranges overlap (with 1-year buffer in pixels)
@@ -32,28 +35,50 @@ function verticalOverlap(a: LayoutItem, b: LayoutItem): boolean {
   return a.top < b.bottom + OVERLAP_BUFFER_PX && b.top < a.bottom + OVERLAP_BUFFER_PX;
 }
 
-// Count how many placed spans an arrow from colA to colB would cross,
-// considering only spans whose vertical extent overlaps the arrow's vertical range
-function countCrossings(
-  colA: number,
-  colB: number,
-  arrowTop: number,
-  arrowBottom: number,
-  placed: LayoutItem[]
-): number {
-  if (colA === colB) return 0;
-  const minCol = Math.min(colA, colB);
-  const maxCol = Math.max(colA, colB);
-  let crossings = 0;
-  for (const p of placed) {
-    if (p.column !== -1 && p.column > minCol && p.column < maxCol) {
-      // Check vertical overlap with arrow
-      if (p.top < arrowBottom && arrowTop < p.bottom) {
-        crossings++;
+// Build continuation chains from spans' continuesAs links.
+// Returns arrays of span indices, each representing a chain in order.
+function buildChains(spans: Span[]): number[][] {
+  // Map span ID to index
+  const idToIndex = new Map<string, number>();
+  for (let i = 0; i < spans.length; i++) idToIndex.set(spans[i].id, i);
+
+  // Find which spans are pointed to (i.e. are successors)
+  const successorSet = new Set<number>();
+  const continuesAsIndex = new Map<number, number>(); // index -> successor index
+  for (let i = 0; i < spans.length; i++) {
+    const s = spans[i];
+    if (s.continuesAs) {
+      const tgtIdx = idToIndex.get(s.continuesAs);
+      if (tgtIdx !== undefined) {
+        continuesAsIndex.set(i, tgtIdx);
+        successorSet.add(tgtIdx);
       }
     }
   }
-  return crossings;
+
+  // Chain heads are spans that have a continuesAs but are not themselves a successor
+  const visited = new Set<number>();
+  const chains: number[][] = [];
+
+  for (let i = 0; i < spans.length; i++) {
+    if (visited.has(i)) continue;
+    if (!continuesAsIndex.has(i) && !successorSet.has(i)) continue; // independent span
+    if (successorSet.has(i)) continue; // not a chain head
+
+    // Walk the chain from head
+    const chain: number[] = [];
+    let current: number | undefined = i;
+    while (current !== undefined && !visited.has(current)) {
+      visited.add(current);
+      chain.push(current);
+      current = continuesAsIndex.get(current);
+    }
+    if (chain.length > 1) {
+      chains.push(chain);
+    }
+  }
+
+  return chains;
 }
 
 export function layoutSpans(spans: Span[], svgHeight: number, seed: number = 0): LayoutSpan[] {
@@ -62,23 +87,83 @@ export function layoutSpans(spans: Span[], svgHeight: number, seed: number = 0):
   const yScale = createYearScale(spans, svgHeight);
 
   // Compute pixel extents for each span
-  const items: LayoutItem[] = spans.map((s, i) => {
+  interface SpanExtent {
+    span: Span;
+    index: number;
+    top: number;
+    bottom: number;
+    height: number;
+  }
+  const extents: SpanExtent[] = spans.map((s, i) => {
     const startPx = yScale(s.startYear);
     const endPx = yScale(s.endYear === 'ongoing' ? CURRENT_YEAR : s.endYear);
     const isOngoing = s.endYear === 'ongoing';
     const topPx = Math.min(startPx, endPx) - (isOngoing ? ONGOING_OVERFLOW_PX : 0);
     const h = Math.max(Math.abs(endPx - startPx) + (isOngoing ? ONGOING_OVERFLOW_PX : 0), 10);
-    return { span: s, index: i, top: topPx, bottom: topPx + h, height: h, column: -1 };
+    return { span: s, index: i, top: topPx, bottom: topPx + h, height: h };
   });
 
-  // Collect all edges (arrows) as pairs of item indices
+  // Build continuation chains
+  const chains = buildChains(spans);
+  const inChain = new Set<number>();
+  for (const chain of chains) {
+    for (const idx of chain) inChain.add(idx);
+  }
+
+  // Build layout items: super-spans for chains, individual items for independent spans
+  const items: LayoutItem[] = [];
+  // Map from original span index to layout item index
+  const spanToItemIndex = new Map<number, number>();
+
+  // Add super-spans for chains
+  for (const chain of chains) {
+    const memberExtents = chain.map((idx) => extents[idx]);
+    const top = Math.min(...memberExtents.map((e) => e.top));
+    const bottom = Math.max(...memberExtents.map((e) => e.bottom));
+    const itemIndex = items.length;
+    items.push({
+      span: extents[chain[0]].span,
+      index: itemIndex,
+      top,
+      bottom,
+      height: bottom - top,
+      column: -1,
+      memberIndices: chain,
+    });
+    for (const idx of chain) spanToItemIndex.set(idx, itemIndex);
+  }
+
+  // Add independent spans
+  for (let i = 0; i < extents.length; i++) {
+    if (inChain.has(i)) continue;
+    const e = extents[i];
+    const itemIndex = items.length;
+    items.push({
+      span: e.span,
+      index: itemIndex,
+      top: e.top,
+      bottom: e.bottom,
+      height: e.height,
+      column: -1,
+      memberIndices: [i],
+    });
+    spanToItemIndex.set(i, itemIndex);
+  }
+
+  // Collect all edges (arrows) as pairs of item indices (deduplicated for super-spans)
+  const edgeSet = new Set<string>();
   const edges: { src: LayoutItem; tgt: LayoutItem }[] = [];
-  for (const item of items) {
-    for (const ci of item.span.causalImpacts) {
-      const target = items.find((it) => it.span.id === ci.targetSpanId);
-      if (target) {
-        edges.push({ src: item, tgt: target });
-      }
+  for (const ext of extents) {
+    for (const ci of ext.span.causalImpacts) {
+      const tgtSpanIdx = extents.findIndex((e) => e.span.id === ci.targetSpanId);
+      if (tgtSpanIdx === -1) continue;
+      const srcItemIdx = spanToItemIndex.get(ext.index)!;
+      const tgtItemIdx = spanToItemIndex.get(tgtSpanIdx)!;
+      if (srcItemIdx === tgtItemIdx) continue; // within same chain
+      const key = `${srcItemIdx}-${tgtItemIdx}`;
+      if (edgeSet.has(key)) continue;
+      edgeSet.add(key);
+      edges.push({ src: items[srcItemIdx], tgt: items[tgtItemIdx] });
     }
   }
 
@@ -120,9 +205,18 @@ export function layoutSpans(spans: Span[], svgHeight: number, seed: number = 0):
     return score;
   }
 
-  // Combined score: minimize crossings, maximize spacing
+  // Total arrow length in columns (lower is better)
+  function totalArrowLength(): number {
+    let total = 0;
+    for (const e of edges) {
+      total += Math.abs(e.src.column - e.tgt.column);
+    }
+    return total;
+  }
+
+  // Combined score: minimize crossings, balance spacing vs arrow length
   function globalScore(): number {
-    return countTotalCrossings() * 100 - spacingScore() * 1;
+    return countTotalCrossings() * 100 - spacingScore() * 1 + totalArrowLength() * 1;
   }
 
   // Place items greedily given an ordering
@@ -329,12 +423,20 @@ export function layoutSpans(spans: Span[], svgHeight: number, seed: number = 0):
     items[i].column = bestAssignment[i];
   }
 
+  // Expand super-spans back to individual LayoutSpan entries
+  const result: LayoutSpan[] = [];
+  for (const item of items) {
+    for (const spanIdx of item.memberIndices) {
+      const ext = extents[spanIdx];
+      result.push({
+        span: ext.span,
+        x: (item.column - (NUM_COLUMNS - 1) / 2) * COL_WIDTH,
+        y: ext.top,
+        width: SPAN_WIDTH,
+        height: ext.height,
+      });
+    }
+  }
 
-  return items.map((item) => ({
-    span: item.span,
-    x: (item.column - (NUM_COLUMNS - 1) / 2) * COL_WIDTH,
-    y: item.top,
-    width: SPAN_WIDTH,
-    height: item.height,
-  }));
+  return result;
 }

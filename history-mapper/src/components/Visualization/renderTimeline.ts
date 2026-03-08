@@ -14,6 +14,7 @@ function structuralKey(spans: Span[], height: number, seed?: number): string {
     endYear: s.endYear,
     spanType: s.spanType,
     ci: s.causalImpacts.map(c => ({ t: c.targetSpanId, sa: c.sourceAttachment, ta: c.targetAttachment })),
+    ca: s.continuesAs,
   }))) + `|${height}|${seed ?? 0}`;
 }
 
@@ -58,6 +59,43 @@ export function renderTimeline(
   // Map span id to layout for arrow drawing
   const layoutMap = new Map<string, LayoutSpan>();
   for (const ls of layoutResult) layoutMap.set(ls.span.id, ls);
+
+  // Build continuation chain map: span ID → all span IDs in the same chain
+  const chainOf = new Map<string, Set<string>>();
+  {
+    // Build forward links
+    const fwd = new Map<string, string>();
+    const rev = new Map<string, string>();
+    for (const s of spans) {
+      if (s.continuesAs) {
+        fwd.set(s.id, s.continuesAs);
+        rev.set(s.continuesAs, s.id);
+      }
+    }
+    // Find chain heads (spans with no predecessor)
+    const visited = new Set<string>();
+    for (const s of spans) {
+      if (visited.has(s.id)) continue;
+      if (rev.has(s.id)) continue; // not a head
+      // Walk the chain
+      const chain = new Set<string>();
+      let cur: string | undefined = s.id;
+      while (cur && !visited.has(cur)) {
+        visited.add(cur);
+        chain.add(cur);
+        cur = fwd.get(cur);
+      }
+      if (chain.size > 1) {
+        for (const id of chain) chainOf.set(id, chain);
+      }
+    }
+  }
+
+  // Get all span IDs that should activate together (chain members or just the single span)
+  function getChainIds(spanId: string): string[] {
+    const chain = chainOf.get(spanId);
+    return chain ? Array.from(chain) : [spanId];
+  }
 
   const centerX = width / 2;
 
@@ -143,16 +181,48 @@ export function renderTimeline(
     }
   }
 
-  // For "middle" attachments, position the endpoint based on the direction to the other end.
-  // Steeper angle up → higher on the span; steeper angle down → lower on the span.
-  function middleY(span: LayoutSpan, otherY: number): number {
-    const spanMidY = span.y + span.height / 2;
-    const dy = otherY - spanMidY;
-    // Normalize: how far is the other end relative to half the SVG height
-    const maxDy = height / 2;
-    // Map to a fraction within the span (0.15 to 0.85 to keep padding from edges)
-    const t = Math.max(0.15, Math.min(0.85, 0.5 + (dy / maxDy) * 0.5));
-    return span.y + span.height * t;
+  // For "middle" attachments, the arrow should lie along the line from the span's center
+  // to the other endpoint, but the visible arrow starts/ends where that line intersects
+  // the span's edge (left or right side).
+  // Given a span's screen-space bounds and a target point, find where the line from
+  // the span's center to the target intersects the span's left or right edge.
+  function middleEdgePoint(
+    spanLeft: number, spanTop: number, spanWidth: number, spanHeight: number,
+    otherX: number, otherY: number
+  ): { x: number; y: number } {
+    const cx = spanLeft + spanWidth / 2;
+    const cy = spanTop + spanHeight / 2;
+    const dx = otherX - cx;
+    const dy = otherY - cy;
+
+    if (Math.abs(dx) < 0.001 && Math.abs(dy) < 0.001) {
+      return { x: cx, y: cy };
+    }
+
+    // Try intersecting with left/right edge
+    let bestT = Infinity;
+    if (Math.abs(dx) > 0.001) {
+      const edgeX = dx > 0 ? spanLeft + spanWidth : spanLeft;
+      const t = (edgeX - cx) / dx;
+      if (t > 0) {
+        const y = cy + dy * t;
+        if (y >= spanTop && y <= spanTop + spanHeight) {
+          bestT = t;
+        }
+      }
+    }
+
+    // Try intersecting with top/bottom edge
+    if (Math.abs(dy) > 0.001) {
+      const edgeY = dy > 0 ? spanTop + spanHeight : spanTop;
+      const t = (edgeY - cy) / dy;
+      if (t > 0 && t < bestT) {
+        bestT = t;
+      }
+    }
+
+    if (bestT === Infinity) bestT = 0;
+    return { x: cx + dx * bestT, y: cy + dy * bestT };
   }
 
   // Render arrows
@@ -162,25 +232,53 @@ export function renderTimeline(
   for (const arrow of allArrows) {
     const { ls, target, ci } = arrow;
 
-    const srcX = centerX + ls.x;
-    const tgtX = centerX + target.x;
+    const srcCenterX = centerX + ls.x;
+    const tgtCenterX = centerX + target.x;
 
-    // For non-middle attachments, compute fixed Y; for middle, use the other span's center as reference
+    const srcIsVertical = ci.sourceAttachment === 'end' || ci.sourceAttachment === 'start';
+    const tgtIsVertical = ci.targetAttachment === 'end' || ci.targetAttachment === 'start';
+    const srcIsMiddle = ci.sourceAttachment === 'middle';
+    const tgtIsMiddle = ci.targetAttachment === 'middle';
+
+    // For non-middle attachments, compute fixed positions
     const fixedSrcY = typeof ci.sourceAttachment === 'number' ? yScale(ci.sourceAttachment)
       : ci.sourceAttachment === 'end' ? ls.y : ci.sourceAttachment === 'start' ? ls.y + ls.height : null;
     const fixedTgtY = typeof ci.targetAttachment === 'number' ? yScale(ci.targetAttachment)
       : ci.targetAttachment === 'end' ? target.y : ci.targetAttachment === 'start' ? target.y + target.height : null;
 
-    // For "middle" attachments, position based on direction to the other end
-    const srcRefY = fixedTgtY ?? (target.y + target.height / 2);
-    const tgtRefY = fixedSrcY ?? (ls.y + ls.height / 2);
-    const srcY = fixedSrcY ?? middleY(ls, srcRefY);
-    const tgtY = fixedTgtY ?? middleY(target, tgtRefY);
+    let srcAnchorX: number, srcY: number, tgtAnchorX: number, tgtY: number;
 
-    const srcIsVertical = ci.sourceAttachment === 'end' || ci.sourceAttachment === 'start';
-    const tgtIsVertical = ci.targetAttachment === 'end' || ci.targetAttachment === 'start';
-    const srcAnchorX = srcIsVertical ? srcX : srcX + (tgtX > srcX ? ls.width / 2 : -ls.width / 2);
-    const tgtAnchorX = tgtIsVertical ? tgtX : tgtX + (srcX > tgtX ? target.width / 2 : -target.width / 2);
+    // Screen-space left edges
+    const srcLeft = srcCenterX - ls.width / 2;
+    const tgtLeft = tgtCenterX - target.width / 2;
+
+    if (srcIsMiddle && tgtIsMiddle) {
+      // Both middle: line from center to center, clipped at edges
+      const srcEdge = middleEdgePoint(srcLeft, ls.y, ls.width, ls.height, tgtCenterX, target.y + target.height / 2);
+      const tgtEdge = middleEdgePoint(tgtLeft, target.y, target.width, target.height, srcCenterX, ls.y + ls.height / 2);
+      srcAnchorX = srcEdge.x; srcY = srcEdge.y;
+      tgtAnchorX = tgtEdge.x; tgtY = tgtEdge.y;
+    } else if (srcIsMiddle) {
+      // Source is middle: line from source center toward target endpoint, clipped at source edge
+      const tgtEndX = tgtIsVertical ? tgtCenterX : tgtCenterX + (srcCenterX > tgtCenterX ? target.width / 2 : -target.width / 2);
+      tgtY = fixedTgtY!;
+      tgtAnchorX = tgtEndX;
+      const srcEdge = middleEdgePoint(srcLeft, ls.y, ls.width, ls.height, tgtAnchorX, tgtY);
+      srcAnchorX = srcEdge.x; srcY = srcEdge.y;
+    } else if (tgtIsMiddle) {
+      // Target is middle: line from target center toward source endpoint, clipped at target edge
+      const srcEndX = srcIsVertical ? srcCenterX : srcCenterX + (tgtCenterX > srcCenterX ? ls.width / 2 : -ls.width / 2);
+      srcY = fixedSrcY!;
+      srcAnchorX = srcEndX;
+      const tgtEdge = middleEdgePoint(tgtLeft, target.y, target.width, target.height, srcAnchorX, srcY);
+      tgtAnchorX = tgtEdge.x; tgtY = tgtEdge.y;
+    } else {
+      // Neither is middle
+      srcY = fixedSrcY!;
+      tgtY = fixedTgtY!;
+      srcAnchorX = srcIsVertical ? srcCenterX : srcCenterX + (tgtCenterX > srcCenterX ? ls.width / 2 : -ls.width / 2);
+      tgtAnchorX = tgtIsVertical ? tgtCenterX : tgtCenterX + (srcCenterX > tgtCenterX ? target.width / 2 : -target.width / 2);
+    }
 
     const curvePath = `M${srcAnchorX},${srcY} L${tgtAnchorX},${tgtY}`;
 
@@ -337,6 +435,10 @@ export function renderTimeline(
   // Sub-event label overlay (rendered on top of all spans)
   const labelOverlay = svg.append('g').attr('class', 'sub-event-overlay');
 
+  // Map span ID to its label group for chain-aware show/hide
+  type GSel = d3.Selection<SVGGElement, unknown, null, undefined>;
+  const labelGroupsBySpan = new Map<string, GSel>();
+
   for (const { ls, tickLen } of subEventLabelData) {
     const labelBoxPadX = 6;
     const labelBoxPadY = 3;
@@ -346,6 +448,7 @@ export function renderTimeline(
     // Create a group for this span's labels, hidden by default
     const labelsG = labelOverlay.append('g')
       .attr('opacity', 0);
+    labelGroupsBySpan.set(ls.span.id, labelsG);
 
     for (const se of ls.span.subEvents) {
       const seY = yScale(se.date) - ls.y;
@@ -408,9 +511,35 @@ export function renderTimeline(
       labelG
         .on('mouseenter', () => { labelG.raise(); });
     }
+  }
 
-    // The span group needs a hover target — add an invisible rect over the span area
-    let pinned = false;
+  // Helper: show/hide labels for all spans in a chain
+  function showChainLabels(spanId: string, show: boolean) {
+    for (const id of getChainIds(spanId)) {
+      const g = labelGroupsBySpan.get(id);
+      if (g) g.attr('opacity', show ? 1 : 0);
+    }
+  }
+
+  // Track pinned state per chain (keyed by any member span ID)
+  const pinnedChains = new Set<string>();
+  function getChainKey(spanId: string): string {
+    const chain = chainOf.get(spanId);
+    return chain ? Array.from(chain).sort()[0] : spanId;
+  }
+
+  // Add hover targets for each span that has sub-events (or is in a chain with sub-events)
+  // We need hover targets for ALL spans, not just those with sub-events, if they're in a chain
+  const spansNeedingHoverTargets = new Set<string>();
+  for (const { ls } of subEventLabelData) {
+    for (const id of getChainIds(ls.span.id)) {
+      spansNeedingHoverTargets.add(id);
+    }
+  }
+
+  for (const ls of layoutResult) {
+    if (!spansNeedingHoverTargets.has(ls.span.id)) continue;
+
     const hoverTarget = spansG.append('rect')
       .attr('x', centerX + ls.x - ls.width / 2)
       .attr('y', ls.y)
@@ -419,14 +548,24 @@ export function renderTimeline(
       .attr('fill', 'transparent')
       .attr('cursor', 'pointer');
 
+    const spanId = ls.span.id;
     hoverTarget
-      .on('mouseenter', () => { labelsG.attr('opacity', 1); })
-      .on('mouseleave', () => { if (!pinned) labelsG.attr('opacity', 0); })
+      .on('mouseenter', () => { showChainLabels(spanId, true); })
+      .on('mouseleave', () => {
+        const key = getChainKey(spanId);
+        if (!pinnedChains.has(key)) showChainLabels(spanId, false);
+      })
       .on('click', () => {
-        pinned = !pinned;
-        labelsG.attr('opacity', pinned ? 1 : 0);
-        toggleArrowHighlight(ls.span.id);
-        if (onSpanClick) onSpanClick(ls.span.id);
+        const key = getChainKey(spanId);
+        if (pinnedChains.has(key)) {
+          pinnedChains.delete(key);
+          showChainLabels(spanId, false);
+        } else {
+          pinnedChains.add(key);
+          showChainLabels(spanId, true);
+        }
+        toggleArrowHighlight(spanId);
+        if (onSpanClick) onSpanClick(spanId);
       });
   }
 
@@ -497,9 +636,12 @@ export function renderTimeline(
       .attr('opacity', 0);
 
     if (spanId) {
-      const paths = overlayPathsBySpan.get(spanId) ?? [];
-      for (const p of paths) {
-        p.classed('pinned', true).attr('opacity', 1);
+      const ids = getChainIds(spanId);
+      for (const id of ids) {
+        const paths = overlayPathsBySpan.get(id) ?? [];
+        for (const p of paths) {
+          p.classed('pinned', true).attr('opacity', 1);
+        }
       }
     }
   }

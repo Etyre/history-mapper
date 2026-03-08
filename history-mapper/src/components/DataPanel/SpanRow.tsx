@@ -4,7 +4,7 @@ import { SubEventEditor } from './SubEventEditor';
 import { CausalImpactEditor } from './CausalImpactEditor';
 import React, { useState, useEffect, useRef } from 'react';
 
-const SPAN_TYPES: SpanType[] = ['Economics', 'Technology', 'Politics', 'Culture', 'Subculture'];
+const SPAN_TYPES: SpanType[] = ['Economics', 'Technology', 'Politics', 'Culture', 'Subculture', 'Demographics'];
 
 interface Props {
   span: Span;
@@ -108,6 +108,24 @@ export function SpanRow({ span, allSpans, dispatch, forceExpanded }: Props) {
         <div className="span-row-details">
           <SubEventEditor spanId={span.id} subEvents={span.subEvents} dispatch={dispatch} />
           <CausalImpactEditor spanId={span.id} causalImpacts={span.causalImpacts} allSpans={allSpans} dispatch={dispatch} />
+          {span.endYear !== 'ongoing' && (() => {
+            const candidates = allSpans.filter((s) => s.id !== span.id && s.startYear === span.endYear);
+            return candidates.length > 0 ? (
+              <div className="sub-section-header" style={{ marginTop: 8 }}>
+                <span>Continues as</span>
+                <select
+                  value={span.continuesAs ?? ''}
+                  onChange={(e) => dispatch({ type: 'SET_CONTINUES_AS', spanId: span.id, continuesAsId: e.target.value || null })}
+                  style={{ fontSize: 12 }}
+                >
+                  <option value="">-- None --</option>
+                  {candidates.map((s) => (
+                    <option key={s.id} value={s.id}>{s.title}</option>
+                  ))}
+                </select>
+              </div>
+            ) : null;
+          })()}
           <button className="delete-span-btn" onClick={() => {
             if (window.confirm(`Delete "${span.title}"?`)) {
               dispatch({ type: 'REMOVE_SPAN', id: span.id });

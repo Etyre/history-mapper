@@ -1,72 +1,56 @@
 {
   "spans": [
     {
-      "id": "c42b729c-be17-4176-9f18-83ff567fe94e",
-      "title": "Second Trump Admin (US)",
-      "startYear": 2025,
-      "endYear": "ongoing",
-      "spanType": "Politics",
-      "subEvents": [],
-      "causalImpacts": []
-    },
-    {
-      "id": "867cdaa2-c377-46f9-9acf-3c93e5398008",
-      "title": "The Singularity",
-      "startYear": 2022,
-      "endYear": "ongoing",
+      "id": "68aab05d-0df9-416c-a572-40ace7225a56",
+      "title": "early slow deployment of wireless radio",
+      "startYear": 1901,
+      "endYear": 1923,
       "spanType": "Technology",
       "subEvents": [
         {
-          "id": "5d509d94-6859-4eeb-9144-515ab057c3d7",
-          "date": 2022,
-          "label": "ChatGPT launched"
+          "id": "53bb63fd-fbf1-4776-8d6f-5434e319c36d",
+          "date": 1907,
+          "label": "Reginald Fessenden makes the first audio radio broadcast (voice and music)"
         },
         {
-          "id": "8615a051-a5c6-4fd7-95f0-53c96f5de3bb",
-          "date": 2023,
-          "label": "GPT-4 launched"
+          "id": "39dfdfb7-a84c-41a5-9723-f05d1aa27176",
+          "date": 1920,
+          "label": "KDKA in Pittsburgh begins regular commercial broadcasting"
         },
         {
-          "id": "609838e9-4311-40f3-9977-41cfc6e075af",
-          "date": 2024,
-          "label": "o1 anounced"
+          "id": "64364fc1-b8dc-4d7e-bfde-1d0d8d06a9d1",
+          "date": 1922,
+          "label": "BBC founded in the UK; hundreds of radio stations spring up across the US"
         },
         {
-          "id": "ff1f5f0d-74e8-405c-bb86-a3f5fee19166",
-          "date": 2026,
-          "label": "Agentic coding begins to really work with the release Claude Opus 4.5"
+          "id": "2507388c-8f6c-4731-b84d-4f4cf8a58b6b",
+          "date": 1912,
+          "label": "Radio Act of 1912 passed"
         }
       ],
+      "causalImpacts": [],
+      "continuesAs": "7816cc45-3ab3-45c9-8d99-ff458561b05a"
+    },
+    {
+      "id": "8b4a39e6-d67e-4fa5-b47f-109517eee027",
+      "title": "Between 1492 and 1600, the native population of North America collapses, falling by between 40% to 94%.",
+      "startYear": 1492,
+      "endYear": 1600,
+      "spanType": "Demographics",
+      "subEvents": [],
       "causalImpacts": []
     },
     {
-      "id": "0a2ebfc1-552b-451f-b0b9-798acb4cfa18",
-      "title": "Covid-19 Pandemic and Lockdowns",
-      "startYear": 2020,
-      "endYear": 2021,
-      "spanType": "Politics",
+      "id": "b4768f0a-2492-44a0-9c8e-e47fc97edb91",
+      "title": "The slave population in the American South is expanding exponentially",
+      "startYear": 1700,
+      "endYear": 1860,
+      "spanType": "Demographics",
       "subEvents": [],
       "causalImpacts": [
         {
-          "id": "d893130d-4e8d-447d-9400-ab8a915f3e44",
-          "targetSpanId": "8a7878af-21d7-44ee-82ab-d5ff8259b585",
-          "sourceAttachment": "middle",
-          "targetAttachment": 2020,
-          "annotation": "CFAR stops running workshops due to covid"
-        }
-      ]
-    },
-    {
-      "id": "3541e9a9-f7cf-4365-80b6-2311883146e7",
-      "title": "First Trump Admin (US)",
-      "startYear": 2017,
-      "endYear": 2021,
-      "spanType": "Politics",
-      "subEvents": [],
-      "causalImpacts": [
-        {
-          "id": "1589bb33-9570-4636-83a3-058b00ce6e0f",
-          "targetSpanId": "c42b729c-be17-4176-9f18-83ff567fe94e",
+          "id": "6cb81cab-10f4-462e-8886-e9457640c8a5",
+          "targetSpanId": "bc444142-438c-4c0e-8b9a-e5a36966e868",
           "sourceAttachment": "end",
           "targetAttachment": "start",
           "annotation": ""
@@ -74,37 +58,920 @@
       ]
     },
     {
-      "id": "467cf973-ce34-483f-a496-fab0c4fc2651",
-      "title": "The Deep Learning revolution is quietly underway",
-      "startYear": 2012,
+      "id": "0bfce399-5d4f-4aac-a7d4-ef2e7dd29246",
+      "title": "The Seven Years War",
+      "startYear": 1756,
+      "endYear": 1763,
+      "spanType": "Politics",
+      "subEvents": [],
+      "causalImpacts": [
+        {
+          "id": "44c7e72b-7615-4f4d-bc16-11e11bc503e6",
+          "targetSpanId": "970f6b2e-6517-480a-9ea5-c1b899836e8e",
+          "sourceAttachment": "end",
+          "targetAttachment": "start",
+          "annotation": ""
+        }
+      ]
+    },
+    {
+      "id": "c1abc2e3-f8eb-4cb0-9d10-da881ca15ef0",
+      "title": "Industrialization of textile manufacture in Britain",
+      "startYear": 1760,
+      "endYear": 1840,
+      "spanType": "Technology",
+      "subEvents": [],
+      "causalImpacts": [
+        {
+          "id": "2e04f2b8-4482-4fde-944c-294580bc82b6",
+          "targetSpanId": "b4768f0a-2492-44a0-9c8e-e47fc97edb91",
+          "sourceAttachment": "middle",
+          "targetAttachment": "middle",
+          "annotation": ""
+        }
+      ]
+    },
+    {
+      "id": "970f6b2e-6517-480a-9ea5-c1b899836e8e",
+      "title": "American Revolution",
+      "startYear": 1765,
+      "endYear": 1783,
+      "spanType": "Politics",
+      "subEvents": [],
+      "causalImpacts": []
+    },
+    {
+      "id": "122043b1-6fdf-4540-8c81-7f2f3f98a8ec",
+      "title": "The French Revolution",
+      "startYear": 1789,
+      "endYear": 1799,
+      "spanType": "Politics",
+      "subEvents": [],
+      "causalImpacts": []
+    },
+    {
+      "id": "124524e6-f23e-4641-9687-19aed7c9950d",
+      "title": "US total fertility declining",
+      "startYear": 1800,
+      "endYear": "ongoing",
+      "spanType": "Demographics",
+      "subEvents": [],
+      "causalImpacts": []
+    },
+    {
+      "id": "68eca036-3ae3-4b29-bbec-3d1633e84f8e",
+      "title": "American urbanization trend",
+      "startYear": 1800,
+      "endYear": 1970,
+      "spanType": "Culture",
+      "subEvents": [],
+      "causalImpacts": []
+    },
+    {
+      "id": "3eedf15a-aff4-44e2-8c93-add8e5be1ae0",
+      "title": "Railroad Revolution s-curve",
+      "startYear": 1804,
+      "endYear": 1916,
+      "spanType": "Technology",
+      "subEvents": [],
+      "causalImpacts": [
+        {
+          "id": "fb2af40b-6341-4bd6-aa3a-9740fbe15716",
+          "targetSpanId": "de414cb2-bdb0-45a0-96f1-92c88e0c2175",
+          "sourceAttachment": "middle",
+          "targetAttachment": "start",
+          "annotation": "Railroads change the dynamics of military mobilization—because it's possible to mobilize and attack in days without long transit delays, mobilizing fast becomes imperative. This is one of the reasons why the Great Powers rushed into WWI—each country didn't want to risk being swiftly defeated by their rivals before their own army had mobilized.  "
+        }
+      ]
+    },
+    {
+      "id": "war-1812",
+      "title": "War of 1812",
+      "startYear": 1812,
+      "endYear": 1815,
+      "spanType": "Politics",
+      "subEvents": [],
+      "causalImpacts": []
+    },
+    {
+      "id": "791fd834-16a8-4a8b-b1d0-174bc0802149",
+      "title": "Telegraph network build out s-curve",
+      "startYear": 1837,
+      "endYear": 1930,
+      "spanType": "Technology",
+      "subEvents": [],
+      "causalImpacts": []
+    },
+    {
+      "id": "3ed566fc-46b7-4669-bdac-5ff876bd6b5a",
+      "title": "The Exponential Part of the Coal Production S-curve",
+      "startYear": 1840,
+      "endYear": 1900,
+      "spanType": "Technology",
+      "subEvents": [],
+      "causalImpacts": []
+    },
+    {
+      "id": "mexican-american-war",
+      "title": "Mexican-American War",
+      "startYear": 1846,
+      "endYear": 1848,
+      "spanType": "Politics",
+      "subEvents": [],
+      "causalImpacts": []
+    },
+    {
+      "id": "bc444142-438c-4c0e-8b9a-e5a36966e868",
+      "title": "The American Civil War",
+      "startYear": 1861,
+      "endYear": 1865,
+      "spanType": "Politics",
+      "subEvents": [],
+      "causalImpacts": [],
+      "continuesAs": "7f8f02c7-209a-4636-89b5-3a5f82ab42bf"
+    },
+    {
+      "id": "7f8f02c7-209a-4636-89b5-3a5f82ab42bf",
+      "title": "Reconstruction era",
+      "startYear": 1865,
+      "endYear": 1876,
+      "spanType": "Politics",
+      "subEvents": [],
+      "causalImpacts": []
+    },
+    {
+      "id": "3cfe1e85-c117-4fd4-8565-cab1d38ad34c",
+      "title": "Recession following the panic of 1873 [US]",
+      "startYear": 1873,
+      "endYear": 1879,
+      "spanType": "Economics",
+      "subEvents": [],
+      "causalImpacts": [
+        {
+          "id": "58869bde-22fe-49be-ad48-cdcc92cfe87e",
+          "targetSpanId": "7f8f02c7-209a-4636-89b5-3a5f82ab42bf",
+          "sourceAttachment": "middle",
+          "targetAttachment": "end",
+          "annotation": "The economic crash of the made it hard to garner support for progressive agendas in the South."
+        }
+      ]
+    },
+    {
+      "id": "408b0615-1dc7-43a5-95ce-79968f868acd",
+      "title": "Invention of wireless radio",
+      "startYear": 1895,
+      "endYear": 1901,
+      "spanType": "Technology",
+      "subEvents": [
+        {
+          "id": "6ef473ec-6f4c-4c59-9011-0d5a100a1482",
+          "date": 1895,
+          "label": "Marconi successfully sends and receives his first radio signals in Italy"
+        },
+        {
+          "id": "97406880-c6ce-46dd-8fbd-697015aacca5",
+          "date": 1901,
+          "label": "Marconi transmits the first transatlantic radio signal                                                    "
+        }
+      ],
+      "causalImpacts": [],
+      "continuesAs": "68aab05d-0df9-416c-a572-40ace7225a56"
+    },
+    {
+      "id": "spanish-american-war",
+      "title": "Spanish-American War",
+      "startYear": 1898,
+      "endYear": 1898,
+      "spanType": "Politics",
+      "subEvents": [],
+      "causalImpacts": []
+    },
+    {
+      "id": "ccb4a663-99c9-4946-9197-592632dad1e0",
+      "title": "Automobile Revolution s-curve [America]",
+      "startYear": 1900,
+      "endYear": 1950,
+      "spanType": "Technology",
+      "subEvents": [],
+      "causalImpacts": []
+    },
+    {
+      "id": "7816cc45-3ab3-45c9-8d99-ff458561b05a",
+      "title": "Mas adoption of wireless radio",
+      "startYear": 1923,
+      "endYear": 1950,
+      "spanType": "Technology",
+      "subEvents": [
+        {
+          "id": "radio-se-1906",
+          "date": 1907,
+          "label": "Reginald Fessenden makes the first audio radio broadcast (voice and music)"
+        },
+        {
+          "id": "radio-se-1912",
+          "date": 1912,
+          "label": "Radio Act of 1912 passed"
+        },
+        {
+          "id": "radio-se-1920",
+          "date": 1920,
+          "label": "KDKA in Pittsburgh begins regular commercial broadcasting"
+        },
+        {
+          "id": "radio-se-1922",
+          "date": 1922,
+          "label": "BBC founded in the UK; hundreds of radio stations spring up across the US"
+        },
+        {
+          "id": "radio-se-1923",
+          "date": 1923,
+          "label": "~1% of US households own a radio"
+        },
+        {
+          "id": "radio-se-1926",
+          "date": 1926,
+          "label": "NBC founded as the first national radio network"
+        },
+        {
+          "id": "radio-se-1927",
+          "date": 1927,
+          "label": "CBS founded; Federal Radio Commission established to regulate the airwaves"
+        },
+        {
+          "id": "radio-se-1930",
+          "date": 1930,
+          "label": "~40% of US households own a radio"
+        },
+        {
+          "id": "radio-se-1933",
+          "date": 1933,
+          "label": "Edwin Armstrong demonstrates FM radio"
+        },
+        {
+          "id": "radio-se-1935",
+          "date": 1935,
+          "label": "~60% of US households own a radio"
+        },
+        {
+          "id": "radio-se-1938",
+          "date": 1938,
+          "label": "Orson Welles' \"War of the Worlds\" broadcast demonstrates radio's cultural power"
+        },
+        {
+          "id": "radio-se-1940",
+          "date": 1940,
+          "label": "~80% of US households own a radio"
+        },
+        {
+          "id": "radio-se-1945",
+          "date": 1945,
+          "label": "~90% of US households own a radio"
+        },
+        {
+          "id": "radio-se-1950",
+          "date": 1950,
+          "label": "~95% of US households own a radio; TV begins displacing radio as the dominant medium"
+        }
+      ],
+      "causalImpacts": []
+    },
+    {
+      "id": "de414cb2-bdb0-45a0-96f1-92c88e0c2175",
+      "title": "World War I",
+      "startYear": 1914,
+      "endYear": 1918,
+      "spanType": "Politics",
+      "subEvents": [],
+      "causalImpacts": []
+    },
+    {
+      "id": "d4e653a7-57a0-4fc1-90b6-30281006d216",
+      "title": "The invention of television",
+      "startYear": 1927,
+      "endYear": 1928,
+      "spanType": "Technology",
+      "subEvents": [
+        {
+          "id": "b38ac12a-7ea7-4d2d-a7b0-b9ef01129792",
+          "date": 1927,
+          "label": "Philo Farnsworth demonstrates the first fully electronic television system "
+        },
+        {
+          "id": "2795a8ed-a02b-4eaa-97ef-130b0c05cc7c",
+          "date": 1928,
+          "label": "Charles Francis Jenkins broadcasts the first US TV station (mechanical TV) "
+        }
+      ],
+      "causalImpacts": [],
+      "continuesAs": "7de27337-afa3-4c50-ae29-64603696a484"
+    },
+    {
+      "id": "7de27337-afa3-4c50-ae29-64603696a484",
+      "title": "Slow early deployment of Television",
+      "startYear": 1928,
+      "endYear": 1948,
+      "spanType": "Technology",
+      "subEvents": [
+        {
+          "id": "d084d1ba-3c12-4266-a653-66212f030dba",
+          "date": 1936,
+          "label": "BBC begins the first regular public TV broadcast service"
+        },
+        {
+          "id": "bcb083d1-696d-4ab6-a4a4-3af58970ec2e",
+          "date": 1928,
+          "label": "Charles Francis Jenkins broadcasts the first US TV station (mechanical TV)"
+        },
+        {
+          "id": "96df080f-5562-4189-b066-1636ac0b0fee",
+          "date": 1928,
+          "label": "RCA demonstrates electronic TV at the New York World's Fair; NBC begins regular broadcasts"
+        },
+        {
+          "id": "6352e5a0-e02d-4bda-9c46-dcc376682e0a",
+          "date": 1941,
+          "label": "FCC authorizes commercial TV broadcasting in the US"
+        }
+      ],
+      "causalImpacts": [],
+      "continuesAs": "tv-adoption"
+    },
+    {
+      "id": "607d570b-1713-456f-a13c-78ca52d84dc9",
+      "title": "The Great Depresion",
+      "startYear": 1929,
+      "endYear": 1939,
+      "spanType": "Economics",
+      "subEvents": [],
+      "causalImpacts": []
+    },
+    {
+      "id": "004116c9-d3b7-44f8-b389-8045a75d7cba",
+      "title": "World War II",
+      "startYear": 1939,
+      "endYear": 1945,
+      "spanType": "Politics",
+      "subEvents": [],
+      "causalImpacts": [
+        {
+          "id": "5df0cdcc-dd03-433e-beba-83a0c2339fdd",
+          "targetSpanId": "5a765ce6-2396-4575-898a-ba1d5aaecf39",
+          "sourceAttachment": "end",
+          "targetAttachment": "start",
+          "annotation": ""
+        },
+        {
+          "id": "8482dabd-bdbf-4bc4-a4be-ffe4a2255416",
+          "targetSpanId": "53af27b6-0754-4976-8bf8-31b3e02be734",
+          "sourceAttachment": "end",
+          "targetAttachment": "middle",
+          "annotation": "The US Fed keeps interest rates low to help with the paying back of war debts"
+        },
+        {
+          "id": "4baedb2e-471e-4e63-bebd-2b76fa9aa27d",
+          "targetSpanId": "3541137a-449d-48e0-a0f9-a37b59e12834",
+          "sourceAttachment": "middle",
+          "targetAttachment": "start",
+          "annotation": ""
+        }
+      ]
+    },
+    {
+      "id": "3541137a-449d-48e0-a0f9-a37b59e12834",
+      "title": "The Manhattan Project",
+      "startYear": 1942,
+      "endYear": 1945,
+      "spanType": "Technology",
+      "subEvents": [],
+      "causalImpacts": []
+    },
+    {
+      "id": "d4101e68-9124-4ac4-88b9-94f35c499e17",
+      "title": "The Bretton Woods system: dollar pegged to gold at $35/oz, other currencies pegged to dollar (international- only convertibility)",
+      "startYear": 1944,
+      "endYear": 1971,
+      "spanType": "Economics",
+      "subEvents": [
+        {
+          "id": "bc8dbff9-0652-42c7-97cc-4f85d9c800ee",
+          "date": 1971,
+          "label": "Nixon closes the gold window (\"Nixon Shock\")"
+        }
+      ],
+      "causalImpacts": []
+    },
+    {
+      "id": "5a765ce6-2396-4575-898a-ba1d5aaecf39",
+      "title": "The Cold War",
+      "startYear": 1945,
+      "endYear": 1989,
+      "spanType": "Politics",
+      "subEvents": [
+        {
+          "id": "2afe27f8-78e2-40dc-aa7b-77d70a8380f5",
+          "date": 1989,
+          "label": "Fall of the Berlin Wall"
+        }
+      ],
+      "causalImpacts": [
+        {
+          "id": "304b2f77-420d-4f43-ad72-3a5cce9a0a18",
+          "targetSpanId": "ff50f5fb-e680-4305-9319-3b01b32950b7",
+          "sourceAttachment": 1955,
+          "targetAttachment": 1965,
+          "annotation": "The early market for computer chips is almost entirely government contracts, especially from the air force (for Minuteman missiles) and NASA (for the Apollo Program)"
+        },
+        {
+          "id": "81bcbe3e-8c2b-4fb8-897a-90ea3ceb355b",
+          "targetSpanId": "18279e61-e302-4495-89c9-ae1df8c0d5cc",
+          "sourceAttachment": "middle",
+          "targetAttachment": "middle",
+          "annotation": ""
+        }
+      ]
+    },
+    {
+      "id": "53af27b6-0754-4976-8bf8-31b3e02be734",
+      "title": "Postwar low interest rates and expansion of consumer credit. US household debt goes up by 10x between 1945 and 1965",
+      "startYear": 1945,
+      "endYear": 1965,
+      "spanType": "Economics",
+      "subEvents": [],
+      "causalImpacts": []
+    },
+    {
+      "id": "ff50f5fb-e680-4305-9319-3b01b32950b7",
+      "title": "Exponential increase in semiconductor manufacture and computing capacity",
+      "startYear": 1947,
+      "endYear": "ongoing",
+      "spanType": "Technology",
+      "subEvents": [
+        {
+          "id": "dfe10542-080f-46c2-b954-c1869aed84ee",
+          "date": 1947,
+          "label": "The transistor is invented"
+        },
+        {
+          "id": "9516fe6f-c25e-4f3e-b13a-45f9cb18bfb5",
+          "date": 1955,
+          "label": "Shockley Semiconductor is founded"
+        }
+      ],
+      "causalImpacts": [
+        {
+          "id": "b3c3a00b-7edd-4e7f-adca-980dd2e7d181",
+          "targetSpanId": "b7d4c772-f631-48f2-a125-7711b2273a46",
+          "sourceAttachment": "middle",
+          "targetAttachment": "middle",
+          "annotation": ""
+        },
+        {
+          "id": "eae0c81f-7e2f-4700-82b2-bf14a9639282",
+          "targetSpanId": "43eefd45-a801-49a9-8a36-a9ef7f47bb94",
+          "sourceAttachment": "middle",
+          "targetAttachment": "middle",
+          "annotation": ""
+        },
+        {
+          "id": "183261cd-2acc-493b-9203-99d515e4fec0",
+          "targetSpanId": "467cf973-ce34-483f-a496-fab0c4fc2651",
+          "sourceAttachment": "middle",
+          "targetAttachment": "middle",
+          "annotation": ""
+        },
+        {
+          "id": "2d0dee67-1951-4701-8606-78d3cb3732a1",
+          "targetSpanId": "36fcbf40-1cf1-4cdc-a6f7-774e7c603557",
+          "sourceAttachment": "middle",
+          "targetAttachment": "middle",
+          "annotation": ""
+        },
+        {
+          "id": "475874aa-5d46-4461-9ccd-0e2e9a545af9",
+          "targetSpanId": "867cdaa2-c377-46f9-9acf-3c93e5398008",
+          "sourceAttachment": "middle",
+          "targetAttachment": "middle",
+          "annotation": ""
+        },
+        {
+          "id": "5f750a97-ebc2-41c3-8871-3bd0866dc1ea",
+          "targetSpanId": "internet-quiet",
+          "sourceAttachment": "middle",
+          "targetAttachment": "middle",
+          "annotation": ""
+        }
+      ]
+    },
+    {
+      "id": "tv-adoption",
+      "title": "Mass television adoption",
+      "startYear": 1948,
+      "endYear": 1965,
+      "spanType": "Technology",
+      "subEvents": [
+        {
+          "id": "tv-se-1950",
+          "date": 1950,
+          "label": "~9% of US households have a TV"
+        },
+        {
+          "id": "tv-se-1955",
+          "date": 1955,
+          "label": "~65% of US households have a TV"
+        },
+        {
+          "id": "tv-se-1960",
+          "date": 1960,
+          "label": "~87% of US households have a TV"
+        },
+        {
+          "id": "tv-se-1965",
+          "date": 1965,
+          "label": "~93% of US households have a TV, approaching saturation"
+        },
+        {
+          "id": "abebb56c-f1ea-4576-b985-4e31cbcc5150",
+          "date": 1941,
+          "label": "FCC authorizes commercial TV broadcasting in the US"
+        },
+        {
+          "id": "c4a8dcac-4c83-4942-8948-f001631503b4",
+          "date": 1948,
+          "label": "1% of US households own a TV"
+        },
+        {
+          "id": "a971dbf0-70ff-4c61-af58-04afd7593890",
+          "date": 1937,
+          "label": "BBC begins the first regular public TV broadcast service"
+        }
+      ],
+      "causalImpacts": [
+        {
+          "id": "23716ecc-94e9-4f81-a6dd-d1dab49e0d50",
+          "targetSpanId": "80d13747-a48a-46d7-81b1-35acc8edae69",
+          "sourceAttachment": "middle",
+          "targetAttachment": "middle",
+          "annotation": ""
+        }
+      ]
+    },
+    {
+      "id": "korean-war",
+      "title": "Korean War",
+      "startYear": 1950,
+      "endYear": 1953,
+      "spanType": "Politics",
+      "subEvents": [],
+      "causalImpacts": []
+    },
+    {
+      "id": "80d13747-a48a-46d7-81b1-35acc8edae69",
+      "title": "The Era of Television",
+      "startYear": 1951,
+      "endYear": 2010,
+      "spanType": "Culture",
+      "subEvents": [],
+      "causalImpacts": []
+    },
+    {
+      "id": "6e93e3d6-8f68-45a5-bd58-82888faf0885",
+      "title": "The Objectivist circle (\"The Collective\") active in New York",
+      "startYear": 1954,
+      "endYear": 1968,
+      "spanType": "Subculture",
+      "subEvents": [
+        {
+          "id": "obj-se-1954",
+          "date": 1954,
+          "label": "Murray Rothbard brings students to meet Rand; The Collective operating as regular weekly salons at Rand's East 36th St apartment"
+        },
+        {
+          "id": "obj-se-1957",
+          "date": 1957,
+          "label": "Atlas Shrugged published; Rand dedicates it partly to Branden; readership expands dramatically"
+        },
+        {
+          "id": "obj-se-1958",
+          "date": 1958,
+          "label": "Branden founds the Nathaniel Branden Institute (NBI); lectures begin in New York, later distributed by tape nationally"
+        },
+        {
+          "id": "obj-se-1962",
+          "date": 1962,
+          "label": "Rand and Branden launch the Objectivist Newsletter (renamed The Objectivist in 1966)"
+        },
+        {
+          "id": "obj-se-1968",
+          "date": 1968,
+          "label": "Branden reveals affair with Patrecia Scott; Rand expels him, demands he surrender NBI; NBI dissolves; The Collective effectively disbands"
+        }
+      ],
+      "causalImpacts": []
+    },
+    {
+      "id": "18279e61-e302-4495-89c9-ae1df8c0d5cc",
+      "title": "The Apollo Progam",
+      "startYear": 1961,
+      "endYear": 1972,
+      "spanType": "Technology",
+      "subEvents": [],
+      "causalImpacts": [
+        {
+          "id": "20704166-f2c7-41cc-bd9d-5b4e73ba7581",
+          "targetSpanId": "ff50f5fb-e680-4305-9319-3b01b32950b7",
+          "sourceAttachment": 1962,
+          "targetAttachment": 1964,
+          "annotation": "Between 1962 and 1965, Apollo was the world's largest Integrated Circuit customer "
+        }
+      ]
+    },
+    {
+      "id": "vietnam-war",
+      "title": "Vietnam War (US involvement)",
+      "startYear": 1964,
+      "endYear": 1973,
+      "spanType": "Politics",
+      "subEvents": [],
+      "causalImpacts": []
+    },
+    {
+      "id": "94d2be48-0a96-4b92-8343-c694574a7322",
+      "title": "China's Economic Miracle: China is industrializing and pulling itself out of poverty",
+      "startYear": 1975,
+      "endYear": 2010,
+      "spanType": "Economics",
+      "subEvents": [],
+      "causalImpacts": [
+        {
+          "id": "e247b7c3-643b-4823-935d-b236e94e2c29",
+          "targetSpanId": "0c86e8f9-a948-4be6-9f58-e5835d1b8f55",
+          "sourceAttachment": "middle",
+          "targetAttachment": "middle",
+          "annotation": ""
+        }
+      ]
+    },
+    {
+      "id": "b7d4c772-f631-48f2-a125-7711b2273a46",
+      "title": "The Personal Computer S-curve",
+      "startYear": 1984,
+      "endYear": 2000,
+      "spanType": "Technology",
+      "subEvents": [
+        {
+          "id": "26c654df-1bed-4c07-8f42-2af5b95d665f",
+          "date": 1984,
+          "label": "The First Macintosh is Released"
+        },
+        {
+          "id": "948f4e59-5217-4faa-8a5a-83c36a06fd25",
+          "date": 2000,
+          "label": "Half of all households in the US have a personal computer"
+        }
+      ],
+      "causalImpacts": [
+        {
+          "id": "44548315-562d-4960-ad52-b3b1945ed1a0",
+          "targetSpanId": "2ba2ed14-c4d4-4bd1-b979-1a093128bd43",
+          "sourceAttachment": "end",
+          "targetAttachment": "start",
+          "annotation": ""
+        },
+        {
+          "id": "2b1b7cb5-b3d1-4fad-8a64-136cacdc268a",
+          "targetSpanId": "92a00069-b195-4110-8f17-3fc296e69d72",
+          "sourceAttachment": "middle",
+          "targetAttachment": "middle",
+          "annotation": ""
+        }
+      ]
+    },
+    {
+      "id": "fc66c95c-ce5b-4b10-a55c-736b6db571f7",
+      "title": "The Extropians",
+      "startYear": 1988,
+      "endYear": 2004,
+      "spanType": "Subculture",
+      "subEvents": [
+        {
+          "id": "12b934d8-3903-4773-9896-3bfee5a1ed90",
+          "date": 1988,
+          "label": "Max More and Tom Morrow coined \"Extropy\" and founded the Extropy Institute"
+        },
+        {
+          "id": "db77d26d-e9d0-44de-b87f-69759bed4189",
+          "date": 1989,
+          "label": "Extropy magazine launched"
+        },
+        {
+          "id": "b864d015-371b-4df3-9491-8099867eaea8",
+          "date": 2006,
+          "label": "Extropy Institute formally dissolved"
+        }
+      ],
+      "causalImpacts": [
+        {
+          "id": "fb95ad01-db1a-45eb-a87e-f81f7efdb71e",
+          "targetSpanId": "8a7878af-21d7-44ee-82ab-d5ff8259b585",
+          "sourceAttachment": "end",
+          "targetAttachment": "start",
+          "annotation": ""
+        }
+      ]
+    },
+    {
+      "id": "gulf-war",
+      "title": "Gulf War / Desert Storm",
+      "startYear": 1990,
+      "endYear": 1991,
+      "spanType": "Politics",
+      "subEvents": [],
+      "causalImpacts": []
+    },
+    {
+      "id": "internet-quiet",
+      "title": "The internet is quietly being created",
+      "startYear": 1969,
+      "endYear": 1991,
+      "spanType": "Technology",
+      "subEvents": [
+        {
+          "id": "inet-se-1969",
+          "date": 1969,
+          "label": "ARPANET goes live with 4 nodes (UCLA, Stanford, UCSB, Utah)"
+        },
+        {
+          "id": "inet-se-1971",
+          "date": 1971,
+          "label": "First email sent by Ray Tomlinson"
+        },
+        {
+          "id": "inet-se-1983",
+          "date": 1983,
+          "label": "ARPANET switches to TCP/IP, the modern internet protocol"
+        },
+        {
+          "id": "inet-se-1985",
+          "date": 1985,
+          "label": "NSFNet established, connecting university supercomputing centers"
+        },
+        {
+          "id": "inet-se-1989",
+          "date": 1989,
+          "label": "Tim Berners-Lee proposes the World Wide Web at CERN"
+        }
+      ],
+      "causalImpacts": [],
+      "continuesAs": "92a00069-b195-4110-8f17-3fc296e69d72"
+    },
+    {
+      "id": "92a00069-b195-4110-8f17-3fc296e69d72",
+      "title": "Growth of the internet and World Wide Web",
+      "startYear": 1991,
       "endYear": 2020,
       "spanType": "Technology",
       "subEvents": [
         {
-          "id": "e7eac929-d7e9-4f47-94bd-25c232a9a97c",
-          "date": 2012,
-          "label": "AlexNet wins the ImageNet Challenge"
+          "id": "www-se-1991",
+          "date": 1991,
+          "label": "World Wide Web goes public; first website launched"
         },
         {
-          "id": "a79fe93b-b5d1-4395-b782-42caaf3c39c5",
-          "date": 2016,
-          "label": "AlphaGo Beats Lee Sedol"
+          "id": "www-se-1993",
+          "date": 1993,
+          "label": "Mosaic browser released; ~2% of US households online"
         },
         {
-          "id": "941b9d18-145e-430d-be7d-12baec011c5b",
+          "id": "www-se-1995",
+          "date": 1995,
+          "label": "Netscape IPO; Amazon and eBay launch; ~14% of US adults use the internet"
+        },
+        {
+          "id": "www-se-1997",
+          "date": 1997,
+          "label": "~22% of US households have internet access"
+        },
+        {
+          "id": "www-se-1998",
+          "date": 1998,
+          "label": "Google founded"
+        },
+        {
+          "id": "www-se-2000",
+          "date": 2000,
+          "label": "~42% of US households have internet access; dot-com bubble peaks"
+        },
+        {
+          "id": "www-se-2001",
+          "date": 2001,
+          "label": "Dot-com bust; ~50% of US adults online"
+        },
+        {
+          "id": "www-se-2005",
+          "date": 2005,
+          "label": "~68% of US households online"
+        },
+        {
+          "id": "www-se-2007",
+          "date": 2007,
+          "label": "~70% of households; broadband overtakes dial-up"
+        },
+        {
+          "id": "www-se-2010",
+          "date": 2010,
+          "label": "~79% of US households have internet access"
+        },
+        {
+          "id": "www-se-2015",
+          "date": 2015,
+          "label": "~87% of US households online"
+        },
+        {
+          "id": "www-se-2020",
           "date": 2020,
-          "label": "GPT-3 announced "
-        },
-        {
-          "id": "a87498da-9b2c-464a-95dc-22ded10b87e2",
-          "date": 2017,
-          "label": "The transformer architecture is invented"
+          "label": "~93% of US households have internet access"
         }
       ],
       "causalImpacts": [
         {
-          "id": "931f8012-cc2c-4943-9b9e-6b5fc40dd379",
-          "targetSpanId": "867cdaa2-c377-46f9-9acf-3c93e5398008",
+          "id": "9f209bbb-20e3-4637-8bba-282dd0bc7ae2",
+          "targetSpanId": "2ba2ed14-c4d4-4bd1-b979-1a093128bd43",
+          "sourceAttachment": "middle",
+          "targetAttachment": "middle",
+          "annotation": ""
+        },
+        {
+          "id": "62769bcb-a1d6-4945-93c0-b2b726e47b16",
+          "targetSpanId": "2c41fc33-fb98-4331-badc-87cdaae1a3d4",
+          "sourceAttachment": "middle",
+          "targetAttachment": "middle",
+          "annotation": ""
+        },
+        {
+          "id": "9793f46c-16c7-4495-9544-55d238761d4b",
+          "targetSpanId": "36fcbf40-1cf1-4cdc-a6f7-774e7c603557",
+          "sourceAttachment": "middle",
+          "targetAttachment": "middle",
+          "annotation": ""
+        },
+        {
+          "id": "855fa171-3df0-4c90-adf4-68669ffcaa32",
+          "targetSpanId": "36f682d3-8f64-4abd-8fb3-fad3023633fa",
+          "sourceAttachment": "middle",
+          "targetAttachment": "start",
+          "annotation": ""
+        }
+      ]
+    },
+    {
+      "id": "0c86e8f9-a948-4be6-9f58-e5835d1b8f55",
+      "title": "China becoming an industrial powerhouse",
+      "startYear": 2000,
+      "endYear": "ongoing",
+      "spanType": "Economics",
+      "subEvents": [
+        {
+          "id": "5764a43f-7f30-48a4-94f4-1e6df6e9306b",
+          "date": 2010,
+          "label": "Chinese electricity production surpasses US electricity production"
+        }
+      ],
+      "causalImpacts": []
+    },
+    {
+      "id": "2c41fc33-fb98-4331-badc-87cdaae1a3d4",
+      "title": "Google's search business model",
+      "startYear": 2000,
+      "endYear": 2023,
+      "spanType": "Economics",
+      "subEvents": [
+        {
+          "id": "7556c274-8653-4e91-a5fb-52a0e97a4c4f",
+          "date": 2000,
+          "label": "Google Adwords is introduced"
+        }
+      ],
+      "causalImpacts": [
+        {
+          "id": "567bef35-ef90-46db-9bc4-61aefd61d748",
+          "targetSpanId": "2ba2ed14-c4d4-4bd1-b979-1a093128bd43",
+          "sourceAttachment": "middle",
+          "targetAttachment": "middle",
+          "annotation": ""
+        }
+      ]
+    },
+    {
+      "id": "ea393c3d-79bf-46e8-9995-c33a473f2265",
+      "title": "9/11 and aftermath",
+      "startYear": 2001,
+      "endYear": 2002,
+      "spanType": "Politics",
+      "subEvents": [],
+      "causalImpacts": [
+        {
+          "id": "b65ce57b-442a-4595-9247-346f65bc9659",
+          "targetSpanId": "27f1f023-05ec-40fb-894b-e594e45a66bd",
           "sourceAttachment": "end",
           "targetAttachment": "start",
           "annotation": ""
@@ -112,47 +979,136 @@
       ]
     },
     {
-      "id": "caeee581-afd3-451d-bf68-a96d033ed042",
-      "title": "Effective Altruism",
-      "startYear": 2009,
-      "endYear": "ongoing",
-      "spanType": "Subculture",
-      "subEvents": [
-        {
-          "id": "11b85a6f-f2aa-4dcb-8bb6-a79895281b1e",
-          "date": 2014,
-          "label": "GiveWell labs (what becomes OpenPhilanthropy/ Coefficient Giving) is announced"
-        },
-        {
-          "id": "3e884422-7377-4228-a3e2-152890438fac",
-          "date": 2013,
-          "label": "First EA Summit"
-        },
-        {
-          "id": "2a5538cd-2194-44fc-b790-80f821d1c56c",
-          "date": 2015,
-          "label": "First EAG"
-        },
-        {
-          "id": "a93e9675-9c75-4053-9bdb-d35542407749",
-          "date": 2022,
-          "label": "FTX is revealed to have stolen customer deposits and collapses; EA's public perception declines "
-        },
-        {
-          "id": "4541678f-d10f-453f-ac6e-e7d950384df0",
-          "date": 2009,
-          "label": "The first people take the giving what we can pledge"
-        }
-      ],
+      "id": "war-in-afghanistan",
+      "title": "War in Afghanistan",
+      "startYear": 2001,
+      "endYear": 2021,
+      "spanType": "Politics",
+      "subEvents": [],
       "causalImpacts": []
     },
     {
-      "id": "d782ce4b-971e-4408-910e-4a02d81b5753",
-      "title": "Global Financial Collapse and Great Recession",
-      "startYear": 2008,
-      "endYear": 2013,
-      "spanType": "Economics",
+      "id": "2ba2ed14-c4d4-4bd1-b979-1a093128bd43",
+      "title": "the heyday of the Open Web (and the Golden Age of Blogging)",
+      "startYear": 2002,
+      "endYear": 2015,
+      "spanType": "Culture",
       "subEvents": [],
+      "causalImpacts": [
+        {
+          "id": "9ba75d3f-f744-4786-8002-29762c90207a",
+          "targetSpanId": "8a7878af-21d7-44ee-82ab-d5ff8259b585",
+          "sourceAttachment": "middle",
+          "targetAttachment": "middle",
+          "annotation": ""
+        },
+        {
+          "id": "1279e799-b4b5-44c6-b2ea-263491c0a91a",
+          "targetSpanId": "caeee581-afd3-451d-bf68-a96d033ed042",
+          "sourceAttachment": "middle",
+          "targetAttachment": "middle",
+          "annotation": ""
+        }
+      ]
+    },
+    {
+      "id": "27f1f023-05ec-40fb-894b-e594e45a66bd",
+      "title": "Iraq War",
+      "startYear": 2003,
+      "endYear": 2011,
+      "spanType": "Politics",
+      "subEvents": [],
+      "causalImpacts": []
+    },
+    {
+      "id": "270dc16e-b0aa-4ac1-9891-677fe4c66fcc",
+      "title": "Facebook's product lifecycle s-curve",
+      "startYear": 2004,
+      "endYear": 2016,
+      "spanType": "Culture",
+      "subEvents": [],
+      "causalImpacts": [
+        {
+          "id": "b2e38021-f3d5-4741-b26f-a68c47155734",
+          "targetSpanId": "caeee581-afd3-451d-bf68-a96d033ed042",
+          "sourceAttachment": "middle",
+          "targetAttachment": "middle",
+          "annotation": "Dustin Moskovitz cofounder of facebook, funds OpenPhilanthropy (and through OP much of the EA movement)"
+        }
+      ]
+    },
+    {
+      "id": "36fcbf40-1cf1-4cdc-a6f7-774e7c603557",
+      "title": "Software is eating the world",
+      "startYear": 2005,
+      "endYear": 2026,
+      "spanType": "Technology",
+      "subEvents": [],
+      "causalImpacts": [
+        {
+          "id": "5de1fca4-8cc5-40e6-bf33-f5eae68bbea7",
+          "targetSpanId": "8a7878af-21d7-44ee-82ab-d5ff8259b585",
+          "sourceAttachment": 2010,
+          "targetAttachment": "middle",
+          "annotation": "In the 2010s and early 2020s, SAAS business models are lucrative and software engineering is highly lucrative profession for smart nerds. Most members of the rationality community are software engineers; the early MIRI and CFAR were largely funded by donations from community members."
+        },
+        {
+          "id": "c2854fcf-ff42-4311-8f37-bc9993096e42",
+          "targetSpanId": "",
+          "sourceAttachment": "middle",
+          "targetAttachment": "middle",
+          "annotation": ""
+        }
+      ]
+    },
+    {
+      "id": "36f682d3-8f64-4abd-8fb3-fad3023633fa",
+      "title": "Twitter",
+      "startYear": 2006,
+      "endYear": "ongoing",
+      "spanType": "Culture",
+      "subEvents": [
+        {
+          "id": "tw-se-2006",
+          "date": 2006,
+          "label": "Jack Dorsey sends the first tweet; Twitter launches publicly at SXSW"
+        },
+        {
+          "id": "tw-se-2009",
+          "date": 2009,
+          "label": "\"Hudson River miracle\" landing live-tweeted; Twitter becomes a breaking news platform"
+        },
+        {
+          "id": "tw-se-2010",
+          "date": 2010,
+          "label": "Promoted Tweets (advertising) introduced; 100 million users"
+        },
+        {
+          "id": "tw-se-2011",
+          "date": 2011,
+          "label": "Arab Spring protests organized partly via Twitter, demonstrating political power"
+        },
+        {
+          "id": "tw-se-2012",
+          "date": 2012,
+          "label": "200 million active users"
+        },
+        {
+          "id": "tw-se-2015",
+          "date": 2015,
+          "label": "Growth stalls around 300 million users"
+        },
+        {
+          "id": "tw-se-2022",
+          "date": 2022,
+          "label": "Elon Musk acquires Twitter for $44 billion"
+        },
+        {
+          "id": "tw-se-2023",
+          "date": 2023,
+          "label": "Rebranded to \"X\""
+        }
+      ],
       "causalImpacts": []
     },
     {
@@ -213,621 +1169,159 @@
         },
         {
           "id": "7ff2dcc4-8b6b-43d1-95cb-af3381ec158b",
-          "targetSpanId": "867cdaa2-c377-46f9-9acf-3c93e5398008",
+          "targetSpanId": "467cf973-ce34-483f-a496-fab0c4fc2651",
           "sourceAttachment": "middle",
-          "targetAttachment": "middle",
+          "targetAttachment": 2015,
           "annotation": "The ideas that Yudkowsky promoted, and which were discussed on LessWrong, lead directly to the founding of OpenAI: Elon Musk reads Superintelligence and attends the Puerto Rico conference, and then founds OpenAI with Sam Altman as a counterweight to Google DeepMind"
         }
       ]
     },
     {
-      "id": "36f682d3-8f64-4abd-8fb3-fad3023633fa",
-      "title": "Twitter",
-      "startYear": 2006,
-      "endYear": "ongoing",
-      "spanType": "Culture",
-      "subEvents": [],
-      "causalImpacts": []
-    },
-    {
-      "id": "36fcbf40-1cf1-4cdc-a6f7-774e7c603557",
-      "title": "Software is eating the world",
-      "startYear": 2005,
-      "endYear": 2026,
-      "spanType": "Technology",
-      "subEvents": [],
-      "causalImpacts": [
-        {
-          "id": "5de1fca4-8cc5-40e6-bf33-f5eae68bbea7",
-          "targetSpanId": "8a7878af-21d7-44ee-82ab-d5ff8259b585",
-          "sourceAttachment": 2010,
-          "targetAttachment": "middle",
-          "annotation": "In the 2010s and early 2020s, SAAS business models are lucrative and software engineering is highly lucrative profession for smart nerds. Most members of the rationality community are software engineers; the early MIRI and CFAR were largely funded by donations from community members."
-        },
-        {
-          "id": "c2854fcf-ff42-4311-8f37-bc9993096e42",
-          "targetSpanId": "",
-          "sourceAttachment": "middle",
-          "targetAttachment": "middle",
-          "annotation": ""
-        }
-      ]
-    },
-    {
-      "id": "270dc16e-b0aa-4ac1-9891-677fe4c66fcc",
-      "title": "Facebook's product lifecycle s-curve",
-      "startYear": 2004,
-      "endYear": 2016,
-      "spanType": "Culture",
-      "subEvents": [],
-      "causalImpacts": [
-        {
-          "id": "b2e38021-f3d5-4741-b26f-a68c47155734",
-          "targetSpanId": "caeee581-afd3-451d-bf68-a96d033ed042",
-          "sourceAttachment": "middle",
-          "targetAttachment": "middle",
-          "annotation": "Dustin Moskovitz cofounder of facebook, funds OpenPhilanthropy (and through OP much of the EA movement)"
-        }
-      ]
-    },
-    {
-      "id": "27f1f023-05ec-40fb-894b-e594e45a66bd",
-      "title": "Iraq War",
-      "startYear": 2003,
-      "endYear": 2011,
-      "spanType": "Politics",
-      "subEvents": [],
-      "causalImpacts": []
-    },
-    {
-      "id": "2ba2ed14-c4d4-4bd1-b979-1a093128bd43",
-      "title": "the heyday of the Open Web (and the Golden Age of Blogging)",
-      "startYear": 2002,
-      "endYear": 2015,
-      "spanType": "Culture",
-      "subEvents": [],
-      "causalImpacts": [
-        {
-          "id": "9ba75d3f-f744-4786-8002-29762c90207a",
-          "targetSpanId": "8a7878af-21d7-44ee-82ab-d5ff8259b585",
-          "sourceAttachment": "middle",
-          "targetAttachment": "middle",
-          "annotation": ""
-        },
-        {
-          "id": "1279e799-b4b5-44c6-b2ea-263491c0a91a",
-          "targetSpanId": "caeee581-afd3-451d-bf68-a96d033ed042",
-          "sourceAttachment": "middle",
-          "targetAttachment": "middle",
-          "annotation": ""
-        }
-      ]
-    },
-    {
-      "id": "ea393c3d-79bf-46e8-9995-c33a473f2265",
-      "title": "9/11 and aftermath",
-      "startYear": 2001,
-      "endYear": 2002,
-      "spanType": "Politics",
-      "subEvents": [],
-      "causalImpacts": [
-        {
-          "id": "b65ce57b-442a-4595-9247-346f65bc9659",
-          "targetSpanId": "27f1f023-05ec-40fb-894b-e594e45a66bd",
-          "sourceAttachment": "end",
-          "targetAttachment": "start",
-          "annotation": ""
-        }
-      ]
-    },
-    {
-      "id": "0c86e8f9-a948-4be6-9f58-e5835d1b8f55",
-      "title": "China becoming an industrial powerhouse",
-      "startYear": 2000,
-      "endYear": "ongoing",
+      "id": "d782ce4b-971e-4408-910e-4a02d81b5753",
+      "title": "Global Financial Collapse and Great Recession",
+      "startYear": 2008,
+      "endYear": 2013,
       "spanType": "Economics",
-      "subEvents": [
-        {
-          "id": "5764a43f-7f30-48a4-94f4-1e6df6e9306b",
-          "date": 2010,
-          "label": "Chinese electricity production surpasses US electricity production"
-        }
-      ],
+      "subEvents": [],
       "causalImpacts": []
     },
     {
-      "id": "2c41fc33-fb98-4331-badc-87cdaae1a3d4",
-      "title": "Google's search business model",
-      "startYear": 2000,
-      "endYear": 2023,
-      "spanType": "Economics",
-      "subEvents": [
-        {
-          "id": "7556c274-8653-4e91-a5fb-52a0e97a4c4f",
-          "date": 2000,
-          "label": "Google Adwords is introduced"
-        }
-      ],
-      "causalImpacts": [
-        {
-          "id": "567bef35-ef90-46db-9bc4-61aefd61d748",
-          "targetSpanId": "2ba2ed14-c4d4-4bd1-b979-1a093128bd43",
-          "sourceAttachment": "middle",
-          "targetAttachment": "middle",
-          "annotation": ""
-        }
-      ]
-    },
-    {
-      "id": "fc66c95c-ce5b-4b10-a55c-736b6db571f7",
-      "title": "The Extropians",
-      "startYear": 1988,
-      "endYear": 2004,
+      "id": "caeee581-afd3-451d-bf68-a96d033ed042",
+      "title": "Effective Altruism",
+      "startYear": 2009,
+      "endYear": "ongoing",
       "spanType": "Subculture",
       "subEvents": [
         {
-          "id": "12b934d8-3903-4773-9896-3bfee5a1ed90",
-          "date": 1988,
-          "label": "Max More and Tom Morrow coined \"Extropy\" and founded the Extropy Institute"
+          "id": "11b85a6f-f2aa-4dcb-8bb6-a79895281b1e",
+          "date": 2014,
+          "label": "GiveWell labs (what becomes OpenPhilanthropy/ Coefficient Giving) is announced"
         },
         {
-          "id": "db77d26d-e9d0-44de-b87f-69759bed4189",
-          "date": 1989,
-          "label": "Extropy magazine launched"
+          "id": "3e884422-7377-4228-a3e2-152890438fac",
+          "date": 2013,
+          "label": "First EA Summit"
         },
         {
-          "id": "b864d015-371b-4df3-9491-8099867eaea8",
-          "date": 2006,
-          "label": "Extropy Institute formally dissolved"
+          "id": "2a5538cd-2194-44fc-b790-80f821d1c56c",
+          "date": 2015,
+          "label": "First EAG"
+        },
+        {
+          "id": "a93e9675-9c75-4053-9bdb-d35542407749",
+          "date": 2022,
+          "label": "FTX is revealed to have stolen customer deposits and collapses; EA's public perception declines "
+        },
+        {
+          "id": "4541678f-d10f-453f-ac6e-e7d950384df0",
+          "date": 2009,
+          "label": "The first people take the giving what we can pledge"
         }
       ],
+      "causalImpacts": []
+    },
+    {
+      "id": "467cf973-ce34-483f-a496-fab0c4fc2651",
+      "title": "The Deep Learning revolution is quietly underway",
+      "startYear": 2012,
+      "endYear": 2022,
+      "spanType": "Technology",
+      "subEvents": [
+        {
+          "id": "e7eac929-d7e9-4f47-94bd-25c232a9a97c",
+          "date": 2012,
+          "label": "AlexNet wins the ImageNet Challenge"
+        },
+        {
+          "id": "a79fe93b-b5d1-4395-b782-42caaf3c39c5",
+          "date": 2016,
+          "label": "AlphaGo Beats Lee Sedol"
+        },
+        {
+          "id": "941b9d18-145e-430d-be7d-12baec011c5b",
+          "date": 2020,
+          "label": "GPT-3 announced "
+        },
+        {
+          "id": "a87498da-9b2c-464a-95dc-22ded10b87e2",
+          "date": 2017,
+          "label": "The transformer architecture is invented"
+        }
+      ],
+      "causalImpacts": [],
+      "continuesAs": "867cdaa2-c377-46f9-9acf-3c93e5398008"
+    },
+    {
+      "id": "3541e9a9-f7cf-4365-80b6-2311883146e7",
+      "title": "First Trump Admin (US)",
+      "startYear": 2017,
+      "endYear": 2021,
+      "spanType": "Politics",
+      "subEvents": [],
       "causalImpacts": [
         {
-          "id": "fb95ad01-db1a-45eb-a87e-f81f7efdb71e",
+          "id": "1589bb33-9570-4636-83a3-058b00ce6e0f",
+          "targetSpanId": "c42b729c-be17-4176-9f18-83ff567fe94e",
+          "sourceAttachment": "end",
+          "targetAttachment": "start",
+          "annotation": ""
+        }
+      ]
+    },
+    {
+      "id": "0a2ebfc1-552b-451f-b0b9-798acb4cfa18",
+      "title": "Covid-19 Pandemic and Lockdowns",
+      "startYear": 2020,
+      "endYear": 2021,
+      "spanType": "Politics",
+      "subEvents": [],
+      "causalImpacts": [
+        {
+          "id": "d893130d-4e8d-447d-9400-ab8a915f3e44",
           "targetSpanId": "8a7878af-21d7-44ee-82ab-d5ff8259b585",
-          "sourceAttachment": "end",
-          "targetAttachment": "start",
-          "annotation": ""
-        }
-      ]
-    },
-    {
-      "id": "b7d4c772-f631-48f2-a125-7711b2273a46",
-      "title": "The Personal Computer S-curve",
-      "startYear": 1984,
-      "endYear": 2000,
-      "spanType": "Technology",
-      "subEvents": [
-        {
-          "id": "26c654df-1bed-4c07-8f42-2af5b95d665f",
-          "date": 1984,
-          "label": "The First Macintosh is Released"
-        },
-        {
-          "id": "948f4e59-5217-4faa-8a5a-83c36a06fd25",
-          "date": 2000,
-          "label": "Half of all households in the US have a personal computer"
-        }
-      ],
-      "causalImpacts": [
-        {
-          "id": "44548315-562d-4960-ad52-b3b1945ed1a0",
-          "targetSpanId": "2ba2ed14-c4d4-4bd1-b979-1a093128bd43",
-          "sourceAttachment": "end",
-          "targetAttachment": "start",
-          "annotation": ""
-        },
-        {
-          "id": "2b1b7cb5-b3d1-4fad-8a64-136cacdc268a",
-          "targetSpanId": "92a00069-b195-4110-8f17-3fc296e69d72",
           "sourceAttachment": "middle",
-          "targetAttachment": "middle",
-          "annotation": ""
+          "targetAttachment": 2020,
+          "annotation": "CFAR stops running workshops due to covid"
         }
       ]
     },
     {
-      "id": "94d2be48-0a96-4b92-8343-c694574a7322",
-      "title": "China's Economic Miracle: China is industrializing and pulling itself out of poverty",
-      "startYear": 1975,
-      "endYear": 2010,
-      "spanType": "Economics",
-      "subEvents": [],
-      "causalImpacts": [
-        {
-          "id": "e247b7c3-643b-4823-935d-b236e94e2c29",
-          "targetSpanId": "0c86e8f9-a948-4be6-9f58-e5835d1b8f55",
-          "sourceAttachment": "middle",
-          "targetAttachment": "middle",
-          "annotation": ""
-        }
-      ]
-    },
-    {
-      "id": "18279e61-e302-4495-89c9-ae1df8c0d5cc",
-      "title": "The Apollo Progam",
-      "startYear": 1961,
-      "endYear": 1972,
-      "spanType": "Technology",
-      "subEvents": [],
-      "causalImpacts": [
-        {
-          "id": "20704166-f2c7-41cc-bd9d-5b4e73ba7581",
-          "targetSpanId": "ff50f5fb-e680-4305-9319-3b01b32950b7",
-          "sourceAttachment": 1962,
-          "targetAttachment": 1964,
-          "annotation": "Between 1962 and 1965, Apollo was the world's largest Integrated Circuit customer "
-        }
-      ]
-    },
-    {
-      "id": "80d13747-a48a-46d7-81b1-35acc8edae69",
-      "title": "The Era of Television",
-      "startYear": 1960,
-      "endYear": 2010,
-      "spanType": "Culture",
-      "subEvents": [],
-      "causalImpacts": []
-    },
-    {
-      "id": "ff50f5fb-e680-4305-9319-3b01b32950b7",
-      "title": "Exponential increase in semiconductor manufacture and computing capacity",
-      "startYear": 1947,
+      "id": "867cdaa2-c377-46f9-9acf-3c93e5398008",
+      "title": "The Singularity",
+      "startYear": 2022,
       "endYear": "ongoing",
       "spanType": "Technology",
       "subEvents": [
         {
-          "id": "dfe10542-080f-46c2-b954-c1869aed84ee",
-          "date": 1947,
-          "label": "The transistor is invented"
+          "id": "5d509d94-6859-4eeb-9144-515ab057c3d7",
+          "date": 2022,
+          "label": "ChatGPT launched"
         },
         {
-          "id": "9516fe6f-c25e-4f3e-b13a-45f9cb18bfb5",
-          "date": 1955,
-          "label": "Shockley Semiconductor is founded"
+          "id": "8615a051-a5c6-4fd7-95f0-53c96f5de3bb",
+          "date": 2023,
+          "label": "GPT-4 launched"
+        },
+        {
+          "id": "609838e9-4311-40f3-9977-41cfc6e075af",
+          "date": 2024,
+          "label": "o1 anounced"
+        },
+        {
+          "id": "ff1f5f0d-74e8-405c-bb86-a3f5fee19166",
+          "date": 2026,
+          "label": "Agentic coding begins to really work with the release Claude Opus 4.5"
         }
       ],
-      "causalImpacts": [
-        {
-          "id": "b3c3a00b-7edd-4e7f-adca-980dd2e7d181",
-          "targetSpanId": "b7d4c772-f631-48f2-a125-7711b2273a46",
-          "sourceAttachment": "middle",
-          "targetAttachment": "middle",
-          "annotation": ""
-        },
-        {
-          "id": "eae0c81f-7e2f-4700-82b2-bf14a9639282",
-          "targetSpanId": "43eefd45-a801-49a9-8a36-a9ef7f47bb94",
-          "sourceAttachment": "middle",
-          "targetAttachment": "middle",
-          "annotation": ""
-        },
-        {
-          "id": "183261cd-2acc-493b-9203-99d515e4fec0",
-          "targetSpanId": "467cf973-ce34-483f-a496-fab0c4fc2651",
-          "sourceAttachment": "middle",
-          "targetAttachment": "middle",
-          "annotation": ""
-        },
-        {
-          "id": "2d0dee67-1951-4701-8606-78d3cb3732a1",
-          "targetSpanId": "36fcbf40-1cf1-4cdc-a6f7-774e7c603557",
-          "sourceAttachment": "middle",
-          "targetAttachment": "middle",
-          "annotation": ""
-        },
-        {
-          "id": "475874aa-5d46-4461-9ccd-0e2e9a545af9",
-          "targetSpanId": "867cdaa2-c377-46f9-9acf-3c93e5398008",
-          "sourceAttachment": "middle",
-          "targetAttachment": "middle",
-          "annotation": ""
-        }
-      ]
-    },
-    {
-      "id": "5a765ce6-2396-4575-898a-ba1d5aaecf39",
-      "title": "The Cold War",
-      "startYear": 1945,
-      "endYear": 1989,
-      "spanType": "Politics",
-      "subEvents": [
-        {
-          "id": "2afe27f8-78e2-40dc-aa7b-77d70a8380f5",
-          "date": 1989,
-          "label": "Fall of the Berlin Wall"
-        }
-      ],
-      "causalImpacts": [
-        {
-          "id": "304b2f77-420d-4f43-ad72-3a5cce9a0a18",
-          "targetSpanId": "ff50f5fb-e680-4305-9319-3b01b32950b7",
-          "sourceAttachment": 1955,
-          "targetAttachment": 1965,
-          "annotation": "The early market for computer chips is almost entirely government contracts, especially from the air force (for Minuteman missiles) and NASA (for the Apollo Program)"
-        },
-        {
-          "id": "81bcbe3e-8c2b-4fb8-897a-90ea3ceb355b",
-          "targetSpanId": "18279e61-e302-4495-89c9-ae1df8c0d5cc",
-          "sourceAttachment": "middle",
-          "targetAttachment": "middle",
-          "annotation": ""
-        }
-      ]
-    },
-    {
-      "id": "53af27b6-0754-4976-8bf8-31b3e02be734",
-      "title": "Postwar low interest rates and expansion of consumer credit",
-      "startYear": 1945,
-      "endYear": 1965,
-      "spanType": "Economics",
-      "subEvents": [],
       "causalImpacts": []
     },
     {
-      "id": "004116c9-d3b7-44f8-b389-8045a75d7cba",
-      "title": "World War II",
-      "startYear": 1939,
-      "endYear": 1945,
-      "spanType": "Politics",
-      "subEvents": [],
-      "causalImpacts": [
-        {
-          "id": "5df0cdcc-dd03-433e-beba-83a0c2339fdd",
-          "targetSpanId": "5a765ce6-2396-4575-898a-ba1d5aaecf39",
-          "sourceAttachment": "end",
-          "targetAttachment": "start",
-          "annotation": ""
-        },
-        {
-          "id": "8482dabd-bdbf-4bc4-a4be-ffe4a2255416",
-          "targetSpanId": "53af27b6-0754-4976-8bf8-31b3e02be734",
-          "sourceAttachment": "end",
-          "targetAttachment": "middle",
-          "annotation": "The US Fed keeps interest rates low to help with the paying back of war debts"
-        },
-        {
-          "id": "4baedb2e-471e-4e63-bebd-2b76fa9aa27d",
-          "targetSpanId": "3541137a-449d-48e0-a0f9-a37b59e12834",
-          "sourceAttachment": "middle",
-          "targetAttachment": "start",
-          "annotation": ""
-        }
-      ]
-    },
-    {
-      "id": "607d570b-1713-456f-a13c-78ca52d84dc9",
-      "title": "The Great Depresion",
-      "startYear": 1929,
-      "endYear": 1939,
-      "spanType": "Economics",
-      "subEvents": [],
-      "causalImpacts": []
-    },
-    {
-      "id": "de414cb2-bdb0-45a0-96f1-92c88e0c2175",
-      "title": "World War I",
-      "startYear": 1914,
-      "endYear": 1917,
-      "spanType": "Politics",
-      "subEvents": [],
-      "causalImpacts": []
-    },
-    {
-      "id": "ccb4a663-99c9-4946-9197-592632dad1e0",
-      "title": "Automobile Revolution s-curve [America]",
-      "startYear": 1900,
-      "endYear": 1950,
-      "spanType": "Technology",
-      "subEvents": [],
-      "causalImpacts": []
-    },
-    {
-      "id": "3cfe1e85-c117-4fd4-8565-cab1d38ad34c",
-      "title": "Recession following the panic of 1873 [US]",
-      "startYear": 1873,
-      "endYear": 1879,
-      "spanType": "Economics",
-      "subEvents": [],
-      "causalImpacts": [
-        {
-          "id": "58869bde-22fe-49be-ad48-cdcc92cfe87e",
-          "targetSpanId": "7f8f02c7-209a-4636-89b5-3a5f82ab42bf",
-          "sourceAttachment": "middle",
-          "targetAttachment": "end",
-          "annotation": "The economic crash of the made it hard to garner support for progressive agendas in the South."
-        }
-      ]
-    },
-    {
-      "id": "7f8f02c7-209a-4636-89b5-3a5f82ab42bf",
-      "title": "Reconstruction era",
-      "startYear": 1865,
-      "endYear": 1876,
-      "spanType": "Politics",
-      "subEvents": [],
-      "causalImpacts": []
-    },
-    {
-      "id": "bc444142-438c-4c0e-8b9a-e5a36966e868",
-      "title": "The American Civil War",
-      "startYear": 1861,
-      "endYear": 1865,
-      "spanType": "Politics",
-      "subEvents": [],
-      "causalImpacts": [
-        {
-          "id": "40349388-0ae8-423a-b130-acfb6e91e2a0",
-          "targetSpanId": "7f8f02c7-209a-4636-89b5-3a5f82ab42bf",
-          "sourceAttachment": "end",
-          "targetAttachment": "start",
-          "annotation": ""
-        }
-      ]
-    },
-    {
-      "id": "3ed566fc-46b7-4669-bdac-5ff876bd6b5a",
-      "title": "The Exponential Part of the Coal Production S-curve",
-      "startYear": 1840,
-      "endYear": 1900,
-      "spanType": "Technology",
-      "subEvents": [],
-      "causalImpacts": []
-    },
-    {
-      "id": "3eedf15a-aff4-44e2-8c93-add8e5be1ae0",
-      "title": "Railroad Revolution s-curve",
-      "startYear": 1804,
-      "endYear": 1916,
-      "spanType": "Technology",
-      "subEvents": [],
-      "causalImpacts": [
-        {
-          "id": "fb2af40b-6341-4bd6-aa3a-9740fbe15716",
-          "targetSpanId": "de414cb2-bdb0-45a0-96f1-92c88e0c2175",
-          "sourceAttachment": "middle",
-          "targetAttachment": "start",
-          "annotation": "Railroads change the dynamics of military mobilization—because it's possible to mobilize and attack in days without long transit delays, mobilizing fast becomes imperative. This is one of the reasons why the Great Powers rushed into WWI—each country didn't want to risk being swiftly defeated by their rivals before their own army had mobilized.  "
-        }
-      ]
-    },
-    {
-      "id": "124524e6-f23e-4641-9687-19aed7c9950d",
-      "title": "US total fertility declining",
-      "startYear": 1800,
+      "id": "c42b729c-be17-4176-9f18-83ff567fe94e",
+      "title": "Second Trump Admin (US)",
+      "startYear": 2025,
       "endYear": "ongoing",
-      "spanType": "Culture",
-      "subEvents": [],
-      "causalImpacts": []
-    },
-    {
-      "id": "122043b1-6fdf-4540-8c81-7f2f3f98a8ec",
-      "title": "The French Revolution",
-      "startYear": 1789,
-      "endYear": 1799,
       "spanType": "Politics",
       "subEvents": [],
-      "causalImpacts": []
-    },
-    {
-      "id": "970f6b2e-6517-480a-9ea5-c1b899836e8e",
-      "title": "American Revolution",
-      "startYear": 1765,
-      "endYear": 1783,
-      "spanType": "Politics",
-      "subEvents": [],
-      "causalImpacts": []
-    },
-    {
-      "id": "c1abc2e3-f8eb-4cb0-9d10-da881ca15ef0",
-      "title": "Industrialization of textile manufacture in Britain",
-      "startYear": 1760,
-      "endYear": 1840,
-      "spanType": "Technology",
-      "subEvents": [],
-      "causalImpacts": [
-        {
-          "id": "2e04f2b8-4482-4fde-944c-294580bc82b6",
-          "targetSpanId": "b4768f0a-2492-44a0-9c8e-e47fc97edb91",
-          "sourceAttachment": "middle",
-          "targetAttachment": "middle",
-          "annotation": ""
-        }
-      ]
-    },
-    {
-      "id": "0bfce399-5d4f-4aac-a7d4-ef2e7dd29246",
-      "title": "The Seven Years War",
-      "startYear": 1756,
-      "endYear": 1763,
-      "spanType": "Politics",
-      "subEvents": [],
-      "causalImpacts": [
-        {
-          "id": "44c7e72b-7615-4f4d-bc16-11e11bc503e6",
-          "targetSpanId": "970f6b2e-6517-480a-9ea5-c1b899836e8e",
-          "sourceAttachment": "end",
-          "targetAttachment": "start",
-          "annotation": ""
-        }
-      ]
-    },
-    {
-      "id": "b4768f0a-2492-44a0-9c8e-e47fc97edb91",
-      "title": "The slave population in the American South is expanding exponentially",
-      "startYear": 1700,
-      "endYear": 1860,
-      "spanType": "Politics",
-      "subEvents": [],
-      "causalImpacts": []
-    },
-    {
-      "id": "3541137a-449d-48e0-a0f9-a37b59e12834",
-      "title": "The Manhattan Project",
-      "startYear": 1942,
-      "endYear": 1945,
-      "spanType": "Technology",
-      "subEvents": [],
-      "causalImpacts": []
-    },
-    {
-      "id": "92a00069-b195-4110-8f17-3fc296e69d72",
-      "title": "The World Wide Web",
-      "startYear": 1991,
-      "endYear": "ongoing",
-      "spanType": "Technology",
-      "subEvents": [],
-      "causalImpacts": [
-        {
-          "id": "9f209bbb-20e3-4637-8bba-282dd0bc7ae2",
-          "targetSpanId": "2ba2ed14-c4d4-4bd1-b979-1a093128bd43",
-          "sourceAttachment": "middle",
-          "targetAttachment": "middle",
-          "annotation": ""
-        },
-        {
-          "id": "62769bcb-a1d6-4945-93c0-b2b726e47b16",
-          "targetSpanId": "2c41fc33-fb98-4331-badc-87cdaae1a3d4",
-          "sourceAttachment": "middle",
-          "targetAttachment": "middle",
-          "annotation": ""
-        },
-        {
-          "id": "9793f46c-16c7-4495-9544-55d238761d4b",
-          "targetSpanId": "36fcbf40-1cf1-4cdc-a6f7-774e7c603557",
-          "sourceAttachment": "middle",
-          "targetAttachment": "middle",
-          "annotation": ""
-        }
-      ]
-    },
-    {
-      "id": "791fd834-16a8-4a8b-b1d0-174bc0802149",
-      "title": "Telegraph network build out s-curve",
-      "startYear": 1837,
-      "endYear": 1930,
-      "spanType": "Technology",
-      "subEvents": [],
-      "causalImpacts": []
-    },
-    {
-      "id": "7816cc45-3ab3-45c9-8d99-ff458561b05a",
-      "title": "Wireless radio adoption s-curve",
-      "startYear": 1895,
-      "endYear": 1950,
-      "spanType": "Technology",
-      "subEvents": [
-        {
-          "id": "65a9e650-4ef5-4dcd-a2a4-1d230d7b22aa",
-          "date": 1895,
-          "label": "Marconi successfully sends and receives his first radio signals in Italy"
-        },
-        {
-          "id": "c1e86891-42b9-4464-9b59-ee6197d33562",
-          "date": 1950,
-          "label": "By 1950 ~95% of US households own a radio"
-        }
-      ],
       "causalImpacts": []
     }
   ]

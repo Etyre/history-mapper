@@ -23,7 +23,7 @@ export const initialState: AppState = {
 export function reducer(state: AppState, action: Action): AppState {
   switch (action.type) {
     case 'ADD_SPAN':
-      return { ...state, spans: [...state.spans, newSpan()] };
+      return { ...state, spans: [newSpan(), ...state.spans] };
 
     case 'REMOVE_SPAN':
       return {
@@ -33,6 +33,7 @@ export function reducer(state: AppState, action: Action): AppState {
           .map((s) => ({
             ...s,
             causalImpacts: s.causalImpacts.filter((ci) => ci.targetSpanId !== action.id),
+            continuesAs: s.continuesAs === action.id ? undefined : s.continuesAs,
           })),
       };
 
@@ -114,6 +115,16 @@ export function reducer(state: AppState, action: Action): AppState {
                   ci.id === action.impactId ? { ...ci, ...action.updates } : ci
                 ),
               }
+            : s
+        ),
+      };
+
+    case 'SET_CONTINUES_AS':
+      return {
+        ...state,
+        spans: state.spans.map((s) =>
+          s.id === action.spanId
+            ? { ...s, continuesAs: action.continuesAsId ?? undefined }
             : s
         ),
       };

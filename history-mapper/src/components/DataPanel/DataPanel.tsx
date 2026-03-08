@@ -11,11 +11,16 @@ interface Props {
 
 export function DataPanel({ state, dispatch, selectedSpanId }: Props) {
   const [sortDir, setSortDir] = useState<'asc' | 'desc'>('asc');
+  const [search, setSearch] = useState('');
 
   const handleSort = () => {
     dispatch({ type: 'REORDER_BY_START_DATE', direction: sortDir });
     setSortDir(sortDir === 'asc' ? 'desc' : 'asc');
   };
+
+  const filteredSpans = search.trim()
+    ? state.spans.filter((s) => s.title.toLowerCase().includes(search.toLowerCase()))
+    : state.spans;
 
   return (
     <div className="data-panel">
@@ -27,8 +32,16 @@ export function DataPanel({ state, dispatch, selectedSpanId }: Props) {
           <JsonImportExport state={state} dispatch={dispatch} />
         </div>
       </div>
+      <input
+        type="text"
+        value={search}
+        onChange={(e) => setSearch(e.target.value)}
+        placeholder="Filter spans..."
+        className="title-input"
+        style={{ marginBottom: 8 }}
+      />
       <div className="span-list">
-        {state.spans.map((span) => (
+        {filteredSpans.map((span) => (
           <SpanRow
             key={span.id}
             span={span}

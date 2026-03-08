@@ -6,4 +6,5 @@ export const SPAN_COLORS: Record<SpanType, string> = {
   Politics: '#e74c3c',
   Culture: '#f39c12',
   Subculture: '#9b59b6',
+  Demographics: '#1abc9c',
 };

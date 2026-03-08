@@ -1,4 +1,4 @@
-export type SpanType = 'Economics' | 'Technology' | 'Politics' | 'Culture' | 'Subculture';
+export type SpanType = 'Economics' | 'Technology' | 'Politics' | 'Culture' | 'Subculture' | 'Demographics';
 
 export interface SubEvent {
   id: string;
@@ -24,6 +24,7 @@ export interface Span {
   spanType: SpanType;
   subEvents: SubEvent[];
   causalImpacts: CausalImpact[];
+  continuesAs?: string; // ID of span this transitions into
 }
 
 export type AppState = {
@@ -40,5 +41,6 @@ export type Action =
   | { type: 'ADD_CAUSAL_IMPACT'; spanId: string }
   | { type: 'REMOVE_CAUSAL_IMPACT'; spanId: string; impactId: string }
   | { type: 'UPDATE_CAUSAL_IMPACT'; spanId: string; impactId: string; updates: Partial<Omit<CausalImpact, 'id'>> }
+  | { type: 'SET_CONTINUES_AS'; spanId: string; continuesAsId: string | null }
   | { type: 'REORDER_BY_START_DATE'; direction: 'asc' | 'desc' }
   | { type: 'LOAD_STATE'; state: AppState };
