@@ -1,17 +1,81 @@
 {
   "spans": [
     {
+      "id": "c42b729c-be17-4176-9f18-83ff567fe94e",
+      "title": "Second Trump Admin (US)",
+      "startYear": 2025,
+      "endYear": "ongoing",
+      "spanType": "Politics",
+      "subEvents": [],
+      "causalImpacts": []
+    },
+    {
+      "id": "867cdaa2-c377-46f9-9acf-3c93e5398008",
+      "title": "The Singularity",
+      "startYear": 2022,
+      "endYear": "ongoing",
+      "spanType": "Technology",
+      "subEvents": [
+        {
+          "id": "5d509d94-6859-4eeb-9144-515ab057c3d7",
+          "date": 2022,
+          "label": "ChatGPT launched"
+        },
+        {
+          "id": "8615a051-a5c6-4fd7-95f0-53c96f5de3bb",
+          "date": 2023,
+          "label": "GPT-4 launched"
+        },
+        {
+          "id": "609838e9-4311-40f3-9977-41cfc6e075af",
+          "date": 2024,
+          "label": "o1 anounced"
+        },
+        {
+          "id": "ff1f5f0d-74e8-405c-bb86-a3f5fee19166",
+          "date": 2026,
+          "label": "Agentic coding begins to really work with the release Claude Opus 4.5"
+        }
+      ],
+      "causalImpacts": []
+    },
+    {
       "id": "0a2ebfc1-552b-451f-b0b9-798acb4cfa18",
       "title": "Covid-19 Pandemic and Lockdowns",
       "startYear": 2020,
       "endYear": 2021,
       "spanType": "Politics",
       "subEvents": [],
-      "causalImpacts": []
+      "causalImpacts": [
+        {
+          "id": "d893130d-4e8d-447d-9400-ab8a915f3e44",
+          "targetSpanId": "8a7878af-21d7-44ee-82ab-d5ff8259b585",
+          "sourceAttachment": "middle",
+          "targetAttachment": 2020,
+          "annotation": "CFAR stops running workshops due to covid"
+        }
+      ]
+    },
+    {
+      "id": "3541e9a9-f7cf-4365-80b6-2311883146e7",
+      "title": "First Trump Admin (US)",
+      "startYear": 2017,
+      "endYear": 2021,
+      "spanType": "Politics",
+      "subEvents": [],
+      "causalImpacts": [
+        {
+          "id": "1589bb33-9570-4636-83a3-058b00ce6e0f",
+          "targetSpanId": "c42b729c-be17-4176-9f18-83ff567fe94e",
+          "sourceAttachment": "end",
+          "targetAttachment": "start",
+          "annotation": ""
+        }
+      ]
     },
     {
       "id": "467cf973-ce34-483f-a496-fab0c4fc2651",
-      "title": "The Deep Learning Revolution is quietly underway",
+      "title": "The Deep Learning revolution is quietly underway",
       "startYear": 2012,
       "endYear": 2020,
       "spanType": "Technology",
@@ -50,7 +114,7 @@
     {
       "id": "caeee581-afd3-451d-bf68-a96d033ed042",
       "title": "Effective Altruism",
-      "startYear": 2010,
+      "startYear": 2009,
       "endYear": "ongoing",
       "spanType": "Subculture",
       "subEvents": [
@@ -73,6 +137,11 @@
           "id": "a93e9675-9c75-4053-9bdb-d35542407749",
           "date": 2022,
           "label": "FTX is revealed to have stolen customer deposits and collapses; EA's public perception declines "
+        },
+        {
+          "id": "4541678f-d10f-453f-ac6e-e7d950384df0",
+          "date": 2009,
+          "label": "The first people take the giving what we can pledge"
         }
       ],
       "causalImpacts": []
@@ -108,7 +177,7 @@
     },
     {
       "id": "8a7878af-21d7-44ee-82ab-d5ff8259b585",
-      "title": "The LessWrong and Bay Area Rationality Community",
+      "title": "The LessWrong and Bay Area Rationality Community is growing",
       "startYear": 2007,
       "endYear": 2021,
       "spanType": "Subculture",
@@ -121,7 +190,7 @@
         {
           "id": "1bd40b61-9256-4383-94c0-2bc00a6fb0af",
           "date": 2009,
-          "label": "Yudkowsky finishes the Sequences"
+          "label": "LessWrong started, Yudkowsky finishes the Sequences"
         },
         {
           "id": "9d12163a-52dd-4fb3-ad86-28e5e2107033",
@@ -147,9 +216,18 @@
           "targetSpanId": "867cdaa2-c377-46f9-9acf-3c93e5398008",
           "sourceAttachment": "middle",
           "targetAttachment": "middle",
-          "annotation": "The ideas that Yudkowsky promoted, and which were discussed on LessWrong lead to the founding of OpenAI"
+          "annotation": "The ideas that Yudkowsky promoted, and which were discussed on LessWrong, lead directly to the founding of OpenAI: Elon Musk reads Superintelligence and attends the Puerto Rico conference, and then founds OpenAI with Sam Altman as a counterweight to Google DeepMind"
         }
       ]
+    },
+    {
+      "id": "36f682d3-8f64-4abd-8fb3-fad3023633fa",
+      "title": "Twitter",
+      "startYear": 2006,
+      "endYear": "ongoing",
+      "spanType": "Culture",
+      "subEvents": [],
+      "causalImpacts": []
     },
     {
       "id": "36fcbf40-1cf1-4cdc-a6f7-774e7c603557",
@@ -203,8 +281,8 @@
     },
     {
       "id": "2ba2ed14-c4d4-4bd1-b979-1a093128bd43",
-      "title": "The Open Web / The Golden Age of Blogging",
-      "startYear": 2000,
+      "title": "the heyday of the Open Web (and the Golden Age of Blogging)",
+      "startYear": 2002,
       "endYear": 2015,
       "spanType": "Culture",
       "subEvents": [],
@@ -214,6 +292,30 @@
           "targetSpanId": "8a7878af-21d7-44ee-82ab-d5ff8259b585",
           "sourceAttachment": "middle",
           "targetAttachment": "middle",
+          "annotation": ""
+        },
+        {
+          "id": "1279e799-b4b5-44c6-b2ea-263491c0a91a",
+          "targetSpanId": "caeee581-afd3-451d-bf68-a96d033ed042",
+          "sourceAttachment": "middle",
+          "targetAttachment": "middle",
+          "annotation": ""
+        }
+      ]
+    },
+    {
+      "id": "ea393c3d-79bf-46e8-9995-c33a473f2265",
+      "title": "9/11 and aftermath",
+      "startYear": 2001,
+      "endYear": 2002,
+      "spanType": "Politics",
+      "subEvents": [],
+      "causalImpacts": [
+        {
+          "id": "b65ce57b-442a-4595-9247-346f65bc9659",
+          "targetSpanId": "27f1f023-05ec-40fb-894b-e594e45a66bd",
+          "sourceAttachment": "end",
+          "targetAttachment": "start",
           "annotation": ""
         }
       ]
@@ -232,6 +334,62 @@
         }
       ],
       "causalImpacts": []
+    },
+    {
+      "id": "2c41fc33-fb98-4331-badc-87cdaae1a3d4",
+      "title": "Google's search business model",
+      "startYear": 2000,
+      "endYear": 2023,
+      "spanType": "Economics",
+      "subEvents": [
+        {
+          "id": "7556c274-8653-4e91-a5fb-52a0e97a4c4f",
+          "date": 2000,
+          "label": "Google Adwords is introduced"
+        }
+      ],
+      "causalImpacts": [
+        {
+          "id": "567bef35-ef90-46db-9bc4-61aefd61d748",
+          "targetSpanId": "2ba2ed14-c4d4-4bd1-b979-1a093128bd43",
+          "sourceAttachment": "middle",
+          "targetAttachment": "middle",
+          "annotation": ""
+        }
+      ]
+    },
+    {
+      "id": "fc66c95c-ce5b-4b10-a55c-736b6db571f7",
+      "title": "The Extropians",
+      "startYear": 1988,
+      "endYear": 2004,
+      "spanType": "Subculture",
+      "subEvents": [
+        {
+          "id": "12b934d8-3903-4773-9896-3bfee5a1ed90",
+          "date": 1988,
+          "label": "Max More and Tom Morrow coined \"Extropy\" and founded the Extropy Institute"
+        },
+        {
+          "id": "db77d26d-e9d0-44de-b87f-69759bed4189",
+          "date": 1989,
+          "label": "Extropy magazine launched"
+        },
+        {
+          "id": "b864d015-371b-4df3-9491-8099867eaea8",
+          "date": 2006,
+          "label": "Extropy Institute formally dissolved"
+        }
+      ],
+      "causalImpacts": [
+        {
+          "id": "fb95ad01-db1a-45eb-a87e-f81f7efdb71e",
+          "targetSpanId": "8a7878af-21d7-44ee-82ab-d5ff8259b585",
+          "sourceAttachment": "end",
+          "targetAttachment": "start",
+          "annotation": ""
+        }
+      ]
     },
     {
       "id": "b7d4c772-f631-48f2-a125-7711b2273a46",
@@ -258,6 +416,13 @@
           "sourceAttachment": "end",
           "targetAttachment": "start",
           "annotation": ""
+        },
+        {
+          "id": "2b1b7cb5-b3d1-4fad-8a64-136cacdc268a",
+          "targetSpanId": "92a00069-b195-4110-8f17-3fc296e69d72",
+          "sourceAttachment": "middle",
+          "targetAttachment": "middle",
+          "annotation": ""
         }
       ]
     },
@@ -275,6 +440,23 @@
           "sourceAttachment": "middle",
           "targetAttachment": "middle",
           "annotation": ""
+        }
+      ]
+    },
+    {
+      "id": "18279e61-e302-4495-89c9-ae1df8c0d5cc",
+      "title": "The Apollo Progam",
+      "startYear": 1961,
+      "endYear": 1972,
+      "spanType": "Technology",
+      "subEvents": [],
+      "causalImpacts": [
+        {
+          "id": "20704166-f2c7-41cc-bd9d-5b4e73ba7581",
+          "targetSpanId": "ff50f5fb-e680-4305-9319-3b01b32950b7",
+          "sourceAttachment": 1962,
+          "targetAttachment": 1964,
+          "annotation": "Between 1962 and 1965, Apollo was the world's largest Integrated Circuit customer "
         }
       ]
     },
@@ -403,6 +585,13 @@
           "sourceAttachment": "end",
           "targetAttachment": "middle",
           "annotation": "The US Fed keeps interest rates low to help with the paying back of war debts"
+        },
+        {
+          "id": "4baedb2e-471e-4e63-bebd-2b76fa9aa27d",
+          "targetSpanId": "3541137a-449d-48e0-a0f9-a37b59e12834",
+          "sourceAttachment": "middle",
+          "targetAttachment": "start",
+          "annotation": ""
         }
       ]
     },
@@ -434,13 +623,47 @@
       "causalImpacts": []
     },
     {
+      "id": "3cfe1e85-c117-4fd4-8565-cab1d38ad34c",
+      "title": "Recession following the panic of 1873 [US]",
+      "startYear": 1873,
+      "endYear": 1879,
+      "spanType": "Economics",
+      "subEvents": [],
+      "causalImpacts": [
+        {
+          "id": "58869bde-22fe-49be-ad48-cdcc92cfe87e",
+          "targetSpanId": "7f8f02c7-209a-4636-89b5-3a5f82ab42bf",
+          "sourceAttachment": "middle",
+          "targetAttachment": "end",
+          "annotation": "The economic crash of the made it hard to garner support for progressive agendas in the South."
+        }
+      ]
+    },
+    {
+      "id": "7f8f02c7-209a-4636-89b5-3a5f82ab42bf",
+      "title": "Reconstruction era",
+      "startYear": 1865,
+      "endYear": 1876,
+      "spanType": "Politics",
+      "subEvents": [],
+      "causalImpacts": []
+    },
+    {
       "id": "bc444142-438c-4c0e-8b9a-e5a36966e868",
       "title": "The American Civil War",
       "startYear": 1861,
       "endYear": 1865,
       "spanType": "Politics",
       "subEvents": [],
-      "causalImpacts": []
+      "causalImpacts": [
+        {
+          "id": "40349388-0ae8-423a-b130-acfb6e91e2a0",
+          "targetSpanId": "7f8f02c7-209a-4636-89b5-3a5f82ab42bf",
+          "sourceAttachment": "end",
+          "targetAttachment": "start",
+          "annotation": ""
+        }
+      ]
     },
     {
       "id": "3ed566fc-46b7-4669-bdac-5ff876bd6b5a",
@@ -469,30 +692,22 @@
       ]
     },
     {
-      "id": "b4768f0a-2492-44a0-9c8e-e47fc97edb91",
-      "title": "The slave population in the American South is expanding exponentially",
-      "startYear": 1700,
-      "endYear": 1860,
-      "spanType": "Politics",
+      "id": "124524e6-f23e-4641-9687-19aed7c9950d",
+      "title": "US total fertility declining",
+      "startYear": 1800,
+      "endYear": "ongoing",
+      "spanType": "Culture",
       "subEvents": [],
       "causalImpacts": []
     },
     {
-      "id": "2c41fc33-fb98-4331-badc-87cdaae1a3d4",
-      "title": "Google's search business model",
-      "startYear": 2000,
-      "endYear": 2023,
-      "spanType": "Economics",
+      "id": "122043b1-6fdf-4540-8c81-7f2f3f98a8ec",
+      "title": "The French Revolution",
+      "startYear": 1789,
+      "endYear": 1799,
+      "spanType": "Politics",
       "subEvents": [],
-      "causalImpacts": [
-        {
-          "id": "567bef35-ef90-46db-9bc4-61aefd61d748",
-          "targetSpanId": "2ba2ed14-c4d4-4bd1-b979-1a093128bd43",
-          "sourceAttachment": "middle",
-          "targetAttachment": "middle",
-          "annotation": ""
-        }
-      ]
+      "causalImpacts": []
     },
     {
       "id": "970f6b2e-6517-480a-9ea5-c1b899836e8e",
@@ -521,60 +736,99 @@
       ]
     },
     {
-      "id": "867cdaa2-c377-46f9-9acf-3c93e5398008",
-      "title": "The Singularity",
-      "startYear": 2022,
-      "endYear": "ongoing",
-      "spanType": "Technology",
-      "subEvents": [
+      "id": "0bfce399-5d4f-4aac-a7d4-ef2e7dd29246",
+      "title": "The Seven Years War",
+      "startYear": 1756,
+      "endYear": 1763,
+      "spanType": "Politics",
+      "subEvents": [],
+      "causalImpacts": [
         {
-          "id": "5d509d94-6859-4eeb-9144-515ab057c3d7",
-          "date": 2022,
-          "label": "ChatGPT launched"
-        },
-        {
-          "id": "8615a051-a5c6-4fd7-95f0-53c96f5de3bb",
-          "date": 2023,
-          "label": "GPT-4 launched"
-        },
-        {
-          "id": "609838e9-4311-40f3-9977-41cfc6e075af",
-          "date": 2024,
-          "label": "o1 anounced"
-        },
-        {
-          "id": "ff1f5f0d-74e8-405c-bb86-a3f5fee19166",
-          "date": 2026,
-          "label": "Agentic coding begins to work with Claude Opus 4.5"
+          "id": "44c7e72b-7615-4f4d-bc16-11e11bc503e6",
+          "targetSpanId": "970f6b2e-6517-480a-9ea5-c1b899836e8e",
+          "sourceAttachment": "end",
+          "targetAttachment": "start",
+          "annotation": ""
         }
-      ],
-      "causalImpacts": []
+      ]
     },
     {
-      "id": "122043b1-6fdf-4540-8c81-7f2f3f98a8ec",
-      "title": "The French Revolution",
-      "startYear": 1789,
-      "endYear": 1799,
+      "id": "b4768f0a-2492-44a0-9c8e-e47fc97edb91",
+      "title": "The slave population in the American South is expanding exponentially",
+      "startYear": 1700,
+      "endYear": 1860,
       "spanType": "Politics",
       "subEvents": [],
       "causalImpacts": []
     },
     {
-      "id": "18279e61-e302-4495-89c9-ae1df8c0d5cc",
-      "title": "The Apollo Progam",
-      "startYear": 1961,
-      "endYear": 1972,
+      "id": "3541137a-449d-48e0-a0f9-a37b59e12834",
+      "title": "The Manhattan Project",
+      "startYear": 1942,
+      "endYear": 1945,
+      "spanType": "Technology",
+      "subEvents": [],
+      "causalImpacts": []
+    },
+    {
+      "id": "92a00069-b195-4110-8f17-3fc296e69d72",
+      "title": "The World Wide Web",
+      "startYear": 1991,
+      "endYear": "ongoing",
       "spanType": "Technology",
       "subEvents": [],
       "causalImpacts": [
         {
-          "id": "20704166-f2c7-41cc-bd9d-5b4e73ba7581",
-          "targetSpanId": "ff50f5fb-e680-4305-9319-3b01b32950b7",
+          "id": "9f209bbb-20e3-4637-8bba-282dd0bc7ae2",
+          "targetSpanId": "2ba2ed14-c4d4-4bd1-b979-1a093128bd43",
           "sourceAttachment": "middle",
           "targetAttachment": "middle",
-          "annotation": "One of Fairchild Semiconductor's early contracts was with NASA for the Apollo guidance computer"
+          "annotation": ""
+        },
+        {
+          "id": "62769bcb-a1d6-4945-93c0-b2b726e47b16",
+          "targetSpanId": "2c41fc33-fb98-4331-badc-87cdaae1a3d4",
+          "sourceAttachment": "middle",
+          "targetAttachment": "middle",
+          "annotation": ""
+        },
+        {
+          "id": "9793f46c-16c7-4495-9544-55d238761d4b",
+          "targetSpanId": "36fcbf40-1cf1-4cdc-a6f7-774e7c603557",
+          "sourceAttachment": "middle",
+          "targetAttachment": "middle",
+          "annotation": ""
         }
       ]
+    },
+    {
+      "id": "791fd834-16a8-4a8b-b1d0-174bc0802149",
+      "title": "Telegraph network build out s-curve",
+      "startYear": 1837,
+      "endYear": 1930,
+      "spanType": "Technology",
+      "subEvents": [],
+      "causalImpacts": []
+    },
+    {
+      "id": "7816cc45-3ab3-45c9-8d99-ff458561b05a",
+      "title": "Wireless radio adoption s-curve",
+      "startYear": 1895,
+      "endYear": 1950,
+      "spanType": "Technology",
+      "subEvents": [
+        {
+          "id": "65a9e650-4ef5-4dcd-a2a4-1d230d7b22aa",
+          "date": 1895,
+          "label": "Marconi successfully sends and receives his first radio signals in Italy"
+        },
+        {
+          "id": "c1e86891-42b9-4464-9b59-ee6197d33562",
+          "date": 1950,
+          "label": "By 1950 ~95% of US households own a radio"
+        }
+      ],
+      "causalImpacts": []
     }
   ]
 }

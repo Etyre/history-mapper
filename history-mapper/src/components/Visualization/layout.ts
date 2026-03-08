@@ -12,7 +12,7 @@ export interface LayoutSpan {
 export const SPAN_WIDTH = 80;
 const COL_PADDING = 16;
 export const COL_WIDTH = SPAN_WIDTH + COL_PADDING;
-export const NUM_COLUMNS = 15;
+export const NUM_COLUMNS = 30;
 const CURRENT_YEAR = new Date().getFullYear();
 const ONGOING_OVERFLOW_PX = 15;
 

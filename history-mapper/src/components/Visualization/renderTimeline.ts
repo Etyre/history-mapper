@@ -85,7 +85,7 @@ export function renderTimeline(
     .attr('x2', width - 10)
     .attr('y1', (d) => yScale(d))
     .attr('y2', (d) => yScale(d))
-    .attr('stroke', '#e0e0e0')
+    .attr('stroke', '#2f2f48')
     .attr('stroke-width', 1);
 
   axisG
