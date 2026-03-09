@@ -14,6 +14,7 @@ export interface CausalImpact {
   sourceAttachment: AttachmentPoint;
   targetAttachment: AttachmentPoint;
   annotation: string;
+  bidirectional?: boolean;
 }
 
 export interface Span {

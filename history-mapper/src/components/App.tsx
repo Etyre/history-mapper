@@ -91,6 +91,7 @@ export default function App() {
   const loaded = useRef(false);
   const [layoutKey, setLayoutKey] = useState(0);
   const [selectedSpanId, setSelectedSpanId] = useState<string | null>(null);
+  const [selectionSeq, setSelectionSeq] = useState(0);
 
   const dispatch = useCallback((action: Action) => {
     undoDispatch(action);
@@ -107,11 +108,34 @@ export default function App() {
   }, []);
 
   // Save to disk on every state change (after initial load)
+  const lastSavedJson = useRef<string>('');
   useEffect(() => {
     if (loaded.current) {
+      const json = JSON.stringify(state);
+      lastSavedJson.current = json;
       saveToDisk(state);
     }
   }, [state]);
+
+  // Poll for external file changes (e.g. from Claude editing data.json)
+  useEffect(() => {
+    const interval = setInterval(async () => {
+      if (!loaded.current) return;
+      try {
+        const res = await fetch('/api/data');
+        if (!res.ok) return;
+        const json = await res.text();
+        if (json !== lastSavedJson.current) {
+          const data = JSON.parse(json);
+          if (data.spans && Array.isArray(data.spans)) {
+            lastSavedJson.current = json;
+            undoDispatch({ type: 'LOAD_STATE', state: data });
+          }
+        }
+      } catch { /* ignore */ }
+    }, 2000);
+    return () => clearInterval(interval);
+  }, []);
 
   // Ctrl+Z / Ctrl+Shift+Z keyboard shortcuts
   useEffect(() => {
@@ -139,8 +163,11 @@ export default function App() {
         </div>
       </header>
       <div className="app-body">
-        <DataPanel state={state} dispatch={dispatch} selectedSpanId={selectedSpanId} />
-        <Visualization spans={state.spans} layoutKey={layoutKey} onSpanClick={setSelectedSpanId} />
+        <DataPanel state={state} dispatch={dispatch} selectedSpanId={selectedSpanId} onSpanSelect={(id) => {
+          setSelectedSpanId(id);
+          setSelectionSeq((s) => s + 1);
+        }} />
+        <Visualization spans={state.spans} layoutKey={layoutKey} onSpanClick={setSelectedSpanId} selectedSpanId={selectedSpanId} selectionSeq={selectionSeq} />
       </div>
     </div>
   );

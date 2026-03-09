@@ -11,9 +11,11 @@ interface Props {
   allSpans: Span[];
   dispatch: React.Dispatch<Action>;
   forceExpanded?: boolean;
+  isSelected?: boolean;
+  onSelect?: (spanId: string) => void;
 }
 
-export function SpanRow({ span, allSpans, dispatch, forceExpanded }: Props) {
+export function SpanRow({ span, allSpans, dispatch, forceExpanded, isSelected, onSelect }: Props) {
   const [expanded, setExpanded] = useState(false);
   const rowRef = useRef<HTMLDivElement>(null);
 
@@ -58,8 +60,8 @@ export function SpanRow({ span, allSpans, dispatch, forceExpanded }: Props) {
     : span.endYear === 'ongoing' ? 'ongoing' : String(span.endYear);
 
   return (
-    <div ref={rowRef} className="span-row" style={{ borderLeft: `4px solid ${SPAN_COLORS[span.spanType]}` }}>
-      <div className="span-row-main">
+    <div ref={rowRef} className={`span-row${isSelected ? ' selected' : ''}`} style={{ borderLeft: `4px solid ${SPAN_COLORS[span.spanType]}` }}>
+      <div className="span-row-main" onClick={() => onSelect?.(span.id)}>
         <input
           type="text"
           value={span.title}

@@ -132,6 +132,12 @@ body {
   padding: 8px;
 }
 
+.span-row.selected {
+  background: #e8f0fe;
+  border-color: #4285f4;
+  box-shadow: 0 0 0 1px #4285f4;
+}
+
 .span-row-main {
   display: flex;
   align-items: center;
@@ -275,6 +281,8 @@ body {
 .visualization svg {
   display: block;
   min-height: 100%;
+  transform: scale(0.5);
+  transform-origin: top left;
 }
 
 .tooltip {
@@ -291,6 +299,10 @@ body {
   white-space: pre-wrap;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5);
   border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.tooltip.pinned {
+  pointer-events: auto;
 }
 
 .tooltip a {

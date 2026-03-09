@@ -7,9 +7,10 @@ interface Props {
   state: AppState;
   dispatch: React.Dispatch<Action>;
   selectedSpanId?: string | null;
+  onSpanSelect?: (spanId: string) => void;
 }
 
-export function DataPanel({ state, dispatch, selectedSpanId }: Props) {
+export function DataPanel({ state, dispatch, selectedSpanId, onSpanSelect }: Props) {
   const [sortDir, setSortDir] = useState<'asc' | 'desc'>('asc');
   const [search, setSearch] = useState('');
 
@@ -48,6 +49,8 @@ export function DataPanel({ state, dispatch, selectedSpanId }: Props) {
             allSpans={state.spans}
             dispatch={dispatch}
             forceExpanded={span.id === selectedSpanId}
+            isSelected={span.id === selectedSpanId}
+            onSelect={onSpanSelect}
           />
         ))}
         {state.spans.length === 0 && <p className="empty-message">No spans yet. Click "+ Add Span" to get started.</p>}

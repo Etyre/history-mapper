@@ -1,5 +1,5 @@
 import type { Span } from '../../types';
-import { renderTimeline } from './renderTimeline';
+import { renderTimeline, type RenderResult } from './renderTimeline';
 import { getYearExtent } from '../../utils/yearScale';
 import { NUM_COLUMNS, COL_WIDTH } from './layout';
 import { useRef, useEffect, useState } from 'react';
@@ -13,15 +13,18 @@ interface Props {
   spans: Span[];
   layoutKey?: number;
   onSpanClick?: (spanId: string) => void;
+  selectedSpanId?: string | null;
+  selectionSeq?: number;
 }
 
-export function Visualization({ spans, layoutKey, onSpanClick }: Props) {
+export function Visualization({ spans, layoutKey, onSpanClick, selectedSpanId, selectionSeq }: Props) {
   const svgRef = useRef<SVGSVGElement>(null);
   const tooltipRef = useRef<HTMLDivElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
   const [svgHeight, setSvgHeight] = useState(800);
   const onSpanClickRef = useRef(onSpanClick);
   onSpanClickRef.current = onSpanClick;
+  const renderResultRef = useRef<RenderResult | null>(null);
 
   // Calculate SVG height: enough to fit all spans at a readable density
   useEffect(() => {
@@ -34,11 +37,20 @@ export function Visualization({ spans, layoutKey, onSpanClick }: Props) {
 
   useEffect(() => {
     if (svgRef.current && tooltipRef.current) {
-      renderTimeline(svgRef.current, spans, tooltipRef.current, (spanId) => {
+      const result = renderTimeline(svgRef.current, spans, tooltipRef.current, (spanId) => {
         onSpanClickRef.current?.(spanId);
-      }, layoutKey);
+      }, layoutKey, containerRef.current);
+      renderResultRef.current = result ?? null;
+      return result?.cleanup ?? undefined;
     }
   }, [spans, svgHeight, layoutKey]);
+
+  // When selectedSpanId changes (from DataPanel click), highlight and scroll
+  useEffect(() => {
+    if (selectedSpanId && renderResultRef.current) {
+      renderResultRef.current.selectSpan(selectedSpanId);
+    }
+  }, [selectedSpanId, selectionSeq]);
 
   // Re-render on resize
   useEffect(() => {

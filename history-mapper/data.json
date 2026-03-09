@@ -1,6 +1,225 @@
 {
   "spans": [
     {
+      "id": "mass-electricity-adoption",
+      "title": "Mass adoption of electricity and electric lighting",
+      "startYear": 1900,
+      "endYear": 1950,
+      "spanType": "Technology",
+      "subEvents": [
+        {
+          "id": "elec-1907",
+          "date": 1907,
+          "label": "8% of US homes have electricity"
+        },
+        {
+          "id": "elec-1910",
+          "date": 1910,
+          "label": "14% of US homes wired (1 in 7); tungsten filament bulbs replace carbon"
+        },
+        {
+          "id": "elec-1920",
+          "date": 1920,
+          "label": "35% of US homes electrified"
+        },
+        {
+          "id": "elec-1929",
+          "date": 1929,
+          "label": "68% of US homes electrified; electricity provides 75% of manufacturing horsepower"
+        },
+        {
+          "id": "elec-1930",
+          "date": 1930,
+          "label": "83% of urban homes but only 10% of rural homes have electricity"
+        },
+        {
+          "id": "elec-1936",
+          "date": 1936,
+          "label": "Rural Electrification Act enacted; 90% of farms still lack electric power"
+        },
+        {
+          "id": "elec-1950",
+          "date": 1950,
+          "label": "90%+ of US farms have electricity"
+        }
+      ],
+      "causalImpacts": []
+    },
+    {
+      "id": "ag-mechanization",
+      "title": "Agriculture becoming mechanized",
+      "startYear": 1831,
+      "endYear": 1960,
+      "spanType": "Technology",
+      "subEvents": [
+        {
+          "id": "ag-1831",
+          "date": 1831,
+          "label": "McCormick demonstrates mechanical reaper"
+        },
+        {
+          "id": "ag-1834",
+          "date": 1834,
+          "label": "McCormick patents reaper; Hussey patents rival design (1833)"
+        },
+        {
+          "id": "ag-1836",
+          "date": 1836,
+          "label": "Hiram Moore builds first combine harvester (reap + thresh)"
+        },
+        {
+          "id": "ag-1837",
+          "date": 1837,
+          "label": "John Deere develops steel plow (can break prairie sod); Pitts brothers patent improved threshing machine"
+        },
+        {
+          "id": "ag-1842",
+          "date": 1842,
+          "label": "Dart & Dunbar invent grain elevator in Buffalo (1,000 bushels/hr)"
+        },
+        {
+          "id": "ag-1851",
+          "date": 1851,
+          "label": "Reapers in widespread adoption; McCormick producing 1,000/yr"
+        },
+        {
+          "id": "ag-1857",
+          "date": 1857,
+          "label": "John Deere producing 10,000 steel plows/yr"
+        },
+        {
+          "id": "ag-1859",
+          "date": 1859,
+          "label": "~50,000 reapers in use across the US"
+        },
+        {
+          "id": "ag-1860",
+          "date": 1860,
+          "label": "~60% of farms using mechanical threshing"
+        },
+        {
+          "id": "ag-1892",
+          "date": 1892,
+          "label": "John Froelich invents first gasoline-powered tractor"
+        },
+        {
+          "id": "ag-1899",
+          "date": 1899,
+          "label": "Manure spreader patented (1 person replaces 5+)"
+        },
+        {
+          "id": "ag-1909",
+          "date": 1909,
+          "label": "Mechanical corn pickers become available"
+        },
+        {
+          "id": "ag-1918",
+          "date": 1918,
+          "label": "Ford Fordson tractor: first mass-produced, affordable tractor"
+        },
+        {
+          "id": "ag-1920",
+          "date": 1920,
+          "label": "25.2M horses/mules on farms; 246K tractors"
+        },
+        {
+          "id": "ag-1930",
+          "date": 1930,
+          "label": "75,000 combines in US; 920K tractors vs 18.9M horses"
+        },
+        {
+          "id": "ag-1940",
+          "date": 1940,
+          "label": "Pick-up hay balers become reality; 1.57M tractors vs 13.9M horses"
+        },
+        {
+          "id": "ag-1944",
+          "date": 1944,
+          "label": "International Harvester produces first commercial mechanical cotton picker"
+        },
+        {
+          "id": "ag-1950",
+          "date": 1950,
+          "label": "Tractors (3.25M) outnumber horses/mules (7.6M); peak tractor production (564K units in 1951)"
+        },
+        {
+          "id": "ag-1959",
+          "date": 1959,
+          "label": "4.49M tractors vs 3.0M horses; mechanization largely complete"
+        },
+        {
+          "id": "ag-1960",
+          "date": 1960,
+          "label": "Mechanical cotton picking reaches 96% of crop by late 1960s"
+        }
+      ],
+      "causalImpacts": []
+    },
+    {
+      "id": "early-electrification-tech",
+      "title": "Early development of electrification technology",
+      "startYear": 1878,
+      "endYear": 1900,
+      "spanType": "Technology",
+      "subEvents": [
+        {
+          "id": "eelec-1878",
+          "date": 1878,
+          "label": "Joseph Swan publicly demonstrates incandescent carbon lamp in Newcastle"
+        },
+        {
+          "id": "eelec-1879",
+          "date": 1879,
+          "label": "Edison produces incandescent lamp lasting 14+ hours; patents carbon-filament bulb"
+        },
+        {
+          "id": "eelec-1880",
+          "date": 1880,
+          "label": "Wabash, Indiana becomes first town generally lit by electricity (Brush arc lights)"
+        },
+        {
+          "id": "eelec-1882",
+          "date": 1882,
+          "label": "Edison Pearl Street Station opens in NYC (first permanent central power station); Holborn Viaduct station in London"
+        },
+        {
+          "id": "eelec-1884",
+          "date": 1884,
+          "label": "Parsons invents modern steam turbine for electricity generation"
+        },
+        {
+          "id": "eelec-1886",
+          "date": 1886,
+          "label": "William Stanley demonstrates first full AC power system in Great Barrington, MA"
+        },
+        {
+          "id": "eelec-1888",
+          "date": 1888,
+          "label": "Sprague opens first large-scale electric trolley system in Richmond, VA"
+        },
+        {
+          "id": "eelec-1893",
+          "date": 1893,
+          "label": "Westinghouse lights Chicago World Fair with Tesla AC; wins Niagara Falls power contract"
+        },
+        {
+          "id": "eelec-1896",
+          "date": 1896,
+          "label": "AC power transmitted 26 miles from Niagara Falls to Buffalo"
+        }
+      ],
+      "causalImpacts": [
+        {
+          "id": "8e33a4b3-df4e-4d02-a914-25f100f57625",
+          "targetSpanId": "",
+          "sourceAttachment": "middle",
+          "targetAttachment": "middle",
+          "annotation": ""
+        }
+      ],
+      "continuesAs": "mass-electricity-adoption"
+    },
+    {
       "id": "68aab05d-0df9-416c-a572-40ace7225a56",
       "title": "early slow deployment of wireless radio",
       "startYear": 1901,
@@ -124,7 +343,33 @@
       "startYear": 1800,
       "endYear": 1970,
       "spanType": "Culture",
-      "subEvents": [],
+      "subEvents": [
+        {
+          "id": "urb-1790",
+          "date": 1790,
+          "label": "5.1% of US population lives in urban areas"
+        },
+        {
+          "id": "urb-1870",
+          "date": 1870,
+          "label": "26% urban (crossed 25%)"
+        },
+        {
+          "id": "urb-1920",
+          "date": 1920,
+          "label": "51.2% urban (crossed 50%; first urban-majority census)"
+        },
+        {
+          "id": "urb-1990",
+          "date": 1990,
+          "label": "75.2% urban (crossed 75%)"
+        },
+        {
+          "id": "urb-2010",
+          "date": 2010,
+          "label": "80.7% urban (crossed 80%)"
+        }
+      ],
       "causalImpacts": []
     },
     {
@@ -164,9 +409,9 @@
     },
     {
       "id": "3ed566fc-46b7-4669-bdac-5ff876bd6b5a",
-      "title": "The Exponential Part of the Coal Production S-curve",
-      "startYear": 1840,
-      "endYear": 1900,
+      "title": "Global coal production increases by 13x between 1790 and 1913, doubling every 17 years",
+      "startYear": 1850,
+      "endYear": 1913,
       "spanType": "Technology",
       "subEvents": [],
       "causalImpacts": []

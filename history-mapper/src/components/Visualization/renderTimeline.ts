@@ -18,13 +18,19 @@ function structuralKey(spans: Span[], height: number, seed?: number): string {
   }))) + `|${height}|${seed ?? 0}`;
 }
 
+export interface RenderResult {
+  cleanup?: () => void;
+  selectSpan: (spanId: string) => void;
+}
+
 export function renderTimeline(
   svgEl: SVGSVGElement,
   spans: Span[],
   tooltipEl: HTMLDivElement,
   onSpanClick?: (spanId: string) => void,
-  layoutSeed?: number
-) {
+  layoutSeed?: number,
+  containerEl?: HTMLElement | null
+): RenderResult | void {
   const svg = d3.select(svgEl);
   svg.selectAll('*').remove();
 
@@ -42,7 +48,7 @@ export function renderTimeline(
       .attr('text-anchor', 'middle')
       .attr('fill', '#888')
       .text('Add spans to see the timeline');
-    return;
+    return { selectSpan: () => {} };
   }
 
   const yScale = createYearScale(spans, height);
@@ -164,6 +170,33 @@ export function renderTimeline(
     .attr('points', '0 0, 10 3.5, 0 7')
     .attr('fill', '#f0c040');
 
+  // Reverse arrowhead markers (for bidirectional arrows, pointing backward)
+  defs
+    .append('marker')
+    .attr('id', 'arrowhead-reverse')
+    .attr('viewBox', '0 0 10 7')
+    .attr('refX', 0)
+    .attr('refY', 3.5)
+    .attr('markerWidth', 6)
+    .attr('markerHeight', 5)
+    .attr('orient', 'auto')
+    .append('polygon')
+    .attr('points', '10 0, 0 3.5, 10 7')
+    .attr('fill', '#aaa');
+
+  defs
+    .append('marker')
+    .attr('id', 'arrowhead-reverse-highlight')
+    .attr('viewBox', '0 0 10 7')
+    .attr('refX', 0)
+    .attr('refY', 3.5)
+    .attr('markerWidth', 6)
+    .attr('markerHeight', 5)
+    .attr('orient', 'auto')
+    .append('polygon')
+    .attr('points', '10 0, 0 3.5, 10 7')
+    .attr('fill', '#f0c040');
+
   // Arrows (causal impacts)
   // Collect all arrows for rendering
   interface ArrowInfo {
@@ -226,7 +259,7 @@ export function renderTimeline(
   }
 
   // Render arrows
-  const arrowHoverData: { curvePath: string; annotation: string; srcSpanId: string; tgtSpanId: string }[] = [];
+  const arrowHoverData: { curvePath: string; annotation: string; srcSpanId: string; tgtSpanId: string; bidirectional?: boolean }[] = [];
   const arrowsG = svg.append('g').attr('class', 'arrows');
 
   for (const arrow of allArrows) {
@@ -283,7 +316,7 @@ export function renderTimeline(
     const curvePath = `M${srcAnchorX},${srcY} L${tgtAnchorX},${tgtY}`;
 
     // Arrow rendered behind spans
-    arrowsG
+    const basePath = arrowsG
       .append('path')
       .attr('d', curvePath)
       .attr('fill', 'none')
@@ -291,9 +324,12 @@ export function renderTimeline(
       .attr('stroke-width', 2.5)
       .attr('marker-end', 'url(#arrowhead)')
       .attr('class', 'arrow-path');
+    if (ci.bidirectional) {
+      basePath.attr('marker-start', 'url(#arrowhead-reverse)');
+    }
 
     // Store data for hover overlay (rendered on top of everything later)
-    arrowHoverData.push({ curvePath, annotation: ci.annotation, srcSpanId: ls.span.id, tgtSpanId: ci.targetSpanId });
+    arrowHoverData.push({ curvePath, annotation: ci.annotation, srcSpanId: ls.span.id, tgtSpanId: ci.targetSpanId, bidirectional: ci.bidirectional });
   }
 
   // Span rectangles
@@ -569,6 +605,14 @@ export function renderTimeline(
       });
   }
 
+  // Render markdown links in annotation text
+  function renderMarkdown(text: string): string {
+    return text.replace(
+      /\[([^\]]+)\]\(([^)]+)\)/g,
+      '<a href="$2" target="_blank" rel="noopener noreferrer">$1</a>'
+    );
+  }
+
   // Arrow hover overlay — rendered on top of everything
   const arrowOverlayG = svg.append('g').attr('class', 'arrow-overlay');
 
@@ -576,7 +620,21 @@ export function renderTimeline(
   type PathSel = d3.Selection<SVGPathElement, unknown, null, undefined>;
   const overlayPathsBySpan = new Map<string, PathSel[]>();
 
-  for (const { curvePath, annotation, srcSpanId, tgtSpanId } of arrowHoverData) {
+  // Track pinned arrow annotation state
+  let pinnedArrowHitTarget: SVGPathElement | null = null;
+  let pinnedArrowOverlay: PathSel | null = null;
+
+  function unpinArrowAnnotation() {
+    if (pinnedArrowOverlay && !pinnedArrowOverlay.classed('span-pinned')) {
+      pinnedArrowOverlay.attr('opacity', 0);
+    }
+    pinnedArrowHitTarget = null;
+    pinnedArrowOverlay = null;
+    tooltipEl.style.display = 'none';
+    tooltipEl.classList.remove('pinned');
+  }
+
+  for (const { curvePath, annotation, srcSpanId, tgtSpanId, bidirectional } of arrowHoverData) {
     // Highlighted copy (hidden by default)
     const overlayPath = arrowOverlayG
       .append('path')
@@ -587,6 +645,9 @@ export function renderTimeline(
       .attr('marker-end', 'url(#arrowhead-highlight)')
       .attr('opacity', 0)
       .attr('pointer-events', 'none');
+    if (bidirectional) {
+      overlayPath.attr('marker-start', 'url(#arrowhead-reverse-highlight)');
+    }
 
     // Register this overlay path for both source and target spans
     for (const spanId of [srcSpanId, tgtSpanId]) {
@@ -595,7 +656,7 @@ export function renderTimeline(
     }
 
     // Invisible wide hover target on top
-    arrowOverlayG
+    const hitTarget = arrowOverlayG
       .append('path')
       .attr('d', curvePath)
       .attr('fill', 'none')
@@ -604,35 +665,66 @@ export function renderTimeline(
       .attr('cursor', 'pointer')
       .on('mouseenter', (event: MouseEvent) => {
         overlayPath.attr('opacity', 1);
-        if (annotation) {
-          tooltipEl.innerHTML = annotation;
+        if (annotation && pinnedArrowHitTarget !== hitTarget.node()) {
+          tooltipEl.innerHTML = renderMarkdown(annotation);
           tooltipEl.style.display = 'block';
           tooltipEl.style.left = event.clientX + 10 + 'px';
           tooltipEl.style.top = event.clientY + 10 + 'px';
         }
       })
       .on('mousemove', (event: MouseEvent) => {
-        if (annotation) {
+        if (annotation && pinnedArrowHitTarget !== hitTarget.node()) {
           tooltipEl.style.left = event.clientX + 10 + 'px';
           tooltipEl.style.top = event.clientY + 10 + 'px';
         }
       })
       .on('mouseleave', () => {
-        // Only hide if not pinned by a span click
-        if (!overlayPath.classed('pinned')) {
+        // Only hide if not pinned by a span click or arrow click
+        if (!overlayPath.classed('span-pinned') && pinnedArrowHitTarget !== hitTarget.node()) {
           overlayPath.attr('opacity', 0);
         }
-        tooltipEl.style.display = 'none';
+        if (pinnedArrowHitTarget !== hitTarget.node()) {
+          tooltipEl.style.display = 'none';
+        }
+      })
+      .on('click', (event: MouseEvent) => {
+        event.stopPropagation();
+        if (!annotation) return;
+
+        if (pinnedArrowHitTarget === hitTarget.node()) {
+          // Clicking the same arrow again — unpin
+          unpinArrowAnnotation();
+        } else {
+          // Unpin previous, pin this one
+          unpinArrowAnnotation();
+          pinnedArrowHitTarget = hitTarget.node() as SVGPathElement;
+          pinnedArrowOverlay = overlayPath;
+          overlayPath.attr('opacity', 1);
+          tooltipEl.innerHTML = renderMarkdown(annotation);
+          tooltipEl.style.display = 'block';
+          tooltipEl.classList.add('pinned');
+          tooltipEl.style.left = event.clientX + 10 + 'px';
+          tooltipEl.style.top = event.clientY + 10 + 'px';
+        }
       });
   }
+
+  // Dismiss pinned arrow annotation on outside click (SVG or document)
+  const dismissHandler = (event: MouseEvent) => {
+    if (!pinnedArrowHitTarget) return;
+    // Don't dismiss if clicking inside the tooltip (user may be clicking a link)
+    if (tooltipEl.contains(event.target as Node)) return;
+    unpinArrowAnnotation();
+  };
+  document.addEventListener('click', dismissHandler);
 
   // Span click arrow highlighting
   let highlightedSpanId: string | null = null;
 
   function highlightArrowsForSpan(spanId: string | null) {
-    // Unpin all previously pinned arrows
-    arrowOverlayG.selectAll('path.pinned')
-      .classed('pinned', false)
+    // Unpin all previously span-pinned arrows
+    arrowOverlayG.selectAll('path.span-pinned')
+      .classed('span-pinned', false)
       .attr('opacity', 0);
 
     if (spanId) {
@@ -640,7 +732,7 @@ export function renderTimeline(
       for (const id of ids) {
         const paths = overlayPathsBySpan.get(id) ?? [];
         for (const p of paths) {
-          p.classed('pinned', true).attr('opacity', 1);
+          p.classed('span-pinned', true).attr('opacity', 1);
         }
       }
     }
@@ -655,5 +747,31 @@ export function renderTimeline(
       highlightedSpanId = spanId;
       highlightArrowsForSpan(spanId);
     }
+  };
+
+  // selectSpan: highlight arrows and scroll into view (for external callers)
+  const selectSpan = (spanId: string) => {
+    // Always highlight (non-toggle: clear old, set new)
+    highlightedSpanId = spanId;
+    highlightArrowsForSpan(spanId);
+
+    // Scroll the span rect into view within the container
+    if (containerEl) {
+      const ls = layoutMap.get(spanId);
+      if (ls) {
+        const spanMidY = ls.y + ls.height / 2;
+        const containerHeight = containerEl.clientHeight;
+        const scrollTarget = spanMidY - containerHeight / 2;
+        containerEl.scrollTo({ top: scrollTarget, behavior: 'smooth' });
+      }
+    }
+  };
+
+  // Return cleanup function and selectSpan
+  return {
+    cleanup: () => {
+      document.removeEventListener('click', dismissHandler);
+    },
+    selectSpan,
   };
 }

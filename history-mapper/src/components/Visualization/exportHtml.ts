@@ -84,10 +84,14 @@ export function exportStandaloneHtml(state: AppState) {
     svg.append('text').attr('x',5).attr('y',yScale(y)+4).attr('fill','#888').attr('font-size',11).text(y);
   }
 
-  // Arrow marker
-  svg.append('defs').append('marker').attr('id','ah').attr('viewBox','0 0 10 7')
+  // Arrow markers
+  const exportDefs = svg.append('defs');
+  exportDefs.append('marker').attr('id','ah').attr('viewBox','0 0 10 7')
     .attr('refX',10).attr('refY',3.5).attr('markerWidth',8).attr('markerHeight',6).attr('orient','auto')
     .append('polygon').attr('points','0 0,10 3.5,0 7').attr('fill','#888');
+  exportDefs.append('marker').attr('id','ah-rev').attr('viewBox','0 0 10 7')
+    .attr('refX',0).attr('refY',3.5).attr('markerWidth',8).attr('markerHeight',6).attr('orient','auto')
+    .append('polygon').attr('points','10 0,0 3.5,10 7').attr('fill','#888');
 
   // Arrows
   for (const ls of layoutMap.values()) {
@@ -102,9 +106,13 @@ export function exportStandaloneHtml(state: AppState) {
       const p = svg.append('path')
         .attr('d', 'M'+sex+','+sy+' C'+(sex+(tex-sex)*0.5)+','+my+' '+(tex-(tex-sex)*0.5)+','+my+' '+tex+','+ty)
         .attr('fill','none').attr('stroke','#888').attr('stroke-width',1.5).attr('marker-end','url(#ah)');
+      if (ci.bidirectional) {
+        p.attr('marker-start','url(#ah-rev)');
+      }
       if (ci.annotation) {
+        const rendered = ci.annotation.replace(/\\[([^\\]]+)\\]\\(([^)]+)\\)/g, '<a href="$2" target="_blank" rel="noopener noreferrer">$1</a>');
         p.attr('stroke-width',3).attr('cursor','pointer')
-          .on('mouseenter', e => { tooltip.innerHTML = ci.annotation; tooltip.style.display='block'; tooltip.style.left=e.pageX+10+'px'; tooltip.style.top=e.pageY+10+'px'; })
+          .on('mouseenter', e => { tooltip.innerHTML = rendered; tooltip.style.display='block'; tooltip.style.left=e.pageX+10+'px'; tooltip.style.top=e.pageY+10+'px'; })
           .on('mousemove', e => { tooltip.style.left=e.pageX+10+'px'; tooltip.style.top=e.pageY+10+'px'; })
           .on('mouseleave', () => { tooltip.style.display='none'; });
       }
