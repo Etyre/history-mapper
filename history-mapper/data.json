@@ -1,6 +1,60 @@
 {
   "spans": [
     {
+      "id": "telephone-buildout",
+      "title": "Telephone network buildout",
+      "startYear": 1876,
+      "endYear": 1984,
+      "spanType": "Technology",
+      "subEvents": [
+        {
+          "date": 1876,
+          "label": "Bell patents the telephone"
+        },
+        {
+          "date": 1878,
+          "label": "First local exchanges built; New Haven, CT has first switchboard. ~150,000 phones in the US by 1880"
+        },
+        {
+          "date": 1885,
+          "label": "AT&T founded to build long-distance"
+        },
+        {
+          "date": 1892,
+          "label": "First long-distance line: New York to Chicago"
+        },
+        {
+          "date": 1915,
+          "label": "First transcontinental call (NY to San Francisco)"
+        },
+        {
+          "date": 1925,
+          "label": "Rural expansion begins, but slow. Urban areas well-served; farms largely cut off"
+        },
+        {
+          "date": 1934,
+          "label": "Communications Act creates FCC; universal service becomes explicit policy goal"
+        },
+        {
+          "date": 1936,
+          "label": "Rural Electrification Act extended to telephone cooperatives; massive rural buildout begins"
+        },
+        {
+          "date": 1955,
+          "label": "~60% of US homes have phones"
+        },
+        {
+          "date": 1965,
+          "label": "Direct distance dialing replaces operators for long-distance; ~90% household penetration reached by ~1970"
+        },
+        {
+          "date": 1984,
+          "label": "AT&T breakup (Bell System divestiture)"
+        }
+      ],
+      "causalImpacts": []
+    },
+    {
       "id": "cotton-gin",
       "title": "Invention of the cotton gin",
       "startYear": 1793,
@@ -17,7 +71,7 @@
           "id": "gin-to-cotton-production",
           "targetSpanId": "cotton-production",
           "sourceAttachment": "middle",
-          "targetAttachment": "start",
+          "targetAttachment": "middle",
           "annotation": "",
           "bidirectional": false
         }
@@ -111,10 +165,10 @@
     },
     {
       "id": "virginia-racial-slavery",
-      "title": "Virginia's from a social-economic model of indentured servitude to a model of racial slavery",
+      "title": "Virginia shifts from a social-economic model of indentured servitude to a model of racial slavery",
       "startYear": 1660,
       "endYear": 1700,
-      "spanType": "Politics",
+      "spanType": "Culture",
       "subEvents": [
         {
           "date": 1660,
@@ -2347,6 +2401,11 @@
         {
           "date": 1800,
           "label": "Jacquard develops programmable loom for patterned silk"
+        },
+        {
+          "id": "3f587cae-fb25-471b-b914-14679d13e16f",
+          "date": 1835,
+          "label": "~75% of cotton mills used steam power and there are 85,000 power looms"
         }
       ],
       "causalImpacts": [
