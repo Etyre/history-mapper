@@ -65,10 +65,26 @@
         },
         {
           "date": 1860,
-          "label": "3,837,402 bales produced"
+          "label": "3,837,402 bales produced; the American South is producing two thirds of the world's cotton"
         }
       ],
-      "causalImpacts": []
+      "causalImpacts": [
+        {
+          "id": "0471816d-3b7a-4904-b0ae-6475d561f4ef",
+          "targetSpanId": "c1abc2e3-f8eb-4cb0-9d10-da881ca15ef0",
+          "sourceAttachment": "middle",
+          "targetAttachment": "middle",
+          "annotation": "",
+          "bidirectional": true
+        },
+        {
+          "id": "ba94cc75-1d60-4e8a-962e-81ccaac3f925",
+          "targetSpanId": "b4768f0a-2492-44a0-9c8e-e47fc97edb91",
+          "sourceAttachment": "middle",
+          "targetAttachment": "middle",
+          "annotation": ""
+        }
+      ]
     },
     {
       "id": "virginia-racial-slavery",
@@ -2270,7 +2286,7 @@
       "id": "c1abc2e3-f8eb-4cb0-9d10-da881ca15ef0",
       "title": "Industrialization of textile manufacture in Britain",
       "startYear": 1733,
-      "endYear": 1840,
+      "endYear": 1800,
       "spanType": "Technology",
       "subEvents": [
         {
