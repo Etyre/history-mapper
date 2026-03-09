@@ -887,12 +887,60 @@
         {
           "id": "dfe10542-080f-46c2-b954-c1869aed84ee",
           "date": 1947,
-          "label": "The transistor is invented"
+          "label": "The transistor is invented at Bell Labs"
         },
         {
           "id": "9516fe6f-c25e-4f3e-b13a-45f9cb18bfb5",
           "date": 1955,
           "label": "Shockley Semiconductor is founded"
+        },
+        {
+          "date": 1954,
+          "label": "First silicon transistor (Texas Instruments)"
+        },
+        {
+          "date": 1957,
+          "label": "Fairchild Semiconductor founded"
+        },
+        {
+          "date": 1958,
+          "label": "First integrated circuit (Jack Kilby, TI)"
+        },
+        {
+          "date": 1959,
+          "label": "Planar IC with interconnects (Robert Noyce, Fairchild)"
+        },
+        {
+          "date": 1965,
+          "label": "Moore's Law published"
+        },
+        {
+          "date": 1968,
+          "label": "Intel founded"
+        },
+        {
+          "date": 1971,
+          "label": "Intel 4004: first commercial microprocessor (2,300 transistors, 10μm)"
+        },
+        {
+          "date": 1987,
+          "label": "TSMC founded (first pure-play foundry)"
+        },
+        {
+          "date": 2009,
+          "label": "Cumulative transistors produced estimated ~10^20"
+        },
+        {
+          "date": 2011,
+          "label": "FinFET transistors introduced (22nm, Intel)"
+        },
+        {
+          "date": 2018,
+          "label": "EUV lithography enters volume production (TSMC 7nm)"
+        },
+        {
+          "date": 2023,
+          "label": "Cumulative transistors produced estimated >10^22"
         }
       ],
       "causalImpacts": [
