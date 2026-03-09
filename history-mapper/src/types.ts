@@ -26,6 +26,7 @@ export interface Span {
   subEvents: SubEvent[];
   causalImpacts: CausalImpact[];
   continuesAs?: string; // ID of span this transitions into
+  tags?: string[];
 }
 
 export type AppState = {

@@ -2,6 +2,7 @@ import type { Span, SpanType, Action } from '../../types';
 import { SPAN_COLORS } from '../../utils/colors';
 import { SubEventEditor } from './SubEventEditor';
 import { CausalImpactEditor } from './CausalImpactEditor';
+import { TagEditor } from './TagEditor';
 import React, { useState, useEffect, useRef } from 'react';
 
 const SPAN_TYPES: SpanType[] = ['Economics', 'Technology', 'Politics', 'Culture', 'Subculture', 'Demographics'];
@@ -111,6 +112,7 @@ export function SpanRow({ span, allSpans, dispatch, forceExpanded, isSelected, o
       </div>
       {expanded && (
         <div className="span-row-details">
+          <TagEditor spanId={span.id} tags={span.tags ?? []} allSpans={allSpans} dispatch={dispatch} />
           <SubEventEditor spanId={span.id} subEvents={span.subEvents} dispatch={dispatch} />
           <CausalImpactEditor spanId={span.id} causalImpacts={span.causalImpacts} allSpans={allSpans} dispatch={dispatch} />
           {span.endYear !== 'ongoing' && (() => {

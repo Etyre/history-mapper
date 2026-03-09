@@ -334,3 +334,77 @@ body {
   padding: 4px 8px;
   font-size: 12px;
 }
+
+/* Tag Editor */
+.tag-editor {
+  margin-bottom: 8px;
+}
+
+.tag-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  margin-bottom: 4px;
+}
+
+.tag-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+  background: #e0e7ef;
+  color: #333;
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-size: 11px;
+}
+
+.tag-chip-remove {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #888;
+  font-size: 13px;
+  padding: 0 2px;
+  line-height: 1;
+}
+
+.tag-chip-remove:hover {
+  color: #e74c3c;
+}
+
+.tag-input-wrapper {
+  position: relative;
+}
+
+.tag-input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 3px 6px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  font-size: 12px;
+}
+
+.tag-dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-top: none;
+  border-radius: 0 0 3px 3px;
+  max-height: 120px;
+  overflow-y: auto;
+  z-index: 10;
+}
+
+.tag-dropdown-item {
+  padding: 4px 8px;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.tag-dropdown-item:hover {
+  background: #e8f0fe;
+}
