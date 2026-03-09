@@ -1,6 +1,44 @@
 {
   "spans": [
     {
+      "id": "dutch-manhattan",
+      "title": "Dutch colony in the Manhattan area (New Netherland)",
+      "startYear": 1624,
+      "endYear": 1664,
+      "spanType": "Politics",
+      "subEvents": [
+        {
+          "date": 1609,
+          "label": "Henry Hudson sails into New York Bay and up the Hudson River"
+        },
+        {
+          "date": 1621,
+          "label": "Dutch West India Company created"
+        },
+        {
+          "date": 1624,
+          "label": "First settlers arrive; New Netherland colony established"
+        },
+        {
+          "date": 1625,
+          "label": "Trading post moved to tip of Manhattan Island"
+        },
+        {
+          "date": 1626,
+          "label": "Peter Minuit acquires Manhattan for trade goods valued at 60 guilders"
+        },
+        {
+          "date": 1653,
+          "label": "New Amsterdam receives municipal charter from Governor Stuyvesant"
+        },
+        {
+          "date": 1664,
+          "label": "English seize control; New Amsterdam renamed New York"
+        }
+      ],
+      "causalImpacts": []
+    },
+    {
       "id": "beaver-wars",
       "title": "The Beaver Wars",
       "startYear": 1628,
