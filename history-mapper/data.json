@@ -2,12 +2,20 @@
   "spans": [
     {
       "id": "c6be3f73-c621-45c5-a555-57bebb8b27bf",
-      "title": "Deployment of ",
-      "startYear": 2000,
-      "endYear": 2010,
-      "spanType": "Politics",
+      "title": "Deployment of mass transit methods (horsecars, trollies, subways) in American cities",
+      "startYear": 1820,
+      "endYear": 1920,
+      "spanType": "Technology",
       "subEvents": [],
-      "causalImpacts": []
+      "causalImpacts": [
+        {
+          "id": "c7032b01-976c-4821-83a2-f9cfb1a0119d",
+          "targetSpanId": "68eca036-3ae3-4b29-bbec-3d1633e84f8e",
+          "sourceAttachment": "middle",
+          "targetAttachment": "middle",
+          "annotation": "Mass transit solutions allow people to live at a distance from their place of work, which allows more people to concentrate in the same small area during work hours"
+        }
+      ]
     },
     {
       "id": "14cda60c-663f-46d4-a2b1-a6ca64d6d797",
@@ -2083,8 +2091,8 @@
     },
     {
       "id": "3ed566fc-46b7-4669-bdac-5ff876bd6b5a",
-      "title": "Global coal production increases by 13x between 1790 and 1913, doubling every 17 years",
-      "startYear": 1790,
+      "title": "Global coal production increases by ~100x between 1800 and 1913",
+      "startYear": 1800,
       "endYear": 1913,
       "spanType": "Technology",
       "subEvents": [
