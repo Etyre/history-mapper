@@ -1,5 +1,5 @@
 import type { CausalImpact, AttachmentPoint, Span, Action } from '../../types';
-import React from 'react';
+import React, { useState } from 'react';
 
 function AnnotationInput({ value, onChange }: { value: string; onChange: (val: string) => void }) {
   return (
@@ -17,8 +17,29 @@ function attachmentSelectValue(att: AttachmentPoint): string {
   return typeof att === 'number' ? 'year' : att;
 }
 
-function attachmentYearValue(att: AttachmentPoint): string {
-  return typeof att === 'number' ? String(att) : '';
+function AttachmentYearInput({ value, onCommit }: { value: number; onCommit: (n: number) => void }) {
+  const [draft, setDraft] = useState<string | null>(null);
+  const display = draft !== null ? draft : String(value);
+
+  const commit = (val: string) => {
+    const num = Number(val.trim());
+    if (!isNaN(num) && val.trim() !== '') {
+      onCommit(num);
+    }
+    setDraft(null);
+  };
+
+  return (
+    <input
+      type="text"
+      value={display}
+      className="year-input"
+      style={{ width: '50px' }}
+      onChange={(e) => setDraft(e.target.value)}
+      onBlur={(e) => commit(e.target.value)}
+      onKeyDown={(e) => { if (e.key === 'Enter') commit((e.target as HTMLInputElement).value); }}
+    />
+  );
 }
 
 interface Props {
@@ -74,17 +95,9 @@ function CausalImpactRow({ ci, ownerSpanId, otherSpans, dispatch, incoming }: {
           <option value="year">From: year</option>
         </select>
         {typeof ci.sourceAttachment === 'number' && (
-          <input
-            type="text"
-            value={attachmentYearValue(ci.sourceAttachment)}
-            className="year-input"
-            style={{ width: '50px' }}
-            onChange={(e) => {
-              const num = Number(e.target.value);
-              if (!isNaN(num) && e.target.value.trim() !== '') {
-                updateAttachment('sourceAttachment', num);
-              }
-            }}
+          <AttachmentYearInput
+            value={ci.sourceAttachment}
+            onCommit={(num) => updateAttachment('sourceAttachment', num)}
           />
         )}
         <select
@@ -104,17 +117,9 @@ function CausalImpactRow({ ci, ownerSpanId, otherSpans, dispatch, incoming }: {
           <option value="year">To: year</option>
         </select>
         {typeof ci.targetAttachment === 'number' && (
-          <input
-            type="text"
-            value={attachmentYearValue(ci.targetAttachment)}
-            className="year-input"
-            style={{ width: '50px' }}
-            onChange={(e) => {
-              const num = Number(e.target.value);
-              if (!isNaN(num) && e.target.value.trim() !== '') {
-                updateAttachment('targetAttachment', num);
-              }
-            }}
+          <AttachmentYearInput
+            value={ci.targetAttachment}
+            onCommit={(num) => updateAttachment('targetAttachment', num)}
           />
         )}
         <label style={{ display: 'flex', alignItems: 'center', gap: '2px', fontSize: '11px' }}>

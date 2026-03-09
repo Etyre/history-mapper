@@ -187,6 +187,8 @@ export function layoutSpans(spans: Span[], svgHeight: number, seed: number = 0):
   }
 
   // Compute spacing score: reward minimum distance to nearest vertically-overlapping neighbor
+  // Diminishing returns: gap of 1 = full value (1), each additional column = half as much extra
+  // So gap=1 → 1, gap=2 → 1.5, gap=3 → 1.75, etc.  Formula: 2 * (1 - 0.5^dist)
   function spacingScore(): number {
     let score = 0;
     for (let i = 0; i < items.length; i++) {
@@ -200,7 +202,7 @@ export function layoutSpans(spans: Span[], svgHeight: number, seed: number = 0):
           if (dist < minDist) minDist = dist;
         }
       }
-      if (hasNeighbor) score += minDist;
+      if (hasNeighbor) score += 2 * (1 - Math.pow(0.5, minDist));
     }
     return score;
   }

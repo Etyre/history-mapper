@@ -1,6 +1,83 @@
 {
   "spans": [
     {
+      "id": "ed3ae645-7a45-4b9e-b254-6202cfbd9c24",
+      "title": "Constitutional Convention and ratification by the states ",
+      "startYear": 1787,
+      "endYear": 1788,
+      "spanType": "Politics",
+      "subEvents": [],
+      "causalImpacts": []
+    },
+    {
+      "id": "596ab711-e09a-4e82-971a-919a80efdccb",
+      "title": "FDR's New Deal",
+      "startYear": 1933,
+      "endYear": 1939,
+      "spanType": "Politics",
+      "subEvents": [],
+      "causalImpacts": [
+        {
+          "id": "1d687fbf-3041-4a81-aba9-f2040c0017de",
+          "targetSpanId": "",
+          "sourceAttachment": "middle",
+          "targetAttachment": "middle",
+          "annotation": ""
+        }
+      ]
+    },
+    {
+      "id": "1386a44e-cf85-4ad9-81ea-5db0aecacfad",
+      "title": "Fairness doctrine is in effect",
+      "startYear": 1949,
+      "endYear": 1987,
+      "spanType": "Politics",
+      "subEvents": [],
+      "causalImpacts": []
+    },
+    {
+      "id": "5e517376-a12d-4180-bf80-993e5fae46f3",
+      "title": "The US becomes much more politically polarized: stronger sorting by political tribe and greater hostility towards the other side",
+      "startYear": 1994,
+      "endYear": "ongoing",
+      "spanType": "Culture",
+      "subEvents": [],
+      "causalImpacts": []
+    },
+    {
+      "id": "8a96006f-d1c3-4a80-9297-0161cca4fb72",
+      "title": "SRI and then Xerox PARC develop the idioms of the personal computer",
+      "startYear": 1962,
+      "endYear": 1972,
+      "spanType": "Politics",
+      "subEvents": [
+        {
+          "id": "e8f9f0b3-8964-4dc9-9b87-cc60bfca4e87",
+          "date": 1972,
+          "label": "PARC develops the Alto"
+        },
+        {
+          "id": "a086b97f-838f-4d10-8f45-8adb680ee3d9",
+          "date": 1962,
+          "label": "Douglas Engelbart publishes his foundational manifesto \"Augmenting Human Intellect\", and beings building the NLS to demonstrate it"
+        },
+        {
+          "id": "8b045799-933e-406f-8d26-f7f5211a87b6",
+          "date": 1968,
+          "label": "The mother of all demos"
+        }
+      ],
+      "causalImpacts": [
+        {
+          "id": "26e8fc7b-61b9-401a-8d30-e5de9ed97272",
+          "targetSpanId": "b7d4c772-f631-48f2-a125-7711b2273a46",
+          "sourceAttachment": "end",
+          "targetAttachment": "start",
+          "annotation": ""
+        }
+      ]
+    },
+    {
       "id": "8b4a39e6-d67e-4fa5-b47f-109517eee027",
       "title": "Between 1492 and 1600, the native population of North America collapses, falling by between 40% to 94%.",
       "startYear": 1492,
@@ -243,11 +320,19 @@
     {
       "id": "970f6b2e-6517-480a-9ea5-c1b899836e8e",
       "title": "American Revolution",
-      "startYear": 1765,
+      "startYear": 1775,
       "endYear": 1783,
       "spanType": "Politics",
       "subEvents": [],
-      "causalImpacts": []
+      "causalImpacts": [
+        {
+          "id": "6ed3b5fe-4f83-4888-a3b5-886d64149732",
+          "targetSpanId": "ed3ae645-7a45-4b9e-b254-6202cfbd9c24",
+          "sourceAttachment": "middle",
+          "targetAttachment": "middle",
+          "annotation": ""
+        }
+      ]
     },
     {
       "id": "122043b1-6fdf-4540-8c81-7f2f3f98a8ec",
@@ -369,7 +454,7 @@
     },
     {
       "id": "urbanization-slow-early",
-      "title": "Slow increase in urbanization [US]",
+      "title": "Slow urbanization trend [US]",
       "startYear": 1800,
       "endYear": 1870,
       "spanType": "Demographics",
@@ -1518,7 +1603,15 @@
       "endYear": 1939,
       "spanType": "Economics",
       "subEvents": [],
-      "causalImpacts": []
+      "causalImpacts": [
+        {
+          "id": "2bc78da1-0376-4a38-82f8-398e02ef0b1a",
+          "targetSpanId": "596ab711-e09a-4e82-971a-919a80efdccb",
+          "sourceAttachment": "middle",
+          "targetAttachment": "middle",
+          "annotation": ""
+        }
+      ]
     },
     {
       "id": "004116c9-d3b7-44f8-b389-8045a75d7cba",
@@ -1761,7 +1854,7 @@
         {
           "id": "5f750a97-ebc2-41c3-8871-3bd0866dc1ea",
           "targetSpanId": "internet-quiet",
-          "sourceAttachment": "middle",
+          "sourceAttachment": 1960,
           "targetAttachment": "middle",
           "annotation": ""
         }
@@ -2210,6 +2303,13 @@
           "sourceAttachment": "middle",
           "targetAttachment": "start",
           "annotation": ""
+        },
+        {
+          "id": "f5f7bffd-914f-4bdb-9bde-1452d2e69e53",
+          "targetSpanId": "a156aa87-6fcc-47e2-989f-4d0ef9827329",
+          "sourceAttachment": "middle",
+          "targetAttachment": "middle",
+          "annotation": ""
         }
       ]
     },
@@ -2354,9 +2454,9 @@
         {
           "id": "567bef35-ef90-46db-9bc4-61aefd61d748",
           "targetSpanId": "2ba2ed14-c4d4-4bd1-b979-1a093128bd43",
-          "sourceAttachment": "middle",
+          "sourceAttachment": 2005,
           "targetAttachment": "middle",
-          "annotation": ""
+          "annotation": "Google's business model was to make it easy to to find niche content on the open web, and to monetize that content via adwords. [source](https://www.conradbastable.com/essays/monetization-amp-monopolies-how-the-internet-you-loved-died)"
         }
       ]
     },

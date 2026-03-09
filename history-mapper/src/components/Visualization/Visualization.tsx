@@ -4,7 +4,7 @@ import { getYearExtent } from '../../utils/yearScale';
 import { NUM_COLUMNS, COL_WIDTH } from './layout';
 import { useRef, useEffect, useState } from 'react';
 
-const MIN_PX_PER_YEAR = 28;
+const MIN_PX_PER_YEAR = 14;
 const AXIS_MARGIN = 45;
 const LABEL_MARGIN = 120;
 const MIN_SVG_WIDTH = NUM_COLUMNS * COL_WIDTH + AXIS_MARGIN + LABEL_MARGIN;
