@@ -1,6 +1,37 @@
 {
   "spans": [
     {
+      "id": "auto-development",
+      "title": "Development of the automobile",
+      "startYear": 1876,
+      "endYear": 1901,
+      "spanType": "Technology",
+      "subEvents": [
+        {
+          "date": 1876,
+          "label": "Otto patents four-stroke internal combustion engine"
+        },
+        {
+          "date": 1885,
+          "label": "Daimler & Maybach build first high-speed gasoline engine"
+        },
+        {
+          "date": 1886,
+          "label": "Benz patents the Patent-Motorwagen"
+        },
+        {
+          "date": 1893,
+          "label": "Duryea brothers demonstrate first successful American gasoline car"
+        },
+        {
+          "date": 1896,
+          "label": "Duryea Motor Wagon Co. sells 13 cars — first US commercial auto sales"
+        }
+      ],
+      "causalImpacts": [],
+      "continuesAs": "ccb4a663-99c9-4946-9197-592632dad1e0"
+    },
+    {
       "id": "dutch-manhattan",
       "title": "Dutch colony in the Manhattan area (New Netherland)",
       "startYear": 1624,
@@ -1491,11 +1522,64 @@
     },
     {
       "id": "ccb4a663-99c9-4946-9197-592632dad1e0",
-      "title": "Automobile Revolution s-curve [America]",
-      "startYear": 1900,
-      "endYear": 1950,
+      "title": "Mass adoption of automobiles",
+      "startYear": 1901,
+      "endYear": 1970,
       "spanType": "Technology",
-      "subEvents": [],
+      "subEvents": [
+        {
+          "date": 1901,
+          "label": "Oldsmobile Curved Dash: first mass-produced American car (425 sold)"
+        },
+        {
+          "date": 1905,
+          "label": "First purpose-built gas station (St. Louis)"
+        },
+        {
+          "date": 1908,
+          "label": "Ford Model T introduced at $850; ~1% of households own a car"
+        },
+        {
+          "date": 1913,
+          "label": "Ford introduces moving assembly line (12.5 hrs → 93 min)"
+        },
+        {
+          "date": 1916,
+          "label": "Model T annual production passes 500,000"
+        },
+        {
+          "date": 1919,
+          "label": "~25% of households own a car"
+        },
+        {
+          "date": 1920,
+          "label": "Model T price drops to ~$440"
+        },
+        {
+          "date": 1923,
+          "label": "Peak Model T production: 2,011,125 units"
+        },
+        {
+          "date": 1924,
+          "label": "Model T price drops to $260"
+        },
+        {
+          "date": 1927,
+          "label": "15 millionth Model T produced; production ends"
+        },
+        {
+          "date": 1929,
+          "label": "~60% of families own a car"
+        },
+        {
+          "date": 1960,
+          "label": "~78.5% of households own at least one car"
+        },
+        {
+          "date": 1970,
+          "label": "Approaching saturation (~85%+)"
+        }
+      ],
       "causalImpacts": []
     },
     {
