@@ -1,8 +1,78 @@
 {
   "spans": [
     {
+      "id": "cotton-production",
+      "title": "Southern cotton production expands by 1200x between 1790 and 1860",
+      "startYear": 1790,
+      "endYear": 1860,
+      "spanType": "Economics",
+      "subEvents": [
+        {
+          "date": 1790,
+          "label": "3,135 bales produced"
+        },
+        {
+          "date": 1795,
+          "label": "16,719 bales produced"
+        },
+        {
+          "date": 1800,
+          "label": "73,145 bales produced"
+        },
+        {
+          "date": 1805,
+          "label": "146,290 bales produced"
+        },
+        {
+          "date": 1810,
+          "label": "177,638 bales produced"
+        },
+        {
+          "date": 1815,
+          "label": "208,986 bales produced"
+        },
+        {
+          "date": 1820,
+          "label": "334,378 bales produced"
+        },
+        {
+          "date": 1825,
+          "label": "532,915 bales produced"
+        },
+        {
+          "date": 1830,
+          "label": "731,452 bales produced"
+        },
+        {
+          "date": 1835,
+          "label": "1,060,711 bales produced"
+        },
+        {
+          "date": 1840,
+          "label": "1,346,232 bales produced"
+        },
+        {
+          "date": 1845,
+          "label": "1,804,223 bales produced"
+        },
+        {
+          "date": 1850,
+          "label": "2,133,851 bales produced"
+        },
+        {
+          "date": 1855,
+          "label": "3,217,417 bales produced"
+        },
+        {
+          "date": 1860,
+          "label": "3,837,402 bales produced"
+        }
+      ],
+      "causalImpacts": []
+    },
+    {
       "id": "virginia-racial-slavery",
-      "title": "Virginia shifts from indentured servitude to racial slavery",
+      "title": "Virginia's from a social-economic model of indentured servitude to a model of racial slavery",
       "startYear": 1660,
       "endYear": 1700,
       "spanType": "Politics",
@@ -1603,7 +1673,7 @@
         },
         {
           "date": 1913,
-          "label": "Ford introduces moving assembly line (12.5 hrs → 93 min)"
+          "label": "Ford introduces moving assembly line (12.5 hrs ����������������� 93 min)"
         },
         {
           "date": 1916,
@@ -1777,7 +1847,7 @@
     {
       "id": "3ed566fc-46b7-4669-bdac-5ff876bd6b5a",
       "title": "Global coal production increases by 13x between 1790 and 1913, doubling every 17 years",
-      "startYear": 1850,
+      "startYear": 1790,
       "endYear": 1913,
       "spanType": "Technology",
       "subEvents": [],
