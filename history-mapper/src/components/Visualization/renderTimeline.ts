@@ -393,7 +393,7 @@ export function renderTimeline(
       });
 
     // Title (word-wrapped)
-    const fontSize = 11;
+    const fontSize = 15;
     const maxCharsPerLine = Math.floor(ls.width / (fontSize * 0.6));
     const words = ls.span.title.split(/\s+/);
     const lines: string[] = [];

@@ -1727,7 +1727,16 @@
       "endYear": 1913,
       "spanType": "Technology",
       "subEvents": [],
-      "causalImpacts": []
+      "causalImpacts": [
+        {
+          "id": "201d1550-b563-4160-aab8-916c93bc6df9",
+          "targetSpanId": "3eedf15a-aff4-44e2-8c93-add8e5be1ae0",
+          "sourceAttachment": "middle",
+          "targetAttachment": "middle",
+          "annotation": "",
+          "bidirectional": true
+        }
+      ]
     },
     {
       "id": "mexican-american-war",
