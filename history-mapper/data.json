@@ -1,6 +1,44 @@
 {
   "spans": [
     {
+      "id": "cryptocurrency",
+      "title": "Cryptocurrency",
+      "startYear": 2008,
+      "endYear": "ongoing",
+      "spanType": "Technology",
+      "subEvents": [
+        {
+          "date": 2008,
+          "label": "Bitcoin whitepaper published"
+        },
+        {
+          "date": 2009,
+          "label": "Bitcoin network launched, genesis block mined"
+        },
+        {
+          "date": 2010,
+          "label": "First real-world BTC purchase: 10,000 BTC for two pizzas; Mt. Gox launched"
+        },
+        {
+          "date": 2011,
+          "label": "Bitcoin reaches $1; Silk Road launched; BTC hits $31 then crashes to $2"
+        },
+        {
+          "date": 2013,
+          "label": "Bitcoin hits $1,000; Silk Road seized by FBI"
+        },
+        {
+          "date": 2015,
+          "label": "Ethereum network launches"
+        },
+        {
+          "date": 2024,
+          "label": "SEC approves spot Bitcoin ETFs; BTC hits ~$73,000"
+        }
+      ],
+      "causalImpacts": []
+    },
+    {
       "id": "c42b729c-be17-4176-9f18-83ff567fe94e",
       "title": "Second Trump Admin (US)",
       "startYear": 2025,
@@ -365,8 +403,8 @@
     },
     {
       "id": "0c86e8f9-a948-4be6-9f58-e5835d1b8f55",
-      "title": "China becoming an industrial powerhouse",
-      "startYear": 2000,
+      "title": "China becoming an industrial superpower",
+      "startYear": 1995,
       "endYear": "ongoing",
       "spanType": "Economics",
       "subEvents": [
@@ -389,6 +427,11 @@
           "id": "7556c274-8653-4e91-a5fb-52a0e97a4c4f",
           "date": 2000,
           "label": "Google Adwords is introduced"
+        },
+        {
+          "id": "4501c4dc-dad0-4732-a660-70c6ddd049e4",
+          "date": 2023,
+          "label": "LLMs (including Google's gemini) undercut the google search model of finding information"
         }
       ],
       "causalImpacts": [
@@ -596,7 +639,7 @@
     },
     {
       "id": "internet-quiet",
-      "title": "The internet is quietly being created",
+      "title": "The internet is quietly being developed",
       "startYear": 1969,
       "endYear": 1991,
       "spanType": "Technology",
@@ -1691,7 +1734,8 @@
           "targetSpanId": "b4768f0a-2492-44a0-9c8e-e47fc97edb91",
           "sourceAttachment": "middle",
           "targetAttachment": "middle",
-          "annotation": ""
+          "annotation": "",
+          "bidirectional": true
         }
       ]
     },
