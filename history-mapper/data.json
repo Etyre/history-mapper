@@ -119,7 +119,15 @@
           "label": "Cumulative epidemics have killed roughly 50% of Five Nations population"
         }
       ],
-      "causalImpacts": []
+      "causalImpacts": [
+        {
+          "id": "46a61228-80b5-4d83-91d3-23d027216622",
+          "targetSpanId": "beaver-wars",
+          "sourceAttachment": "middle",
+          "targetAttachment": "middle",
+          "annotation": ""
+        }
+      ]
     },
     {
       "id": "steam-locomotive-dev",
@@ -855,6 +863,13 @@
         {
           "id": "2b1b7cb5-b3d1-4fad-8a64-136cacdc268a",
           "targetSpanId": "92a00069-b195-4110-8f17-3fc296e69d72",
+          "sourceAttachment": "middle",
+          "targetAttachment": "middle",
+          "annotation": ""
+        },
+        {
+          "id": "7d5b6b98-5952-4614-b29b-0d2724e91b5e",
+          "targetSpanId": "36fcbf40-1cf1-4cdc-a6f7-774e7c603557",
           "sourceAttachment": "middle",
           "targetAttachment": "middle",
           "annotation": ""
@@ -2145,10 +2160,47 @@
     {
       "id": "c1abc2e3-f8eb-4cb0-9d10-da881ca15ef0",
       "title": "Industrialization of textile manufacture in Britain",
-      "startYear": 1760,
+      "startYear": 1733,
       "endYear": 1840,
       "spanType": "Technology",
-      "subEvents": [],
+      "subEvents": [
+        {
+          "date": 1733,
+          "label": "John Kay invents the flying shuttle, dramatically speeding up weaving"
+        },
+        {
+          "date": 1738,
+          "label": "Lewis Paul patents roller spinning machine (first to spin cotton mechanically)"
+        },
+        {
+          "date": 1748,
+          "label": "Lewis Paul patents carding machine"
+        },
+        {
+          "date": 1764,
+          "label": "Spinning jenny invented by Hargreaves (8 spools, later 120)"
+        },
+        {
+          "date": 1769,
+          "label": "Water frame patented by Arkwright (moved spinning into factories)"
+        },
+        {
+          "date": 1779,
+          "label": "Spinning mule invented by Crompton (finer, more uniform yarn)"
+        },
+        {
+          "date": 1780,
+          "label": "Calico printing machine (patterned textiles using pre-punched cards)"
+        },
+        {
+          "date": 1785,
+          "label": "Power loom invented by Cartwright"
+        },
+        {
+          "date": 1800,
+          "label": "Jacquard develops programmable loom for patterned silk"
+        }
+      ],
       "causalImpacts": [
         {
           "id": "2e04f2b8-4482-4fde-944c-294580bc82b6",
