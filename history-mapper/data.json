@@ -6,7 +6,40 @@
       "startYear": 1820,
       "endYear": 1920,
       "spanType": "Technology",
-      "subEvents": [],
+      "subEvents": [
+        {
+          "date": 1827,
+          "label": "Omnibus first introduced in NYC (Broadway)"
+        },
+        {
+          "date": 1832,
+          "label": "Horsecar first introduced in NYC (New York & Harlem Railroad)"
+        },
+        {
+          "date": 1873,
+          "label": "Cable car first introduced in San Francisco (Clay Street Hill Railroad)"
+        },
+        {
+          "date": 1878,
+          "label": "Elevated steam rail first introduced in NYC (Ninth Avenue El)"
+        },
+        {
+          "date": 1888,
+          "label": "Electric streetcar (trolley) first introduced in Richmond, VA"
+        },
+        {
+          "date": 1897,
+          "label": "Subway first introduced in Boston (Tremont Street) — a streetcar tunnel, not heavy rail"
+        },
+        {
+          "date": 1900,
+          "label": "Interurban electric rail first introduced, connecting cities rather than serving intracity routes"
+        },
+        {
+          "date": 1904,
+          "label": "First purpose-built heavy-rail subway introduced in NYC (IRT)"
+        }
+      ],
       "causalImpacts": [
         {
           "id": "c7032b01-976c-4821-83a2-f9cfb1a0119d",
