@@ -1,6 +1,150 @@
 {
   "spans": [
     {
+      "id": "c6be3f73-c621-45c5-a555-57bebb8b27bf",
+      "title": "Deployment of ",
+      "startYear": 2000,
+      "endYear": 2010,
+      "spanType": "Politics",
+      "subEvents": [],
+      "causalImpacts": []
+    },
+    {
+      "id": "14cda60c-663f-46d4-a2b1-a6ca64d6d797",
+      "title": "Boom in Skyscraper production [US]",
+      "startYear": 1885,
+      "endYear": 1931,
+      "spanType": "Economics",
+      "subEvents": [
+        {
+          "id": "8a8fb4a5-11dc-454e-b90f-94a22593628e",
+          "date": 1885,
+          "label": "Home Insurance Building, Chicago (William Le Baron Jenney) — 10 floors, first steel-frame load-bearing structure. "
+        },
+        {
+          "id": "dc1d1c77-0e4c-4411-94e0-b7bb25df9d60",
+          "date": 1913,
+          "label": "Woolworth Building, NYC (57 floors) is the tallest building the world for 17 years"
+        },
+        {
+          "id": "bf55bc65-b04f-4949-a304-60bce9c402b2",
+          "date": 1931,
+          "label": "The great depression puts a freeze on new skyscraper construction until the 1950s"
+        }
+      ],
+      "causalImpacts": [
+        {
+          "id": "e7f31cac-b578-407d-b853-620f77ed2acc",
+          "targetSpanId": "68eca036-3ae3-4b29-bbec-3d1633e84f8e",
+          "sourceAttachment": "middle",
+          "targetAttachment": "middle",
+          "annotation": "Skyscrapers effectively manufacture real estate, which increases the population capacity of cities"
+        }
+      ]
+    },
+    {
+      "id": "4284ec14-2840-4881-9659-b437bc6ede04",
+      "title": "The cost of steel drops by 90% and steel production increases by 224x between 18600 and 1900",
+      "startYear": 1860,
+      "endYear": 1900,
+      "spanType": "Economics",
+      "subEvents": [
+        {
+          "id": "005238b7-c217-43b8-a012-90324eb7624f",
+          "date": 1860,
+          "label": "Global steel production is ~125,000 tons"
+        },
+        {
+          "id": "0f4a7071-df91-4ea1-ab28-790b026aad43",
+          "date": 1900,
+          "label": "Global steel production is ~28,000,000 tons"
+        }
+      ],
+      "causalImpacts": [
+        {
+          "id": "e7468a37-2188-4422-aebe-7d91c0855e50",
+          "targetSpanId": "3eedf15a-aff4-44e2-8c93-add8e5be1ae0",
+          "sourceAttachment": "middle",
+          "targetAttachment": "middle",
+          "annotation": "Inexpensive steel enables the railroad buildout. Steel rails are more robust to rust"
+        },
+        {
+          "id": "11022c7f-4604-4ff9-a174-8d8f04c098bf",
+          "targetSpanId": "14cda60c-663f-46d4-a2b1-a6ca64d6d797",
+          "sourceAttachment": "middle",
+          "targetAttachment": "middle",
+          "annotation": "Skyscrapers are only structurally possible due to their reliance on steel beams"
+        }
+      ]
+    },
+    {
+      "id": "44bc122c-9933-4345-8522-1be2818529d0",
+      "title": "Development of the Bessemer process",
+      "startYear": 1851,
+      "endYear": 1878,
+      "spanType": "Technology",
+      "subEvents": [],
+      "causalImpacts": [
+        {
+          "id": "95e0c8bb-f8d4-4baa-81b7-64214d614d4a",
+          "targetSpanId": "4284ec14-2840-4881-9659-b437bc6ede04",
+          "sourceAttachment": 1858,
+          "targetAttachment": "start",
+          "annotation": ""
+        }
+      ]
+    },
+    {
+      "id": "60ea2ea0-6836-42d3-a4d5-cf8659703261",
+      "title": "Norman Borlaug is crossing strains of wheat, by hand, in Mexico",
+      "startYear": 1943,
+      "endYear": 1965,
+      "spanType": "Technology",
+      "subEvents": [
+        {
+          "id": "b7470101-4acd-4b36-96c9-e6bc2cc6fd5e",
+          "date": 1943,
+          "label": ""
+        }
+      ],
+      "causalImpacts": [],
+      "continuesAs": "a1828683-09fe-47e0-b475-3a5e5ef32414"
+    },
+    {
+      "id": "a1828683-09fe-47e0-b475-3a5e5ef32414",
+      "title": "The Green Revolution: Global cereal yields roughly doubled between 1960–1990",
+      "startYear": 1965,
+      "endYear": 1990,
+      "spanType": "Economics",
+      "subEvents": [],
+      "causalImpacts": []
+    },
+    {
+      "id": "a156aa87-6fcc-47e2-989f-4d0ef9827329",
+      "title": "Shift in dating norms: couples begin to meet via dating apps",
+      "startYear": 2000,
+      "endYear": "ongoing",
+      "spanType": "Culture",
+      "subEvents": [
+        {
+          "id": "ccb6b672-b5e2-47df-b09d-49527f98b9c9",
+          "date": 2012,
+          "label": "Tinder founded"
+        },
+        {
+          "id": "a2801b35-6283-4617-99ca-cc780d6bd563",
+          "date": 2021,
+          "label": "More than half of couples meet online (not just dating apps)"
+        },
+        {
+          "id": "41a01878-28de-4441-b515-78220a7d44be",
+          "date": 2025,
+          "label": "27% of couples who married in 2025 met via dating apps/sites"
+        }
+      ],
+      "causalImpacts": []
+    },
+    {
       "id": "telephone-buildout",
       "title": "Telephone network buildout",
       "startYear": 1876,
@@ -1943,7 +2087,60 @@
       "startYear": 1790,
       "endYear": 1913,
       "spanType": "Technology",
-      "subEvents": [],
+      "subEvents": [
+        {
+          "date": 1800,
+          "label": "Global coal production ~10 million metric tons (almost entirely British)"
+        },
+        {
+          "date": 1810,
+          "label": "~13 Mt"
+        },
+        {
+          "date": 1820,
+          "label": "~17 Mt"
+        },
+        {
+          "date": 1830,
+          "label": "~24 Mt; multi-country expansion begins as US, Belgium, France, Germany enter"
+        },
+        {
+          "date": 1840,
+          "label": "~40 Mt"
+        },
+        {
+          "date": 1850,
+          "label": "~64 Mt"
+        },
+        {
+          "date": 1860,
+          "label": "~117 Mt"
+        },
+        {
+          "date": 1870,
+          "label": "~187 Mt"
+        },
+        {
+          "date": 1880,
+          "label": "~296 Mt"
+        },
+        {
+          "date": 1890,
+          "label": "~441 Mt"
+        },
+        {
+          "date": 1900,
+          "label": "~686 Mt"
+        },
+        {
+          "date": 1910,
+          "label": "~1,044 Mt"
+        },
+        {
+          "date": 1913,
+          "label": "~1,319 Mt; coal provides 56% of world energy"
+        }
+      ],
       "causalImpacts": [
         {
           "id": "201d1550-b563-4160-aab8-916c93bc6df9",
@@ -2154,7 +2351,15 @@
           "label": "Mechanical cotton picking reaches 96% of crop by late 1960s"
         }
       ],
-      "causalImpacts": []
+      "causalImpacts": [
+        {
+          "id": "de2b429a-5ce0-42aa-bc44-61e41dacd55c",
+          "targetSpanId": "68eca036-3ae3-4b29-bbec-3d1633e84f8e",
+          "sourceAttachment": "middle",
+          "targetAttachment": "middle",
+          "annotation": "Mechanization increased agricultural productivity which allowed for larger urban populations, and at the same time reduced the demand for agricultural labor, which caused people to move to the cities in search of work"
+        }
+      ]
     },
     {
       "id": "war-1812",
