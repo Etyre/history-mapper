@@ -4,7 +4,7 @@ import { getYearExtent } from '../../utils/yearScale';
 import { NUM_COLUMNS, COL_WIDTH } from './layout';
 import { useRef, useEffect, useState } from 'react';
 
-const MIN_PX_PER_YEAR = 25;
+const MIN_PX_PER_YEAR = 28;
 const AXIS_MARGIN = 45;
 const LABEL_MARGIN = 120;
 const MIN_SVG_WIDTH = NUM_COLUMNS * COL_WIDTH + AXIS_MARGIN + LABEL_MARGIN;
@@ -65,9 +65,12 @@ export function Visualization({ spans, layoutKey, onSpanClick, selectedSpanId, s
     return () => window.removeEventListener('resize', handleResize);
   }, [spans]);
 
+  const scale = 0.5;
   return (
     <div className="visualization" ref={containerRef}>
-      <svg ref={svgRef} style={{ minWidth: MIN_SVG_WIDTH }} width="100%" height={svgHeight} />
+      <div style={{ width: MIN_SVG_WIDTH * scale, height: svgHeight * scale, overflow: 'hidden' }}>
+        <svg ref={svgRef} width={MIN_SVG_WIDTH} height={svgHeight} style={{ transform: `scale(${scale})`, transformOrigin: 'top left' }} />
+      </div>
       <div ref={tooltipRef} className="tooltip" />
     </div>
   );

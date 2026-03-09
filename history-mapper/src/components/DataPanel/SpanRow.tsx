@@ -62,49 +62,52 @@ export function SpanRow({ span, allSpans, dispatch, forceExpanded, isSelected, o
   return (
     <div ref={rowRef} className={`span-row${isSelected ? ' selected' : ''}`} style={{ borderLeft: `4px solid ${SPAN_COLORS[span.spanType]}` }}>
       <div className="span-row-main" onClick={() => onSelect?.(span.id)}>
-        <input
-          type="text"
-          value={span.title}
-          onChange={(e) => update({ title: e.target.value })}
-          className="title-input"
-        />
-        <input
-          type="text"
-          value={startYearDisplay}
-          onChange={(e) => setStartYearDraft(e.target.value)}
-          onBlur={(e) => commitStartYear(e.target.value)}
-          onKeyDown={(e) => { if (e.key === 'Enter') commitStartYear((e.target as HTMLInputElement).value); }}
-          className="year-input"
-        />
-        <span className="year-separator">–</span>
-        <input
-          type="text"
-          value={endYearDisplay}
-          onChange={(e) => setEndYearDraft(e.target.value)}
-          onBlur={(e) => commitEndYear(e.target.value)}
-          onKeyDown={(e) => { if (e.key === 'Enter') commitEndYear((e.target as HTMLInputElement).value); }}
-          className="year-input"
-          title='Enter a year or "ongoing"'
-        />
-        <select
-          value={span.spanType}
-          onChange={(e) => update({ spanType: e.target.value as SpanType })}
-          className="type-select"
-        >
-          {SPAN_TYPES.map((t) => (
-            <option key={t} value={t}>{t}</option>
-          ))}
-        </select>
-        <button className="expand-btn" onClick={() => {
-          if (expanded) {
-            // Sort sub-events by date when collapsing
-            const sorted = [...span.subEvents].sort((a, b) => a.date - b.date);
-            update({ subEvents: sorted });
-          }
-          setExpanded(!expanded);
-        }}>
-          {expanded ? '▾' : '▸'}
-        </button>
+        <div className="span-row-title-line">
+          <input
+            type="text"
+            value={span.title}
+            onChange={(e) => update({ title: e.target.value })}
+            className="title-input"
+          />
+          <button className="expand-btn" onClick={() => {
+            if (expanded) {
+              const sorted = [...span.subEvents].sort((a, b) => a.date - b.date);
+              update({ subEvents: sorted });
+            }
+            setExpanded(!expanded);
+          }}>
+            {expanded ? '▾' : '▸'}
+          </button>
+        </div>
+        <div className="span-row-meta-line">
+          <input
+            type="text"
+            value={startYearDisplay}
+            onChange={(e) => setStartYearDraft(e.target.value)}
+            onBlur={(e) => commitStartYear(e.target.value)}
+            onKeyDown={(e) => { if (e.key === 'Enter') commitStartYear((e.target as HTMLInputElement).value); }}
+            className="year-input"
+          />
+          <span className="year-separator">–</span>
+          <input
+            type="text"
+            value={endYearDisplay}
+            onChange={(e) => setEndYearDraft(e.target.value)}
+            onBlur={(e) => commitEndYear(e.target.value)}
+            onKeyDown={(e) => { if (e.key === 'Enter') commitEndYear((e.target as HTMLInputElement).value); }}
+            className="year-input"
+            title='Enter a year or "ongoing"'
+          />
+          <select
+            value={span.spanType}
+            onChange={(e) => update({ spanType: e.target.value as SpanType })}
+            className="type-select"
+          >
+            {SPAN_TYPES.map((t) => (
+              <option key={t} value={t}>{t}</option>
+            ))}
+          </select>
+        </div>
       </div>
       {expanded && (
         <div className="span-row-details">

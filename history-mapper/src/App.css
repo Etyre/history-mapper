@@ -140,9 +140,20 @@ body {
 
 .span-row-main {
   display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.span-row-title-line {
+  display: flex;
   align-items: center;
   gap: 6px;
-  flex-wrap: wrap;
+}
+
+.span-row-meta-line {
+  display: flex;
+  align-items: center;
+  gap: 6px;
 }
 
 .title-input {
@@ -280,9 +291,6 @@ body {
 
 .visualization svg {
   display: block;
-  min-height: 100%;
-  transform: scale(0.5);
-  transform-origin: top left;
 }
 
 .tooltip {
