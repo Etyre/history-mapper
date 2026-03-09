@@ -1355,11 +1355,84 @@
     },
     {
       "id": "791fd834-16a8-4a8b-b1d0-174bc0802149",
-      "title": "Telegraph network build out s-curve",
+      "title": "Telegraph network build out",
       "startYear": 1837,
-      "endYear": 1930,
+      "endYear": 1966,
       "spanType": "Technology",
-      "subEvents": [],
+      "subEvents": [
+        {
+          "date": 1844,
+          "label": "Morse demonstrates first line: DC to Baltimore (40 mi)"
+        },
+        {
+          "date": 1847,
+          "label": "First line connects New York to St. Louis"
+        },
+        {
+          "date": 1848,
+          "label": "2,000 miles of wire (50x in 2 years)"
+        },
+        {
+          "date": 1850,
+          "label": "12,000 miles; all major cities east of Mississippi connected"
+        },
+        {
+          "date": 1851,
+          "label": "75 companies, 21,147 miles of wire (Census)"
+        },
+        {
+          "date": 1852,
+          "label": "23,000 miles — growth rate begins decelerating"
+        },
+        {
+          "date": 1855,
+          "label": "Network covers nearly every important town in England and Ireland"
+        },
+        {
+          "date": 1857,
+          "label": "Six US companies form regional monopoly cartel"
+        },
+        {
+          "date": 1858,
+          "label": "First transatlantic cable laid — fails after ~3 weeks"
+        },
+        {
+          "date": 1861,
+          "label": "Transcontinental telegraph completed (Oct 24)"
+        },
+        {
+          "date": 1866,
+          "label": "Permanent transatlantic cable; Western Union achieves monopoly (~100k mi)"
+        },
+        {
+          "date": 1870,
+          "label": "9.2M messages/year"
+        },
+        {
+          "date": 1880,
+          "label": "29.2M messages/year"
+        },
+        {
+          "date": 1890,
+          "label": "55.9M messages/year; 679k miles of wire"
+        },
+        {
+          "date": 1900,
+          "label": "63.2M messages/year; ~1M miles of wire"
+        },
+        {
+          "date": 1920,
+          "label": "155.9M messages/year (peak era begins)"
+        },
+        {
+          "date": 1945,
+          "label": "236.2M messages/year (all-time peak)"
+        },
+        {
+          "date": 1960,
+          "label": "124.3M messages/year (telephone taking over)"
+        }
+      ],
       "causalImpacts": []
     },
     {
