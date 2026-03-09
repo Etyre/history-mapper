@@ -67,7 +67,15 @@
           "label": "English seize control; New Amsterdam renamed New York"
         }
       ],
-      "causalImpacts": []
+      "causalImpacts": [
+        {
+          "id": "63aa8adb-a4d6-4b09-8217-fee951d6b47b",
+          "targetSpanId": "beaver-wars",
+          "sourceAttachment": "middle",
+          "targetAttachment": "middle",
+          "annotation": "The Dutch trade with the Iroquois, arming them with firearms, which give them a military advantage over other tribes."
+        }
+      ]
     },
     {
       "id": "beaver-wars",
@@ -81,15 +89,6 @@
           "label": "Great Peace of Montreal signed; ends the Beaver Wars"
         }
       ],
-      "causalImpacts": []
-    },
-    {
-      "id": "mourning-wars",
-      "title": "Intensification of the Mourning Wars",
-      "startYear": 1640,
-      "endYear": 1701,
-      "spanType": "Politics",
-      "subEvents": [],
       "causalImpacts": []
     },
     {
@@ -120,16 +119,7 @@
           "label": "Cumulative epidemics have killed roughly 50% of Five Nations population"
         }
       ],
-      "causalImpacts": [
-        {
-          "id": "epidemics-to-mourning-wars",
-          "targetSpanId": "mourning-wars",
-          "sourceAttachment": "end",
-          "targetAttachment": "start",
-          "annotation": "Mourning wars were an Iroquois practice of raiding enemies to capture replacements for deceased community members. The massive death toll from epidemics created an unprecedented demand for captives, escalating small raids into campaigns of conquest.",
-          "bidirectional": false
-        }
-      ]
+      "causalImpacts": []
     },
     {
       "id": "steam-locomotive-dev",
@@ -820,27 +810,45 @@
     },
     {
       "id": "b7d4c772-f631-48f2-a125-7711b2273a46",
-      "title": "The Personal Computer S-curve",
-      "startYear": 1984,
-      "endYear": 2000,
+      "title": "Mass adoption of personal computers",
+      "startYear": 1982,
+      "endYear": 2012,
       "spanType": "Technology",
       "subEvents": [
         {
-          "id": "26c654df-1bed-4c07-8f42-2af5b95d665f",
-          "date": 1984,
-          "label": "The First Macintosh is Released"
+          "date": 1982,
+          "label": "~1% of US households own a personal computer"
         },
         {
-          "id": "948f4e59-5217-4faa-8a5a-83c36a06fd25",
+          "date": 1984,
+          "label": "~8% of US households own a personal computer"
+        },
+        {
+          "date": 1990,
+          "label": "~15% of US households own a personal computer"
+        },
+        {
+          "date": 1997,
+          "label": "~35% of US households own a personal computer"
+        },
+        {
           "date": 2000,
-          "label": "Half of all households in the US have a personal computer"
+          "label": "~60% of US households own a personal computer"
+        },
+        {
+          "date": 2010,
+          "label": "~75-80% of US households own a personal computer"
+        },
+        {
+          "date": 2012,
+          "label": "Global PC sales peak at ~353M units; sales begin declining as tablets and smartphones take over"
         }
       ],
       "causalImpacts": [
         {
           "id": "44548315-562d-4960-ad52-b3b1945ed1a0",
           "targetSpanId": "2ba2ed14-c4d4-4bd1-b979-1a093128bd43",
-          "sourceAttachment": "end",
+          "sourceAttachment": "middle",
           "targetAttachment": "start",
           "annotation": ""
         },
