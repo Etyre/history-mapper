@@ -1,6 +1,68 @@
 {
   "spans": [
     {
+      "id": "beaver-wars",
+      "title": "The Beaver Wars",
+      "startYear": 1628,
+      "endYear": 1701,
+      "spanType": "Politics",
+      "subEvents": [
+        {
+          "date": 1701,
+          "label": "Great Peace of Montreal signed; ends the Beaver Wars"
+        }
+      ],
+      "causalImpacts": []
+    },
+    {
+      "id": "mourning-wars",
+      "title": "Intensification of the Mourning Wars",
+      "startYear": 1640,
+      "endYear": 1701,
+      "spanType": "Politics",
+      "subEvents": [],
+      "causalImpacts": []
+    },
+    {
+      "id": "iroquois-epidemics",
+      "title": "Epidemics kill ~50% of the Iroquois population",
+      "startYear": 1633,
+      "endYear": 1640,
+      "spanType": "Demographics",
+      "subEvents": [
+        {
+          "date": 1633,
+          "label": "Measles epidemic strikes Iroquois"
+        },
+        {
+          "date": 1634,
+          "label": "Smallpox: Mohawk population drops from ~7,740 to ~2,830 (63% decline)"
+        },
+        {
+          "date": 1636,
+          "label": "Smallpox reaches Lake Ontario area and other nations"
+        },
+        {
+          "date": 1639,
+          "label": "Smallpox returns"
+        },
+        {
+          "date": 1640,
+          "label": "Cumulative epidemics have killed roughly 50% of Five Nations population"
+        }
+      ],
+      "causalImpacts": [
+        {
+          "id": "epidemics-to-mourning-wars",
+          "targetSpanId": "mourning-wars",
+          "sourceAttachment": "end",
+          "targetAttachment": "start",
+          "annotation": "Mourning wars were an Iroquois practice of raiding enemies to capture replacements for deceased community members. The massive death toll from epidemics created an unprecedented demand for captives, escalating small raids into campaigns of conquest.",
+          "bidirectional": false
+        }
+      ]
+    },
+    {
       "id": "steam-locomotive-dev",
       "title": "Development of the steam locomotive",
       "startYear": 1804,
