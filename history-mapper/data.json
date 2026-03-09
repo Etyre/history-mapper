@@ -451,7 +451,7 @@
     {
       "id": "0c86e8f9-a948-4be6-9f58-e5835d1b8f55",
       "title": "China becoming an industrial superpower",
-      "startYear": 1995,
+      "startYear": 1996,
       "endYear": "ongoing",
       "spanType": "Economics",
       "subEvents": [
@@ -459,6 +459,38 @@
           "id": "5764a43f-7f30-48a4-94f4-1e6df6e9306b",
           "date": 2010,
           "label": "Chinese electricity production surpasses US electricity production"
+        },
+        {
+          "date": 1996,
+          "label": "World's largest steel producer (surpasses Japan)"
+        },
+        {
+          "date": 2007,
+          "label": "World's largest aluminum producer"
+        },
+        {
+          "date": 2008,
+          "label": "World's largest solar panel manufacturer"
+        },
+        {
+          "date": 2009,
+          "label": "World's largest automobile manufacturer (surpasses US)"
+        },
+        {
+          "date": 2009,
+          "label": "World's largest shipbuilder (surpasses South Korea)"
+        },
+        {
+          "date": 2010,
+          "label": "World's largest manufacturer overall (surpasses US)"
+        },
+        {
+          "date": 2019,
+          "label": "~29% of global manufacturing output"
+        },
+        {
+          "date": 2023,
+          "label": "World's largest auto exporter; ~31% of global manufacturing"
         }
       ],
       "causalImpacts": []
