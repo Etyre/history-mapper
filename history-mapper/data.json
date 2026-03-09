@@ -1,6 +1,29 @@
 {
   "spans": [
     {
+      "id": "cotton-gin",
+      "title": "Invention of the cotton gin",
+      "startYear": 1793,
+      "endYear": 1794,
+      "spanType": "Technology",
+      "subEvents": [
+        {
+          "date": 1793,
+          "label": "Eli Whitney invents the cotton gin, making short-staple upland cotton commercially viable"
+        }
+      ],
+      "causalImpacts": [
+        {
+          "id": "gin-to-cotton-production",
+          "targetSpanId": "cotton-production",
+          "sourceAttachment": "middle",
+          "targetAttachment": "start",
+          "annotation": "",
+          "bidirectional": false
+        }
+      ]
+    },
+    {
       "id": "cotton-production",
       "title": "Southern cotton production expands by 1200x between 1790 and 1860",
       "startYear": 1790,
