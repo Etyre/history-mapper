@@ -1,6 +1,53 @@
 {
   "spans": [
     {
+      "id": "cypherpunks",
+      "title": "The Cypherpunks",
+      "startYear": 1992,
+      "endYear": 2004,
+      "spanType": "Subculture",
+      "subEvents": [
+        {
+          "date": 1991,
+          "label": "PGP 1.0 released by Phil Zimmermann"
+        },
+        {
+          "date": 1992,
+          "label": "Cypherpunks mailing list founded; first anonymous remailer built"
+        },
+        {
+          "date": 1993,
+          "label": "A Cypherpunk's Manifesto published; US criminal investigation of Zimmermann begins"
+        },
+        {
+          "date": 1995,
+          "label": "PGP investigation dropped; Mixmaster remailer released"
+        },
+        {
+          "date": 1997,
+          "label": "Adam Back invents Hashcash"
+        },
+        {
+          "date": 1998,
+          "label": "Wei Dai publishes b-money; Nick Szabo proposes Bit Gold; DigiCash bankrupt"
+        },
+        {
+          "date": 2004,
+          "label": "Hal Finney creates RPOW (Reusable Proof of Work)"
+        }
+      ],
+      "causalImpacts": [
+        {
+          "id": "cypherpunks-to-crypto",
+          "targetSpanId": "cryptocurrency",
+          "sourceAttachment": "end",
+          "targetAttachment": "start",
+          "annotation": "",
+          "bidirectional": false
+        }
+      ]
+    },
+    {
       "id": "cryptocurrency",
       "title": "Cryptocurrency",
       "startYear": 2008,
