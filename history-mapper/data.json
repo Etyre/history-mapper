@@ -1,6 +1,29 @@
 {
   "spans": [
     {
+      "id": "steam-locomotive-dev",
+      "title": "Development of the steam locomotive",
+      "startYear": 1804,
+      "endYear": 1825,
+      "spanType": "Technology",
+      "subEvents": [
+        {
+          "date": 1804,
+          "label": "Trevithick runs first steam locomotive on rails (Penydarren, Wales)"
+        },
+        {
+          "date": 1812,
+          "label": "Salamanca: first commercially successful steam locomotive (Middleton Railway)"
+        },
+        {
+          "date": 1814,
+          "label": "Stephenson builds first locomotive for hauling coal (Killingworth mine)"
+        }
+      ],
+      "causalImpacts": [],
+      "continuesAs": "3eedf15a-aff4-44e2-8c93-add8e5be1ae0"
+    },
+    {
       "id": "cypherpunks",
       "title": "The Cypherpunks",
       "startYear": 1992,
@@ -456,11 +479,6 @@
       "spanType": "Economics",
       "subEvents": [
         {
-          "id": "5764a43f-7f30-48a4-94f4-1e6df6e9306b",
-          "date": 2010,
-          "label": "Chinese electricity production surpasses US electricity production"
-        },
-        {
           "date": 1996,
           "label": "World's largest steel producer (surpasses Japan)"
         },
@@ -479,6 +497,11 @@
         {
           "date": 2009,
           "label": "World's largest shipbuilder (surpasses South Korea)"
+        },
+        {
+          "id": "5764a43f-7f30-48a4-94f4-1e6df6e9306b",
+          "date": 2010,
+          "label": "Chinese electricity production surpasses US electricity production"
         },
         {
           "date": 2010,
@@ -1726,18 +1749,88 @@
     },
     {
       "id": "3eedf15a-aff4-44e2-8c93-add8e5be1ae0",
-      "title": "Railroad Revolution s-curve",
-      "startYear": 1804,
+      "title": "Railroad buildout [US and Europe]",
+      "startYear": 1825,
       "endYear": 1916,
       "spanType": "Technology",
-      "subEvents": [],
+      "subEvents": [
+        {
+          "date": 1825,
+          "label": "Stockton & Darlington Railway opens (first public railway)"
+        },
+        {
+          "date": 1830,
+          "label": "Liverpool & Manchester Railway opens; Baltimore & Ohio Railroad opens first 13 miles (first public railroad in the US)"
+        },
+        {
+          "date": 1835,
+          "label": "Germany's first railway (Bavaria); US ~1,000 miles"
+        },
+        {
+          "date": 1840,
+          "label": "US ~2,800 miles; Railway Mania begins in Britain"
+        },
+        {
+          "date": 1850,
+          "label": "US ~9,000 miles; Britain ~6,000 miles; Germany ~3,600 miles; France ~1,800 miles"
+        },
+        {
+          "date": 1856,
+          "label": "First railroad bridge across the Mississippi"
+        },
+        {
+          "date": 1860,
+          "label": "US ~30,000 miles"
+        },
+        {
+          "date": 1862,
+          "label": "Pacific Railroad Act signed by Lincoln"
+        },
+        {
+          "date": 1869,
+          "label": "Transcontinental railroad completed at Promontory Summit"
+        },
+        {
+          "date": 1870,
+          "label": "US ~53,000 miles; German unification accelerates rail consolidation"
+        },
+        {
+          "date": 1880,
+          "label": "US ~93,000 miles"
+        },
+        {
+          "date": 1883,
+          "label": "Northern Pacific completes 3rd transcontinental route; US adopts standard time zones"
+        },
+        {
+          "date": 1886,
+          "label": "Southern railroads adopt standard gauge"
+        },
+        {
+          "date": 1890,
+          "label": "US ~163,000 miles"
+        },
+        {
+          "date": 1900,
+          "label": "US ~193,000 miles"
+        },
+        {
+          "date": 1910,
+          "label": "US ~240,000 miles"
+        },
+        {
+          "date": 1916,
+          "label": "US peak: ~254,000 miles of track"
+        }
+      ],
       "causalImpacts": [
         {
           "id": "fb2af40b-6341-4bd6-aa3a-9740fbe15716",
           "targetSpanId": "de414cb2-bdb0-45a0-96f1-92c88e0c2175",
           "sourceAttachment": "middle",
           "targetAttachment": "start",
-          "annotation": "Railroads change the dynamics of military mobilization—because it's possible to mobilize and attack in days without long transit delays, mobilizing fast becomes imperative. This is one of the reasons why the Great Powers rushed into WWI—each country didn't want to risk being swiftly defeated by their rivals before their own army had mobilized.  "
+          "annotation": "Railroads change the dynamics of military mobilization—because it's possible to mobilize and attack in days without long transit delays, mobilizing fast becomes imperative. This is one of the reasons why the Great Powers rushed into WWI—each country didn't want to risk being swiftly defeated by their rivals before their own army had mobilized.  ",
+          "bidirectional": true
         }
       ]
     },
