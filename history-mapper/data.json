@@ -1,6 +1,45 @@
 {
   "spans": [
     {
+      "id": "virginia-racial-slavery",
+      "title": "Virginia shifts from indentured servitude to racial slavery",
+      "startYear": 1660,
+      "endYear": 1700,
+      "spanType": "Politics",
+      "subEvents": [
+        {
+          "date": 1660,
+          "label": "Laws begin formally recognizing slavery in racial terms"
+        },
+        {
+          "date": 1676,
+          "label": "Bacon's Rebellion: multiracial militia of servants and slaves burns Jamestown"
+        },
+        {
+          "date": 1680,
+          "label": "Virginia bans free Blacks and slaves from bearing arms; enslaved population ~3,000"
+        },
+        {
+          "date": 1685,
+          "label": "Series of laws create racial caste system, giving poor whites elevated status to split multiracial alliances"
+        },
+        {
+          "date": 1700,
+          "label": "Enslaved population reaches ~13,000"
+        }
+      ],
+      "causalImpacts": [
+        {
+          "id": "slavery-shift-to-slave-pop",
+          "targetSpanId": "b4768f0a-2492-44a0-9c8e-e47fc97edb91",
+          "sourceAttachment": "end",
+          "targetAttachment": "start",
+          "annotation": "",
+          "bidirectional": false
+        }
+      ]
+    },
+    {
       "id": "auto-development",
       "title": "Development of the automobile",
       "startYear": 1876,
@@ -2231,7 +2270,7 @@
     },
     {
       "id": "b4768f0a-2492-44a0-9c8e-e47fc97edb91",
-      "title": "The slave population in the American South is expanding exponentially",
+      "title": "The slave population in the American South is expanding exponentially at about 30% a decade",
       "startYear": 1700,
       "endYear": 1860,
       "spanType": "Demographics",
