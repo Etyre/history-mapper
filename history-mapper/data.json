@@ -1,6 +1,24 @@
 {
   "spans": [
     {
+      "id": "0919486b-89f4-4c16-8b6b-4e0dbb2153a4",
+      "title": "The English Civil War",
+      "startYear": 1642,
+      "endYear": 1660,
+      "spanType": "Politics",
+      "subEvents": [],
+      "causalImpacts": []
+    },
+    {
+      "id": "fff18996-3a4c-4b65-abdd-a0b0319274f6",
+      "title": "The Scramble for Africa",
+      "startYear": 1881,
+      "endYear": 1914,
+      "spanType": "Politics",
+      "subEvents": [],
+      "causalImpacts": []
+    },
+    {
       "id": "ed3ae645-7a45-4b9e-b254-6202cfbd9c24",
       "title": "Constitutional Convention and ratification by the states ",
       "startYear": 1787,
@@ -28,7 +46,7 @@
     },
     {
       "id": "1386a44e-cf85-4ad9-81ea-5db0aecacfad",
-      "title": "Fairness doctrine is in effect",
+      "title": "Fairness doctrine is in effect [US]",
       "startYear": 1949,
       "endYear": 1987,
       "spanType": "Politics",
@@ -37,7 +55,7 @@
     },
     {
       "id": "5e517376-a12d-4180-bf80-993e5fae46f3",
-      "title": "The US becomes much more politically polarized: stronger sorting by political tribe and greater hostility towards the other side",
+      "title": "The US is becoming politically polarized: stronger sorting by political tribe and greater hostility towards the other side",
       "startYear": 1994,
       "endYear": "ongoing",
       "spanType": "Culture",
@@ -46,7 +64,7 @@
     },
     {
       "id": "8a96006f-d1c3-4a80-9297-0161cca4fb72",
-      "title": "SRI and then Xerox PARC develop the idioms of the personal computer",
+      "title": "SRI and then Xerox PARC are developing the idioms of the personal computer",
       "startYear": 1962,
       "endYear": 1972,
       "spanType": "Politics",
@@ -95,31 +113,38 @@
       "subEvents": [
         {
           "date": 1609,
-          "label": "Henry Hudson sails into New York Bay and up the Hudson River"
+          "label": "Henry Hudson sails into New York Bay and up the Hudson River",
+          "id": "0e9b416a-bc2a-4d3b-bb0d-b701680b2e61"
         },
         {
           "date": 1621,
-          "label": "Dutch West India Company created"
+          "label": "Dutch West India Company created",
+          "id": "f24b0ae2-7682-4c45-820c-66e10130c4ed"
         },
         {
           "date": 1624,
-          "label": "First settlers arrive; New Netherland colony established"
+          "label": "First settlers arrive; New Netherland colony established",
+          "id": "f65689f8-7298-4675-ac18-a224588445ad"
         },
         {
           "date": 1625,
-          "label": "Trading post moved to tip of Manhattan Island"
+          "label": "Trading post moved to tip of Manhattan Island",
+          "id": "f461480f-3b97-4d73-9008-0c49d50ecce3"
         },
         {
           "date": 1626,
-          "label": "Peter Minuit acquires Manhattan for trade goods valued at 60 guilders"
+          "label": "Peter Minuit acquires Manhattan for trade goods valued at 60 guilders",
+          "id": "5598eea5-510a-4633-9eab-6110f857d6c4"
         },
         {
           "date": 1653,
-          "label": "New Amsterdam receives municipal charter from Governor Stuyvesant"
+          "label": "New Amsterdam receives municipal charter from Governor Stuyvesant",
+          "id": "bf641dda-7ae8-48b7-821c-c5b4a40c52dd"
         },
         {
           "date": 1664,
-          "label": "English seize control; New Amsterdam renamed New York"
+          "label": "English seize control; New Amsterdam renamed New York",
+          "id": "f35f7c51-f051-4e1e-b34b-f35ba109ba48"
         }
       ],
       "causalImpacts": [
@@ -141,7 +166,8 @@
       "subEvents": [
         {
           "date": 1701,
-          "label": "Great Peace of Montreal signed; ends the Beaver Wars"
+          "label": "Great Peace of Montreal signed; ends the Beaver Wars",
+          "id": "ed1ac92b-e0cf-4b4d-8c08-ea5691b7e1fe"
         }
       ],
       "causalImpacts": []
@@ -155,23 +181,28 @@
       "subEvents": [
         {
           "date": 1633,
-          "label": "Measles epidemic strikes Iroquois"
+          "label": "Measles epidemic strikes Iroquois",
+          "id": "2485002c-e04a-412c-ae20-3d50b6ecedfc"
         },
         {
           "date": 1634,
-          "label": "Smallpox: Mohawk population drops from ~7,740 to ~2,830 (63% decline)"
+          "label": "Smallpox: Mohawk population drops from ~7,740 to ~2,830 (63% decline)",
+          "id": "a3fa3062-dd3e-4f4f-a041-c8fa664cc751"
         },
         {
           "date": 1636,
-          "label": "Smallpox reaches Lake Ontario area and other nations"
+          "label": "Smallpox reaches Lake Ontario area and other nations",
+          "id": "95425b7e-eb57-4185-8af4-41b679cfeb92"
         },
         {
           "date": 1639,
-          "label": "Smallpox returns"
+          "label": "Smallpox returns",
+          "id": "3dbf8836-c119-44f3-91d5-ee7c70598cd0"
         },
         {
           "date": 1640,
-          "label": "Cumulative epidemics have killed roughly 50% of Five Nations population"
+          "label": "Cumulative epidemics have killed roughly 50% of Five Nations population",
+          "id": "46d45075-b6d0-4162-bc5c-d749e0305d49"
         }
       ],
       "causalImpacts": [
@@ -193,23 +224,28 @@
       "subEvents": [
         {
           "date": 1660,
-          "label": "Laws begin formally recognizing slavery in racial terms"
+          "label": "Laws begin formally recognizing slavery in racial terms",
+          "id": "527cf9f9-a91f-4bcc-9a90-9ea094bed129"
         },
         {
           "date": 1676,
-          "label": "Bacon's Rebellion: multiracial militia of servants and slaves burns Jamestown"
+          "label": "Bacon's Rebellion: multiracial militia of servants and slaves burns Jamestown",
+          "id": "dfa45cf6-5b72-4d41-9172-96c5e0cf0596"
         },
         {
           "date": 1680,
-          "label": "Virginia bans free Blacks and slaves from bearing arms; enslaved population ~3,000"
+          "label": "Virginia bans free Blacks and slaves from bearing arms; enslaved population ~3,000",
+          "id": "d7699101-c12a-4410-b188-4e42c9c3bb7e"
         },
         {
           "date": 1685,
-          "label": "Series of laws create racial caste system, giving poor whites elevated status to split multiracial alliances"
+          "label": "Series of laws create racial caste system, giving poor whites elevated status to split multiracial alliances",
+          "id": "7f874de8-0d69-492a-a27b-ccc199d08ede"
         },
         {
           "date": 1700,
-          "label": "Enslaved population reaches ~13,000"
+          "label": "Enslaved population reaches ~13,000",
+          "id": "a6852b61-5053-48a4-8823-c75c9a74f47c"
         }
       ],
       "causalImpacts": [
@@ -229,7 +265,83 @@
       "startYear": 1700,
       "endYear": 1860,
       "spanType": "Demographics",
-      "subEvents": [],
+      "subEvents": [
+        {
+          "date": 1700,
+          "label": "Enslaved population: ~27,817",
+          "id": "fd3e6afd-c057-4171-92d2-df89da87a6f4"
+        },
+        {
+          "date": 1720,
+          "label": "Enslaved population: ~68,839",
+          "id": "d93cf7ba-4e34-4160-97ab-b89efa9c607a"
+        },
+        {
+          "date": 1740,
+          "label": "Enslaved population: ~150,024",
+          "id": "7cc73ac2-77a0-4d09-aa47-2789a5f8c33d"
+        },
+        {
+          "date": 1750,
+          "label": "Enslaved population: ~242,073",
+          "id": "844d64a4-8ece-47a7-aaae-925f64dc57a5"
+        },
+        {
+          "date": 1760,
+          "label": "Enslaved population: ~325,806",
+          "id": "2767a890-3f9b-40cc-ac78-9044fcc37721"
+        },
+        {
+          "date": 1770,
+          "label": "Enslaved population: ~460,000",
+          "id": "f4778fcf-411b-4dd4-a582-660f48c53d7b"
+        },
+        {
+          "date": 1780,
+          "label": "Enslaved population: ~575,000",
+          "id": "6084890e-2392-4412-bb5b-59fdfc644031"
+        },
+        {
+          "date": 1790,
+          "label": "Enslaved population: 697,897 (first Census)",
+          "id": "0ae374a4-a858-4b42-8480-bfb8f3407a0f"
+        },
+        {
+          "date": 1800,
+          "label": "Enslaved population: 893,602",
+          "id": "ff57fe65-0310-487d-b176-1637fc418a3e"
+        },
+        {
+          "date": 1810,
+          "label": "Enslaved population: 1,191,362",
+          "id": "c838e37f-24b1-459d-a784-b182bc82d8ec"
+        },
+        {
+          "date": 1820,
+          "label": "Enslaved population: 1,538,022",
+          "id": "4935922b-1749-44a4-9911-07cd1cdc889b"
+        },
+        {
+          "date": 1830,
+          "label": "Enslaved population: 2,009,043",
+          "id": "04cd7a8e-f26d-48d9-9e7f-368fbafdc75a"
+        },
+        {
+          "date": 1840,
+          "label": "Enslaved population: 2,487,355",
+          "id": "232ce87f-31d4-4d57-b6f8-0f2709c2994b"
+        },
+        {
+          "date": 1850,
+          "label": "Enslaved population: 3,204,313",
+          "id": "c2ced76a-283d-4e53-a291-7a31372861cb"
+        },
+        {
+          "date": 1860,
+          "label": "Enslaved population: 3,953,760",
+          "id": "6806d877-adb9-4163-8c64-d062cda6ef7e"
+        }
+      ],
       "causalImpacts": [
         {
           "id": "6cb81cab-10f4-462e-8886-e9457640c8a5",
@@ -249,39 +361,48 @@
       "subEvents": [
         {
           "date": 1733,
-          "label": "John Kay invents the flying shuttle, dramatically speeding up weaving"
+          "label": "John Kay invents the flying shuttle, dramatically speeding up weaving",
+          "id": "70f28f95-a77e-40ff-b8a2-5427b3c314b0"
         },
         {
           "date": 1738,
-          "label": "Lewis Paul patents roller spinning machine (first to spin cotton mechanically)"
+          "label": "Lewis Paul patents roller spinning machine (first to spin cotton mechanically)",
+          "id": "3e7baa5e-3f15-49a4-af73-3193beb524ec"
         },
         {
           "date": 1748,
-          "label": "Lewis Paul patents carding machine"
+          "label": "Lewis Paul patents carding machine",
+          "id": "185e31dc-969f-4937-acc7-aa144e5a1c26"
         },
         {
           "date": 1764,
-          "label": "Spinning jenny invented by Hargreaves (8 spools, later 120)"
+          "label": "Spinning jenny invented by Hargreaves (8 spools, later 120)",
+          "id": "2b52b6d3-2b90-4a54-935e-77542c44c274"
         },
         {
           "date": 1769,
-          "label": "Water frame patented by Arkwright (moved spinning into factories)"
+          "label": "Water frame patented by Arkwright (moved spinning into factories)",
+          "id": "79faee7f-1bef-49bc-b203-df11682fbacc"
         },
         {
           "date": 1779,
-          "label": "Spinning mule invented by Crompton (finer, more uniform yarn)"
+          "label": "Spinning mule invented by Crompton (finer, more uniform yarn)",
+          "id": "b647745e-525d-4abf-99fe-f51bf672a2ba"
         },
         {
           "date": 1780,
-          "label": "Calico printing machine (patterned textiles using pre-punched cards)"
+          "label": "Calico printing machine (patterned textiles using pre-punched cards)",
+          "id": "f84b3907-2466-4ef0-90fc-dbd836858b70"
         },
         {
           "date": 1785,
-          "label": "Power loom invented by Cartwright"
+          "label": "Power loom invented by Cartwright",
+          "id": "ff56cb93-cff6-44fa-a5f9-56b615e90398"
         },
         {
           "date": 1800,
-          "label": "Jacquard develops programmable loom for patterned silk"
+          "label": "Jacquard develops programmable loom for patterned silk",
+          "id": "bcca6c3c-6d76-429b-a33e-7b8a00f51588"
         },
         {
           "id": "3f587cae-fb25-471b-b914-14679d13e16f",
@@ -352,63 +473,78 @@
       "subEvents": [
         {
           "date": 1790,
-          "label": "3,135 bales produced"
+          "label": "3,135 bales produced",
+          "id": "f9c9ab66-30a7-45f2-94d9-3ad376e554dd"
         },
         {
           "date": 1795,
-          "label": "16,719 bales produced"
+          "label": "16,719 bales produced",
+          "id": "720bdf7d-a944-45c8-b581-ca425820a3f1"
         },
         {
           "date": 1800,
-          "label": "73,145 bales produced"
+          "label": "73,145 bales produced",
+          "id": "b0d3d460-4af8-46f0-94af-3dddff7af2db"
         },
         {
           "date": 1805,
-          "label": "146,290 bales produced"
+          "label": "146,290 bales produced",
+          "id": "5c74ee79-9704-49ac-a843-ac114dd317e7"
         },
         {
           "date": 1810,
-          "label": "177,638 bales produced"
+          "label": "177,638 bales produced",
+          "id": "45a1ea25-6337-4e29-bfea-e4cf74913473"
         },
         {
           "date": 1815,
-          "label": "208,986 bales produced"
+          "label": "208,986 bales produced",
+          "id": "7357be86-821f-4414-abc4-05b42430a84b"
         },
         {
           "date": 1820,
-          "label": "334,378 bales produced"
+          "label": "334,378 bales produced",
+          "id": "f70dac21-c0bb-4589-ad09-4b2284eaf696"
         },
         {
           "date": 1825,
-          "label": "532,915 bales produced"
+          "label": "532,915 bales produced",
+          "id": "77e874db-3a07-41a8-813a-20eb7d514e3d"
         },
         {
           "date": 1830,
-          "label": "731,452 bales produced"
+          "label": "731,452 bales produced",
+          "id": "fe1ea4a1-5a51-4337-8351-b07b6f4cfb88"
         },
         {
           "date": 1835,
-          "label": "1,060,711 bales produced"
+          "label": "1,060,711 bales produced",
+          "id": "21ed1357-fd67-428d-b763-f15e5fc97537"
         },
         {
           "date": 1840,
-          "label": "1,346,232 bales produced"
+          "label": "1,346,232 bales produced",
+          "id": "d4577914-f6d4-4447-90c7-4dfde9a51ebc"
         },
         {
           "date": 1845,
-          "label": "1,804,223 bales produced"
+          "label": "1,804,223 bales produced",
+          "id": "613af199-dcf9-4cfd-8604-00e7a7e215e4"
         },
         {
           "date": 1850,
-          "label": "2,133,851 bales produced"
+          "label": "2,133,851 bales produced",
+          "id": "f12c8563-af24-4ed2-b853-57b0eb0a0c8f"
         },
         {
           "date": 1855,
-          "label": "3,217,417 bales produced"
+          "label": "3,217,417 bales produced",
+          "id": "ccf806a1-3bd8-4ad4-8c79-bb4f38fbf62b"
         },
         {
           "date": 1860,
-          "label": "3,837,402 bales produced; the American South is producing two thirds of the world's cotton"
+          "label": "3,837,402 bales produced; the American South is producing two thirds of the world's cotton",
+          "id": "ef0e6c16-8b4a-4b07-b37e-5a4a82ac7b79"
         }
       ],
       "causalImpacts": [
@@ -425,7 +561,8 @@
           "targetSpanId": "b4768f0a-2492-44a0-9c8e-e47fc97edb91",
           "sourceAttachment": "middle",
           "targetAttachment": "middle",
-          "annotation": ""
+          "annotation": "",
+          "bidirectional": true
         }
       ]
     },
@@ -438,7 +575,8 @@
       "subEvents": [
         {
           "date": 1793,
-          "label": "Eli Whitney invents the cotton gin, making short-staple upland cotton commercially viable"
+          "label": "Eli Whitney invents the cotton gin, making short-staple upland cotton commercially viable",
+          "id": "14a1b53b-050a-400b-8b6c-f7d35ef2c286"
         }
       ],
       "causalImpacts": [
@@ -461,19 +599,23 @@
       "subEvents": [
         {
           "date": 1800,
-          "label": "~6% of the US population lives in urban areas"
+          "label": "~6% of the US population lives in urban areas",
+          "id": "c98ae1cd-cb68-474b-82eb-adcde0813403"
         },
         {
           "date": 1820,
-          "label": "~7% urban"
+          "label": "~7% urban",
+          "id": "1a277b9b-1d6c-4592-849d-cd29c97dd4f7"
         },
         {
           "date": 1840,
-          "label": "~11% urban"
+          "label": "~11% urban",
+          "id": "6998d49f-ccb4-45b9-84a7-8e5e22fbed9f"
         },
         {
           "date": 1860,
-          "label": "~20% urban"
+          "label": "~20% urban",
+          "id": "0a389bb3-3f1b-4683-9d17-561f93d68505"
         }
       ],
       "causalImpacts": [],
@@ -484,59 +626,72 @@
       "title": "Global coal production increases by ~100x between 1800 and 1913",
       "startYear": 1800,
       "endYear": 1913,
-      "spanType": "Technology",
+      "spanType": "Economics",
       "subEvents": [
         {
           "date": 1800,
-          "label": "Global coal production ~10 million metric tons (almost entirely British)"
+          "label": "Global coal production ~10 million metric tons (almost entirely British)",
+          "id": "d8f15b3a-e6e7-4a9c-aa27-38be34c51d49"
         },
         {
           "date": 1810,
-          "label": "~13 Mt"
+          "label": "~13 Mt",
+          "id": "4a63fe4d-e85d-470e-96e4-9165af2fbb1a"
         },
         {
           "date": 1820,
-          "label": "~17 Mt"
+          "label": "~17 Mt",
+          "id": "16359df6-b61e-4826-80b1-b1b2bdac9df8"
         },
         {
           "date": 1830,
-          "label": "~24 Mt; multi-country expansion begins as US, Belgium, France, Germany enter"
+          "label": "~24 Mt; multi-country expansion begins as US, Belgium, France, Germany enter",
+          "id": "afaf8d9e-3d38-4d91-a19b-c8b698da4dd8"
         },
         {
           "date": 1840,
-          "label": "~40 Mt"
+          "label": "~40 Mt",
+          "id": "19a12cb1-2982-4dc4-bc25-198eea5438ab"
         },
         {
           "date": 1850,
-          "label": "~64 Mt"
+          "label": "~64 Mt",
+          "id": "6d5b36ad-4921-420c-9523-54da8839b0eb"
         },
         {
           "date": 1860,
-          "label": "~117 Mt"
+          "label": "~117 Mt",
+          "id": "e87a2ef8-af6f-40bd-aed6-5340d6817e11"
         },
         {
           "date": 1870,
-          "label": "~187 Mt"
+          "label": "~187 Mt",
+          "id": "43c7c01d-61eb-4d70-a27d-bb2b02f3cc80"
         },
         {
           "date": 1880,
-          "label": "~296 Mt"
+          "label": "~296 Mt",
+          "id": "5907e335-e4be-4349-a5a2-63a8d4e96e7e"
         },
         {
           "date": 1890,
-          "label": "~441 Mt"
+          "label": "~441 Mt",
+          "id": "6f520175-76c2-42ba-abcd-a874ae407fc5"
         },
         {
           "date": 1900,
-          "label": "~686 Mt"
+          "label": "~686 Mt",
+          "id": "42c74a1e-f12a-4fb2-8fdf-75fb8e263d7f"
         },
         {
           "date": 1910,
-          "label": "~1,044 Mt"
+          "label": "~1,044 Mt",
+          "id": "f58f3e36-6fda-4efa-85ef-a86ad0548187"
         },
         {
           "date": 1913,
-          "label": "~1,319 Mt; coal provides 56% of world energy"
+          "label": "~1,319 Mt; coal provides 56% of world energy",
+          "id": "ddc9c0b6-0a3a-47be-b706-266e712105bb"
         }
       ],
       "causalImpacts": [
@@ -605,15 +760,18 @@
       "subEvents": [
         {
           "date": 1804,
-          "label": "Trevithick runs first steam locomotive on rails (Penydarren, Wales)"
+          "label": "Trevithick runs first steam locomotive on rails (Penydarren, Wales)",
+          "id": "70c153f5-da9b-4e06-b902-4f3ae5631199"
         },
         {
           "date": 1812,
-          "label": "Salamanca: first commercially successful steam locomotive (Middleton Railway)"
+          "label": "Salamanca: first commercially successful steam locomotive (Middleton Railway)",
+          "id": "650d24ac-43a2-41e8-9be8-d17fdae3c721"
         },
         {
           "date": 1814,
-          "label": "Stephenson builds first locomotive for hauling coal (Killingworth mine)"
+          "label": "Stephenson builds first locomotive for hauling coal (Killingworth mine)",
+          "id": "0edb2aff-97a0-4fa9-993a-d26ef2cb04a3"
         }
       ],
       "causalImpacts": [],
@@ -637,35 +795,43 @@
       "subEvents": [
         {
           "date": 1827,
-          "label": "Omnibus first introduced in NYC (Broadway)"
+          "label": "Omnibus first introduced in NYC (Broadway)",
+          "id": "15bf9f19-14ef-4ebf-af5e-d776474d64e8"
         },
         {
           "date": 1832,
-          "label": "Horsecar first introduced in NYC (New York & Harlem Railroad)"
+          "label": "Horsecar first introduced in NYC (New York & Harlem Railroad)",
+          "id": "384e4a31-6219-46c9-bb5c-64285a4b7d11"
         },
         {
           "date": 1873,
-          "label": "Cable car first introduced in San Francisco (Clay Street Hill Railroad)"
+          "label": "Cable car first introduced in San Francisco (Clay Street Hill Railroad)",
+          "id": "52e38e80-0111-4cc4-a129-14b463590641"
         },
         {
           "date": 1878,
-          "label": "Elevated steam rail first introduced in NYC (Ninth Avenue El)"
+          "label": "Elevated steam rail first introduced in NYC (Ninth Avenue El)",
+          "id": "ca4ba1e8-b72c-4f86-984e-37c1f19472b3"
         },
         {
           "date": 1888,
-          "label": "Electric streetcar (trolley) first introduced in Richmond, VA"
+          "label": "Electric streetcar (trolley) first introduced in Richmond, VA",
+          "id": "91487818-4658-4c71-b081-0841308f0c6d"
         },
         {
           "date": 1897,
-          "label": "Subway first introduced in Boston (Tremont Street) — a streetcar tunnel, not heavy rail"
+          "label": "Subway first introduced in Boston (Tremont Street) — a streetcar tunnel, not heavy rail",
+          "id": "9fc6891c-eebd-4568-afa8-88d89b9499f8"
         },
         {
           "date": 1900,
-          "label": "Interurban electric rail first introduced, connecting cities rather than serving intracity routes"
+          "label": "Interurban electric rail first introduced, connecting cities rather than serving intracity routes",
+          "id": "6e249a52-c403-43b2-a12d-523b1e194632"
         },
         {
           "date": 1904,
-          "label": "First purpose-built heavy-rail subway introduced in NYC (IRT)"
+          "label": "First purpose-built heavy-rail subway introduced in NYC (IRT)",
+          "id": "ecac279f-d40d-4111-a554-7aba6b1693b2"
         }
       ],
       "causalImpacts": [
@@ -687,71 +853,88 @@
       "subEvents": [
         {
           "date": 1825,
-          "label": "Stockton & Darlington Railway opens (first public railway)"
+          "label": "Stockton & Darlington Railway opens (first public railway)",
+          "id": "43a88890-208e-486b-8f2a-7ad87a04c91b"
         },
         {
           "date": 1830,
-          "label": "Liverpool & Manchester Railway opens; Baltimore & Ohio Railroad opens first 13 miles (first public railroad in the US)"
+          "label": "Liverpool & Manchester Railway opens; Baltimore & Ohio Railroad opens first 13 miles (first public railroad in the US)",
+          "id": "0f26a1fb-353b-4549-9c8b-15e2d876ce2f"
         },
         {
           "date": 1835,
-          "label": "Germany's first railway (Bavaria); US ~1,000 miles"
+          "label": "Germany's first railway (Bavaria); US ~1,000 miles",
+          "id": "7661150e-dec3-4154-94f8-873c25fba8da"
         },
         {
           "date": 1840,
-          "label": "US ~2,800 miles; Railway Mania begins in Britain"
+          "label": "US ~2,800 miles; Railway Mania begins in Britain",
+          "id": "b1b563e0-8f42-4ffa-85fc-097b2d36dfb1"
         },
         {
           "date": 1850,
-          "label": "US ~9,000 miles; Britain ~6,000 miles; Germany ~3,600 miles; France ~1,800 miles"
+          "label": "US ~9,000 miles; Britain ~6,000 miles; Germany ~3,600 miles; France ~1,800 miles",
+          "id": "6b27403f-b8d6-4349-a6f4-f21b336be73b"
         },
         {
           "date": 1856,
-          "label": "First railroad bridge across the Mississippi"
+          "label": "First railroad bridge across the Mississippi",
+          "id": "002ce647-6e8c-42a8-89c3-832d58c1ace7"
         },
         {
           "date": 1860,
-          "label": "US ~30,000 miles"
+          "label": "US ~30,000 miles",
+          "id": "aaf8792a-8194-4872-b8ca-07174a475972"
         },
         {
           "date": 1862,
-          "label": "Pacific Railroad Act signed by Lincoln"
+          "label": "Pacific Railroad Act signed by Lincoln",
+          "id": "32115fd6-be12-4900-93df-28134e3b916d"
         },
         {
           "date": 1869,
-          "label": "Transcontinental railroad completed at Promontory Summit"
+          "label": "Transcontinental railroad completed at Promontory Summit",
+          "id": "3a2deb2f-7e2a-48a5-adbe-f125c3f92801"
         },
         {
           "date": 1870,
-          "label": "US ~53,000 miles; German unification accelerates rail consolidation"
+          "label": "US ~53,000 miles; German unification accelerates rail consolidation",
+          "id": "0c4b95b7-73d7-41ce-8d4d-1098b97adbad"
         },
         {
           "date": 1880,
-          "label": "US ~93,000 miles"
+          "label": "US ~93,000 miles",
+          "id": "1696a900-4808-4046-8d6a-e7fe0c69cf4a"
         },
         {
           "date": 1883,
-          "label": "Northern Pacific completes 3rd transcontinental route; US adopts standard time zones"
+          "label": "Northern Pacific completes 3rd transcontinental route; US adopts standard time zones",
+          "id": "1826bc32-c355-4aad-8e3e-03e8b9af1e0a"
         },
         {
           "date": 1886,
-          "label": "Southern railroads adopt standard gauge"
+          "label": "Southern railroads adopt standard gauge",
+          "id": "d10c03d3-c0fd-4647-870d-1a5a1eee1465"
         },
         {
           "date": 1890,
-          "label": "US ~163,000 miles"
+          "label": "US ~163,000 miles",
+          "id": "82de07ca-7544-4209-835f-367ca4e5cdf6"
         },
         {
           "date": 1900,
-          "label": "US ~193,000 miles"
+          "label": "US ~193,000 miles",
+          "id": "3167578d-c430-4cfc-8201-50e4ec895993"
         },
         {
           "date": 1910,
-          "label": "US ~240,000 miles"
+          "label": "US ~240,000 miles",
+          "id": "0489fcad-3438-4896-99b7-29760b164fca"
         },
         {
           "date": 1916,
-          "label": "US peak: ~254,000 miles of track"
+          "label": "US peak: ~254,000 miles of track",
+          "id": "b790c8e1-7070-4143-9451-f63db86d7abb"
         }
       ],
       "causalImpacts": [
@@ -892,75 +1075,93 @@
       "subEvents": [
         {
           "date": 1844,
-          "label": "Morse demonstrates first line: DC to Baltimore (40 mi)"
+          "label": "Morse demonstrates first line: DC to Baltimore (40 mi)",
+          "id": "d3fe43e7-94f0-4c82-b0f4-205209de58c1"
         },
         {
           "date": 1847,
-          "label": "First line connects New York to St. Louis"
+          "label": "First line connects New York to St. Louis",
+          "id": "7136b46c-b8c3-45bf-adbf-eee5f4edc098"
         },
         {
           "date": 1848,
-          "label": "2,000 miles of wire (50x in 2 years)"
+          "label": "2,000 miles of wire (50x in 2 years)",
+          "id": "b4427bab-b102-4107-ba5c-51f2515cdb90"
         },
         {
           "date": 1850,
-          "label": "12,000 miles; all major cities east of Mississippi connected"
+          "label": "12,000 miles; all major cities east of Mississippi connected",
+          "id": "3f2fd6a7-880b-4e08-842a-4fa112f98147"
         },
         {
           "date": 1851,
-          "label": "75 companies, 21,147 miles of wire (Census)"
+          "label": "75 companies, 21,147 miles of wire (Census)",
+          "id": "f6684bdb-5a39-4ea6-8c89-76f6c2af9757"
         },
         {
           "date": 1852,
-          "label": "23,000 miles — growth rate begins decelerating"
+          "label": "23,000 miles — growth rate begins decelerating",
+          "id": "dcb1b0a2-2fb5-4624-8941-956db1032693"
         },
         {
           "date": 1855,
-          "label": "Network covers nearly every important town in England and Ireland"
+          "label": "Network covers nearly every important town in England and Ireland",
+          "id": "a4f9ba7f-8f50-4a15-9fee-a3be613f96c1"
         },
         {
           "date": 1857,
-          "label": "Six US companies form regional monopoly cartel"
+          "label": "Six US companies form regional monopoly cartel",
+          "id": "85137ea1-b3e2-4cd6-8d01-208ca16d1b33"
         },
         {
           "date": 1858,
-          "label": "First transatlantic cable laid — fails after ~3 weeks"
+          "label": "First transatlantic cable laid — fails after ~3 weeks",
+          "id": "c7893646-7fbc-448d-8773-be3ea6d3ecce"
         },
         {
           "date": 1861,
-          "label": "Transcontinental telegraph completed (Oct 24)"
+          "label": "Transcontinental telegraph completed (Oct 24)",
+          "id": "df574e09-2d33-4a01-b4d3-173a718e3cb5"
         },
         {
           "date": 1866,
-          "label": "Permanent transatlantic cable; Western Union achieves monopoly (~100k mi)"
+          "label": "Permanent transatlantic cable; Western Union achieves monopoly (~100k mi)",
+          "id": "7a72f0df-9625-4f62-b1aa-79096f5c8ce7"
         },
         {
           "date": 1870,
-          "label": "9.2M messages/year"
+          "label": "9.2M messages/year",
+          "id": "6df3a922-9ee1-41b0-bd4f-eb69c46e79b7"
         },
         {
           "date": 1880,
-          "label": "29.2M messages/year"
+          "label": "29.2M messages/year",
+          "id": "4300ff27-083c-49cf-9b68-7a4658f093ed"
         },
         {
           "date": 1890,
-          "label": "55.9M messages/year; 679k miles of wire"
+          "label": "55.9M messages/year; 679k miles of wire",
+          "id": "93189809-4b5c-4d40-b3f6-0138b196784c"
         },
         {
           "date": 1900,
-          "label": "63.2M messages/year; ~1M miles of wire"
+          "label": "63.2M messages/year; ~1M miles of wire",
+          "id": "9b98728a-6584-43bf-a924-fd78fe3de378"
         },
         {
           "date": 1920,
-          "label": "155.9M messages/year (peak era begins)"
+          "label": "155.9M messages/year (peak era begins)",
+          "id": "3098bb37-31f3-4259-a1e1-f02ce2f3f2fd"
         },
         {
           "date": 1945,
-          "label": "236.2M messages/year (all-time peak)"
+          "label": "236.2M messages/year (all-time peak)",
+          "id": "2e0feab6-98fc-4d4c-8080-556590826ac0"
         },
         {
           "date": 1960,
-          "label": "124.3M messages/year (telephone taking over)"
+          "label": "124.3M messages/year (telephone taking over)",
+          "id": "c15f53f5-7fe2-42a2-aaf1-170ed49fe073"
         }
       ],
       "causalImpacts": []
@@ -993,7 +1194,7 @@
     },
     {
       "id": "4284ec14-2840-4881-9659-b437bc6ede04",
-      "title": "The cost of steel drops by 90% and steel production increases by 224x between 18600 and 1900",
+      "title": "The cost of steel drops by 90% and steel production increases by 224x between 1860 and 1900",
       "startYear": 1860,
       "endYear": 1900,
       "spanType": "Economics",
@@ -1047,34 +1248,45 @@
     },
     {
       "id": "urbanization-explosive",
-      "title": "Explosive urbanization due to the industrial revolution [US]",
+      "title": "Explosive urbanization: the US goes from 25% urbanized to 64% urbanized between 1870 and 1950",
       "startYear": 1870,
       "endYear": 1950,
       "spanType": "Demographics",
       "subEvents": [
         {
           "date": 1880,
-          "label": "~28% urban"
+          "label": "~28% urban",
+          "id": "d1254456-2535-4199-9c91-723576ece1e6"
         },
         {
           "date": 1900,
-          "label": "~40% urban"
+          "label": "~40% urban",
+          "id": "9e6e85e8-9eda-464b-ac03-e74a38bb5e86"
         },
         {
           "date": 1910,
-          "label": "~46% urban"
+          "label": "~46% urban",
+          "id": "02e2f25b-409b-46d2-a513-fad782a688bb"
         },
         {
           "date": 1920,
-          "label": "~51% urban — crosses majority"
+          "label": "~51% urban — crosses majority",
+          "id": "00314cf6-12f5-4ef5-8ff9-5867127fabe8"
         },
         {
           "date": 1940,
-          "label": "~57% urban"
+          "label": "~57% urban",
+          "id": "10abc6c6-5e04-45cf-91f9-8f618c3c24ff"
         },
         {
           "date": 1950,
-          "label": "~64% urban"
+          "label": "~64% urban",
+          "id": "358b2e68-0a89-4a92-953a-aee10bfab948"
+        },
+        {
+          "id": "6aa7ecfc-0c15-4a04-b87c-c7f00dd29f4d",
+          "date": 1870,
+          "label": "~25% urban"
         }
       ],
       "causalImpacts": [
@@ -1114,77 +1326,93 @@
       "subEvents": [
         {
           "date": 1876,
-          "label": "Bell patents the telephone"
+          "label": "Bell patents the telephone",
+          "id": "6978e581-b19a-439b-a8d1-b6f24f9b9e65"
         },
         {
           "date": 1878,
-          "label": "First local exchanges built; New Haven, CT has first switchboard. ~150,000 phones in the US by 1880"
+          "label": "First local exchanges built; New Haven, CT has first switchboard. ~150,000 phones in the US by 1880",
+          "id": "c47e6cb2-f4c5-48c8-816b-feab089aa482"
         },
         {
           "date": 1885,
-          "label": "AT&T founded to build long-distance"
+          "label": "AT&T founded to build long-distance",
+          "id": "db4d3004-e89e-47d8-84d2-8979cfa3fb5c"
         },
         {
           "date": 1892,
-          "label": "First long-distance line: New York to Chicago"
+          "label": "First long-distance line: New York to Chicago",
+          "id": "01ee96cf-1a95-4a43-9dd5-249160ed8618"
         },
         {
           "date": 1915,
-          "label": "First transcontinental call (NY to San Francisco)"
+          "label": "First transcontinental call (NY to San Francisco)",
+          "id": "e07f4029-e0f5-44b4-999d-2da2a05af9e4"
         },
         {
           "date": 1925,
-          "label": "Rural expansion begins, but slow. Urban areas well-served; farms largely cut off"
+          "label": "Rural expansion begins, but slow. Urban areas well-served; farms largely cut off",
+          "id": "6e612fd7-d642-46f4-9c37-75f3216e61bf"
         },
         {
           "date": 1934,
-          "label": "Communications Act creates FCC; universal service becomes explicit policy goal"
+          "label": "Communications Act creates FCC; universal service becomes explicit policy goal",
+          "id": "1f3f7afd-37d0-4cec-8085-573ceb27b2f4"
         },
         {
           "date": 1936,
-          "label": "Rural Electrification Act extended to telephone cooperatives; massive rural buildout begins"
+          "label": "Rural Electrification Act extended to telephone cooperatives; massive rural buildout begins",
+          "id": "c7554c52-e18c-4b0e-b4d5-67ab199bb4b4"
         },
         {
           "date": 1955,
-          "label": "~60% of US homes have phones"
+          "label": "~60% of US homes have phones",
+          "id": "7d9cec55-c4dd-4ba4-87f3-affabddc083b"
         },
         {
           "date": 1965,
-          "label": "Direct distance dialing replaces operators for long-distance; ~90% household penetration reached by ~1970"
+          "label": "Direct distance dialing replaces operators for long-distance; ~90% household penetration reached by ~1970",
+          "id": "f204c08c-954a-436b-ba3d-f2428f9db4be"
         },
         {
           "date": 1984,
-          "label": "AT&T breakup (Bell System divestiture)"
+          "label": "AT&T breakup (Bell System divestiture)",
+          "id": "4a164d7d-74ac-4f70-852f-9ab012119966"
         }
       ],
       "causalImpacts": []
     },
     {
       "id": "auto-development",
-      "title": "Development of the automobile",
+      "title": "Invention and development of the automobile",
       "startYear": 1876,
       "endYear": 1901,
       "spanType": "Technology",
       "subEvents": [
         {
           "date": 1876,
-          "label": "Otto patents four-stroke internal combustion engine"
+          "label": "Otto patents four-stroke internal combustion engine",
+          "id": "b3ce8d16-6ece-4f57-bb69-4a444d83c91f"
         },
         {
           "date": 1885,
-          "label": "Daimler & Maybach build first high-speed gasoline engine"
+          "label": "Daimler & Maybach build first high-speed gasoline engine",
+          "id": "2e9bce62-f978-4121-9051-fa12f16b1035"
         },
         {
           "date": 1886,
-          "label": "Benz patents the Patent-Motorwagen"
+          "label": "Benz patents the Patent-Motorwagen",
+          "id": "d56a6cf2-5524-47c0-adeb-f1227c061976"
         },
         {
           "date": 1893,
-          "label": "Duryea brothers demonstrate first successful American gasoline car"
+          "label": "Duryea brothers demonstrate first successful American gasoline car",
+          "id": "d0061257-c949-4651-990c-94d68da0578e"
         },
         {
           "date": 1896,
-          "label": "Duryea Motor Wagon Co. sells 13 cars — first US commercial auto sales"
+          "label": "Duryea Motor Wagon Co. sells 13 cars — first US commercial auto sales",
+          "id": "b101e829-360a-478b-89aa-2ccfb652a8d0"
         }
       ],
       "causalImpacts": [],
@@ -1402,55 +1630,68 @@
       "subEvents": [
         {
           "date": 1901,
-          "label": "Oldsmobile Curved Dash: first mass-produced American car (425 sold)"
+          "label": "Oldsmobile Curved Dash: first mass-produced American car (425 sold)",
+          "id": "e3c9cf8c-1e6d-438d-82d6-56f44e0efbcc"
         },
         {
           "date": 1905,
-          "label": "First purpose-built gas station (St. Louis)"
+          "label": "First purpose-built gas station (St. Louis)",
+          "id": "669a9712-8bd7-44ad-8a0b-a1f8d748977f"
         },
         {
           "date": 1908,
-          "label": "Ford Model T introduced at $850; ~1% of households own a car"
+          "label": "Ford Model T introduced at $850; ~1% of households own a car",
+          "id": "aeffa3c4-1f5b-4029-93d0-901840974dd5"
         },
         {
           "date": 1913,
-          "label": "Ford introduces moving assembly line (12.5 hrs ����������������� 93 min)"
+          "label": "Ford introduces moving assembly line (12.5 hrs ����������������� 93 min)",
+          "id": "52446121-de27-4f57-995d-75a7dbb6e88a"
         },
         {
           "date": 1916,
-          "label": "Model T annual production passes 500,000"
+          "label": "Model T annual production passes 500,000",
+          "id": "15f3f236-9ce2-49a2-b022-4e867aab5cbf"
         },
         {
           "date": 1919,
-          "label": "~25% of households own a car"
+          "label": "~25% of households own a car",
+          "id": "5bab25e7-cc93-4475-88f1-a2278807c513"
         },
         {
           "date": 1920,
-          "label": "Model T price drops to ~$440"
+          "label": "Model T price drops to ~$440",
+          "id": "8b27925a-6ed3-4abd-a618-9de7e2ce3971"
         },
         {
           "date": 1923,
-          "label": "Peak Model T production: 2,011,125 units"
+          "label": "Peak Model T production: 2,011,125 units",
+          "id": "10631a18-15d0-4c2c-bc21-5a21f0a2a816"
         },
         {
           "date": 1924,
-          "label": "Model T price drops to $260"
+          "label": "Model T price drops to $260",
+          "id": "b852e0bd-5b0f-4b67-8cbe-f7f795f01a32"
         },
         {
           "date": 1927,
-          "label": "15 millionth Model T produced; production ends"
+          "label": "15 millionth Model T produced; production ends",
+          "id": "60c6c83a-2e75-4532-a0a9-1f2f4dcd8c59"
         },
         {
           "date": 1929,
-          "label": "~60% of families own a car"
+          "label": "~60% of families own a car",
+          "id": "437ac449-3003-4fe6-88ee-acb491f1ec2f"
         },
         {
           "date": 1960,
-          "label": "~78.5% of households own at least one car"
+          "label": "~78.5% of households own at least one car",
+          "id": "06a1a72b-3f15-4080-9b71-113a4ed651ab"
         },
         {
           "date": 1970,
-          "label": "Approaching saturation (~85%+)"
+          "label": "Approaching saturation (~85%+)",
+          "id": "ccafae7a-178d-40d8-a248-9259befa9bd7"
         }
       ],
       "causalImpacts": []
@@ -1567,7 +1808,7 @@
     },
     {
       "id": "7de27337-afa3-4c50-ae29-64603696a484",
-      "title": "Slow early deployment of Television",
+      "title": "early deployment of television",
       "startYear": 1928,
       "endYear": 1948,
       "spanType": "Technology",
@@ -1697,7 +1938,7 @@
     },
     {
       "id": "d4101e68-9124-4ac4-88b9-94f35c499e17",
-      "title": "The Bretton Woods system: dollar pegged to gold at $35/oz, other currencies pegged to dollar (international- only convertibility)",
+      "title": "The Bretton Woods system: dollar pegged to gold at $35/oz, other currencies pegged to dollar",
       "startYear": 1944,
       "endYear": 1971,
       "spanType": "Economics",
@@ -1768,51 +2009,63 @@
         },
         {
           "date": 1954,
-          "label": "First silicon transistor (Texas Instruments)"
+          "label": "First silicon transistor (Texas Instruments)",
+          "id": "c2d68086-0fd5-4030-94d7-f4b09cae3570"
         },
         {
           "date": 1957,
-          "label": "Fairchild Semiconductor founded"
+          "label": "Fairchild Semiconductor founded",
+          "id": "99bfdc7c-e763-4a4e-9a93-71313a7028c9"
         },
         {
           "date": 1958,
-          "label": "First integrated circuit (Jack Kilby, TI)"
+          "label": "First integrated circuit (Jack Kilby, TI)",
+          "id": "4f14beaa-621b-4cf0-84c1-4c43285743ef"
         },
         {
           "date": 1959,
-          "label": "Planar IC with interconnects (Robert Noyce, Fairchild)"
+          "label": "Planar IC with interconnects (Robert Noyce, Fairchild)",
+          "id": "ffb1f44f-0784-4730-a891-0681f6dbd229"
         },
         {
           "date": 1965,
-          "label": "Moore's Law published"
+          "label": "Moore's Law published",
+          "id": "e2f95505-c3f9-43de-b40f-def73a5920c7"
         },
         {
           "date": 1968,
-          "label": "Intel founded"
+          "label": "Intel founded",
+          "id": "e96daf73-608f-48c0-bf47-2034063c800a"
         },
         {
           "date": 1971,
-          "label": "Intel 4004: first commercial microprocessor (2,300 transistors, 10μm)"
+          "label": "Intel 4004: first commercial microprocessor (2,300 transistors, 10μm)",
+          "id": "2a58e1d8-59bd-42c1-8743-76b4276e6bf8"
         },
         {
           "date": 1987,
-          "label": "TSMC founded (first pure-play foundry)"
+          "label": "TSMC founded (first pure-play foundry)",
+          "id": "002533e3-53b2-4f82-b90c-593935a13a74"
         },
         {
           "date": 2009,
-          "label": "Cumulative transistors produced estimated ~10^20"
+          "label": "Cumulative transistors produced estimated ~10^20",
+          "id": "d47a7bd0-98de-4bef-8ea6-dd18de6743ec"
         },
         {
           "date": 2011,
-          "label": "FinFET transistors introduced (22nm, Intel)"
+          "label": "FinFET transistors introduced (22nm, Intel)",
+          "id": "c16a681a-6f9d-46eb-b836-08a94920c90f"
         },
         {
           "date": 2018,
-          "label": "EUV lithography enters volume production (TSMC 7nm)"
+          "label": "EUV lithography enters volume production (TSMC 7nm)",
+          "id": "6ae2eec5-a552-4d91-b110-257d367dca28"
         },
         {
           "date": 2023,
-          "label": "Cumulative transistors produced estimated >10^22"
+          "label": "Cumulative transistors produced estimated >10^22",
+          "id": "3f2fb469-9e50-424c-99f4-26757e60d221"
         }
       ],
       "causalImpacts": [
@@ -1922,19 +2175,23 @@
       "subEvents": [
         {
           "date": 1960,
-          "label": "~70% urban"
+          "label": "~70% urban",
+          "id": "85c0f55f-a865-42c7-a1bf-c3c4c73e59c4"
         },
         {
           "date": 1980,
-          "label": "~74% urban"
+          "label": "~74% urban",
+          "id": "2b87ecff-a736-4f87-bbd7-91ee9151db3c"
         },
         {
           "date": 2000,
-          "label": "~79% urban"
+          "label": "~79% urban",
+          "id": "46f343a2-8b9e-4f81-b1a9-5b9d57832d89"
         },
         {
           "date": 2020,
-          "label": "~83% urban"
+          "label": "~83% urban",
+          "id": "b77e0a82-a9bc-47b7-bd28-464db0e21a32"
         }
       ],
       "causalImpacts": []
@@ -2083,6 +2340,11 @@
           "id": "inet-se-1989",
           "date": 1989,
           "label": "Tim Berners-Lee proposes the World Wide Web at CERN"
+        },
+        {
+          "id": "4378b175-e294-4f02-bc50-31cf22520846",
+          "date": 1991,
+          "label": "HTTP developed"
         }
       ],
       "causalImpacts": [],
@@ -2107,38 +2369,45 @@
     },
     {
       "id": "b7d4c772-f631-48f2-a125-7711b2273a46",
-      "title": "Mass adoption of personal computers",
+      "title": "PC Revolution: mass adoption of personal computers",
       "startYear": 1982,
       "endYear": 2012,
       "spanType": "Technology",
       "subEvents": [
         {
           "date": 1982,
-          "label": "~1% of US households own a personal computer"
+          "label": "~1% of US households own a personal computer",
+          "id": "1014ac4a-a70e-415c-956f-5fd449f3b566"
         },
         {
           "date": 1984,
-          "label": "~8% of US households own a personal computer"
+          "label": "~8% of US households own a personal computer",
+          "id": "16031705-c35f-4b8e-9e30-b24811886f80"
         },
         {
           "date": 1990,
-          "label": "~15% of US households own a personal computer"
+          "label": "~15% of US households own a personal computer",
+          "id": "e953c8aa-6c43-45c6-a5d3-6eeab365c3aa"
         },
         {
           "date": 1997,
-          "label": "~35% of US households own a personal computer"
+          "label": "~35% of US households own a personal computer",
+          "id": "4b72c50e-55a8-4744-9a29-889a4fb5c6d5"
         },
         {
           "date": 2000,
-          "label": "~60% of US households own a personal computer"
+          "label": "~60% of US households own a personal computer",
+          "id": "3c5a5da3-ea9e-4115-ac94-2dc7d284094a"
         },
         {
           "date": 2010,
-          "label": "~75-80% of US households own a personal computer"
+          "label": "~75-80% of US households own a personal computer",
+          "id": "c837d6df-29a4-41ca-b4f3-12af04c71ffe"
         },
         {
           "date": 2012,
-          "label": "Global PC sales peak at ~353M units; sales begin declining as tablets and smartphones take over"
+          "label": "Global PC sales peak at ~353M units; sales begin declining as tablets and smartphones take over",
+          "id": "cda7e07d-e50c-4235-a11d-a380904738e0"
         }
       ],
       "causalImpacts": [
@@ -2322,31 +2591,38 @@
       "subEvents": [
         {
           "date": 1991,
-          "label": "PGP 1.0 released by Phil Zimmermann"
+          "label": "PGP 1.0 released by Phil Zimmermann",
+          "id": "89ce3303-7160-47ab-9418-e69cc12889ac"
         },
         {
           "date": 1992,
-          "label": "Cypherpunks mailing list founded; first anonymous remailer built"
+          "label": "Cypherpunks mailing list founded; first anonymous remailer built",
+          "id": "713d07e6-39d9-4747-a4b1-39ee0f72a3c1"
         },
         {
           "date": 1993,
-          "label": "A Cypherpunk's Manifesto published; US criminal investigation of Zimmermann begins"
+          "label": "A Cypherpunk's Manifesto published; US criminal investigation of Zimmermann begins",
+          "id": "0a486720-9f34-4607-a7cf-f3912fa50d28"
         },
         {
           "date": 1995,
-          "label": "PGP investigation dropped; Mixmaster remailer released"
+          "label": "PGP investigation dropped; Mixmaster remailer released",
+          "id": "61961673-79d2-4e44-b870-5c1e9f95ab9a"
         },
         {
           "date": 1997,
-          "label": "Adam Back invents Hashcash"
+          "label": "Adam Back invents Hashcash",
+          "id": "e8b0581f-5269-42b8-b7c3-e583da2fe4bf"
         },
         {
           "date": 1998,
-          "label": "Wei Dai publishes b-money; Nick Szabo proposes Bit Gold; DigiCash bankrupt"
+          "label": "Wei Dai publishes b-money; Nick Szabo proposes Bit Gold; DigiCash bankrupt",
+          "id": "42296c05-096f-456d-bdb9-12f9c64f5f95"
         },
         {
           "date": 2004,
-          "label": "Hal Finney creates RPOW (Reusable Proof of Work)"
+          "label": "Hal Finney creates RPOW (Reusable Proof of Work)",
+          "id": "a087ada1-19e0-47eb-ab32-ae2cc982a61f"
         }
       ],
       "causalImpacts": [
@@ -2369,23 +2645,28 @@
       "subEvents": [
         {
           "date": 1996,
-          "label": "World's largest steel producer (surpasses Japan)"
+          "label": "World's largest steel producer (surpasses Japan)",
+          "id": "18acd55f-e42c-431b-afec-531f8e414a09"
         },
         {
           "date": 2007,
-          "label": "World's largest aluminum producer"
+          "label": "World's largest aluminum producer",
+          "id": "1288e335-3922-44c8-b1bf-d3498d464a77"
         },
         {
           "date": 2008,
-          "label": "World's largest solar panel manufacturer"
+          "label": "World's largest solar panel manufacturer",
+          "id": "7982314e-eaf8-498f-bb05-5e81eb58be2f"
         },
         {
           "date": 2009,
-          "label": "World's largest automobile manufacturer (surpasses US)"
+          "label": "World's largest automobile manufacturer (surpasses US)",
+          "id": "a653bbcd-eb85-4836-ac58-0039c47f2b8f"
         },
         {
           "date": 2009,
-          "label": "World's largest shipbuilder (surpasses South Korea)"
+          "label": "World's largest shipbuilder (surpasses South Korea)",
+          "id": "fc9e34fb-a0ff-4975-9b6d-c2200ebfee06"
         },
         {
           "id": "5764a43f-7f30-48a4-94f4-1e6df6e9306b",
@@ -2394,15 +2675,18 @@
         },
         {
           "date": 2010,
-          "label": "World's largest manufacturer overall (surpasses US)"
+          "label": "World's largest manufacturer overall (surpasses US)",
+          "id": "1c6f456c-eb33-4590-b687-1b8e6201476e"
         },
         {
           "date": 2019,
-          "label": "~29% of global manufacturing output"
+          "label": "~29% of global manufacturing output",
+          "id": "12d4650d-5506-4f01-bd0c-4b8709e8bd4a"
         },
         {
           "date": 2023,
-          "label": "World's largest auto exporter; ~31% of global manufacturing"
+          "label": "World's largest auto exporter; ~31% of global manufacturing",
+          "id": "34dd98cd-9242-480c-b46a-5c5897358300"
         }
       ],
       "causalImpacts": []
@@ -2684,38 +2968,45 @@
       "subEvents": [
         {
           "date": 2008,
-          "label": "Bitcoin whitepaper published"
+          "label": "Bitcoin whitepaper published",
+          "id": "800b562a-e83e-4014-beba-742f7fe9dd07"
         },
         {
           "date": 2009,
-          "label": "Bitcoin network launched, genesis block mined"
+          "label": "Bitcoin network launched, genesis block mined",
+          "id": "fdbb6773-7333-4a2f-b996-4f83e89c4972"
         },
         {
           "date": 2010,
-          "label": "First real-world BTC purchase: 10,000 BTC for two pizzas; Mt. Gox launched"
+          "label": "First real-world BTC purchase: 10,000 BTC for two pizzas; Mt. Gox launched",
+          "id": "d8bbffe4-5acf-4a75-9d79-99154a06d205"
         },
         {
           "date": 2011,
-          "label": "Bitcoin reaches $1; Silk Road launched; BTC hits $31 then crashes to $2"
+          "label": "Bitcoin reaches $1; Silk Road launched; BTC hits $31 then crashes to $2",
+          "id": "1a16730f-1fc3-4eb8-965f-06a0864855f2"
         },
         {
           "date": 2013,
-          "label": "Bitcoin hits $1,000; Silk Road seized by FBI"
+          "label": "Bitcoin hits $1,000; Silk Road seized by FBI",
+          "id": "870aabb5-9ff6-4188-90ca-9cf43cfabac3"
         },
         {
           "date": 2015,
-          "label": "Ethereum network launches"
+          "label": "Ethereum network launches",
+          "id": "f8b91ea4-de7f-4c21-91e1-dd43cb1a0b93"
         },
         {
           "date": 2024,
-          "label": "SEC approves spot Bitcoin ETFs; BTC hits ~$73,000"
+          "label": "SEC approves spot Bitcoin ETFs; BTC hits ~$73,000",
+          "id": "0fcc35cf-0722-460e-a2d0-a225c7c58020"
         }
       ],
       "causalImpacts": []
     },
     {
       "id": "d782ce4b-971e-4408-910e-4a02d81b5753",
-      "title": "Global Financial Collapse and Great Recession",
+      "title": "Global Financial Crisis and Great Recession",
       "startYear": 2008,
       "endYear": 2013,
       "spanType": "Economics",

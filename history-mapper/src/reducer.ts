@@ -137,8 +137,15 @@ export function reducer(state: AppState, action: Action): AppState {
         ),
       };
 
-    case 'LOAD_STATE':
-      return action.state;
+    case 'LOAD_STATE': {
+      // Backfill missing IDs on sub-events and causal impacts
+      const spans = action.state.spans.map((s) => ({
+        ...s,
+        subEvents: s.subEvents.map((se) => se.id ? se : { ...se, id: generateId() }),
+        causalImpacts: s.causalImpacts.map((ci) => ci.id ? ci : { ...ci, id: generateId() }),
+      }));
+      return { ...action.state, spans };
+    }
 
     default:
       return state;

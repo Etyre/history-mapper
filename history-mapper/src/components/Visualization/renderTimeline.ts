@@ -4,23 +4,13 @@ import { SPAN_COLORS } from '../../utils/colors';
 import { createYearScale } from '../../utils/yearScale';
 import { layoutSpans, COL_WIDTH, type LayoutSpan } from './layout';
 
-// Cache layout results based on structural data
-let layoutCache: { key: string; result: ReturnType<typeof layoutSpans> } | null = null;
-
-function structuralKey(spans: Span[], height: number, seed?: number): string {
-  return JSON.stringify(spans.map(s => ({
-    id: s.id,
-    startYear: s.startYear,
-    endYear: s.endYear,
-    spanType: s.spanType,
-    ci: s.causalImpacts.map(c => ({ t: c.targetSpanId, sa: c.sourceAttachment, ta: c.targetAttachment })),
-    ca: s.continuesAs,
-  }))) + `|${height}|${seed ?? 0}`;
-}
-
 export interface RenderResult {
   cleanup?: () => void;
   selectSpan: (spanId: string) => void;
+}
+
+export function computeLayout(spans: Span[], height: number, seed?: number): LayoutSpan[] {
+  return layoutSpans(spans, height, seed);
 }
 
 export function renderTimeline(
@@ -28,8 +18,8 @@ export function renderTimeline(
   spans: Span[],
   tooltipEl: HTMLDivElement,
   onSpanClick?: (spanId: string) => void,
-  layoutSeed?: number,
-  containerEl?: HTMLElement | null
+  containerEl?: HTMLElement | null,
+  precomputedLayout?: LayoutSpan[]
 ): RenderResult | void {
   const svg = d3.select(svgEl);
   svg.selectAll('*').remove();
@@ -53,14 +43,8 @@ export function renderTimeline(
 
   const yScale = createYearScale(spans, height);
 
-  const cacheKey = structuralKey(spans, height, layoutSeed);
-  let layoutResult;
-  if (layoutCache && layoutCache.key === cacheKey) {
-    layoutResult = layoutCache.result;
-  } else {
-    layoutResult = layoutSpans(spans, height, layoutSeed);
-    layoutCache = { key: cacheKey, result: layoutResult };
-  }
+  // Use precomputed layout, or compute fresh if not provided
+  const layoutResult = precomputedLayout ?? layoutSpans(spans, height);
 
   // Map span id to layout for arrow drawing
   const layoutMap = new Map<string, LayoutSpan>();
@@ -398,12 +382,26 @@ export function renderTimeline(
     const words = ls.span.title.split(/\s+/);
     const lines: string[] = [];
     let currentLine = '';
-    for (const word of words) {
-      if (currentLine && (currentLine + ' ' + word).length > maxCharsPerLine) {
+
+    function addChunk(chunk: string, separator: string) {
+      const candidate = currentLine ? currentLine + separator + chunk : chunk;
+      if (currentLine && candidate.length > maxCharsPerLine) {
         lines.push(currentLine);
-        currentLine = word;
+        currentLine = chunk;
       } else {
-        currentLine = currentLine ? currentLine + ' ' + word : word;
+        currentLine = candidate;
+      }
+    }
+
+    for (const word of words) {
+      // Split on hyphens, keeping the hyphen attached to the left part
+      const parts = word.split(/(?<=-)/).filter(Boolean);
+      if (parts.length > 1) {
+        for (let i = 0; i < parts.length; i++) {
+          addChunk(parts[i], i === 0 ? ' ' : '');
+        }
+      } else {
+        addChunk(word, ' ');
       }
     }
     if (currentLine) lines.push(currentLine);
