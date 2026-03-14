@@ -25,3 +25,7 @@ The app has two main parts displayed side-by-side:
 - Visualization must be exportable as a static webpage for embedding on a personal site
 - Span colors correspond to span-type categories
 - Arrow annotations and sub-event labels appear on hover
+
+## Workflow
+
+- **Commit and push after every change**: After every new feature, bug fix, or edit to span data, commit and push to git.
