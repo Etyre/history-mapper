@@ -281,6 +281,60 @@ body {
   margin-top: 8px;
 }
 
+.target-combobox {
+  position: relative;
+  flex: 1;
+  min-width: 100px;
+}
+
+.target-combobox input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 2px 5px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  font-size: 11px;
+}
+
+.target-combobox-list {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 100;
+  min-width: 100%;
+  max-width: 320px;
+  max-height: 220px;
+  overflow-y: auto;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.target-combobox-item {
+  padding: 3px 6px;
+  font-size: 11px;
+  cursor: pointer;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.target-combobox-item.highlighted {
+  background: #e8f0fe;
+}
+
+.target-combobox-item.selected {
+  font-weight: 600;
+}
+
+.target-combobox-empty {
+  padding: 3px 6px;
+  font-size: 11px;
+  color: #999;
+  font-style: italic;
+}
+
 /* Visualization */
 .visualization {
   flex: 1;

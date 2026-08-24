@@ -1,5 +1,80 @@
 import type { CausalImpact, AttachmentPoint, Span, Action } from '../../types';
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
+
+function TargetCombobox({ value, spans, onSelect }: {
+  value: string;
+  spans: Span[];
+  onSelect: (spanId: string) => void;
+}) {
+  const selected = spans.find((s) => s.id === value);
+  const [draft, setDraft] = useState<string | null>(null);
+  const [open, setOpen] = useState(false);
+  const [highlight, setHighlight] = useState(0);
+  const inputRef = useRef<HTMLInputElement>(null);
+
+  const display = draft !== null ? draft : (selected?.title ?? '');
+  const query = (draft ?? '').trim().toLowerCase();
+  const matches = query
+    ? spans.filter((s) => s.title.toLowerCase().includes(query))
+    : spans;
+
+  const close = () => {
+    setDraft(null);
+    setOpen(false);
+    setHighlight(0);
+  };
+
+  const select = (spanId: string) => {
+    onSelect(spanId);
+    close();
+    inputRef.current?.blur();
+  };
+
+  return (
+    <div className="target-combobox">
+      <input
+        ref={inputRef}
+        type="text"
+        value={display}
+        placeholder="Target..."
+        title={selected?.title}
+        onFocus={() => { setDraft(''); setOpen(true); setHighlight(0); }}
+        onChange={(e) => { setDraft(e.target.value); setOpen(true); setHighlight(0); }}
+        onBlur={close}
+        onKeyDown={(e) => {
+          if (e.key === 'ArrowDown') {
+            e.preventDefault();
+            setHighlight((h) => Math.min(h + 1, matches.length - 1));
+          } else if (e.key === 'ArrowUp') {
+            e.preventDefault();
+            setHighlight((h) => Math.max(h - 1, 0));
+          } else if (e.key === 'Enter') {
+            e.preventDefault();
+            if (matches[highlight]) select(matches[highlight].id);
+          } else if (e.key === 'Escape') {
+            close();
+            inputRef.current?.blur();
+          }
+        }}
+      />
+      {open && (
+        <div className="target-combobox-list">
+          {matches.length === 0 && <div className="target-combobox-empty">No matching spans</div>}
+          {matches.map((s, i) => (
+            <div
+              key={s.id}
+              className={`target-combobox-item${i === highlight ? ' highlighted' : ''}${s.id === value ? ' selected' : ''}`}
+              onMouseDown={(e) => { e.preventDefault(); select(s.id); }}
+              onMouseEnter={() => setHighlight(i)}
+            >
+              {s.title}
+            </div>
+          ))}
+        </div>
+      )}
+    </div>
+  );
+}
 
 function AnnotationInput({ value, onChange }: { value: string; onChange: (val: string) => void }) {
   return (
@@ -66,17 +141,13 @@ function CausalImpactRow({ ci, ownerSpanId, otherSpans, dispatch, incoming }: {
         {incoming ? (
           <span style={{ fontSize: '11px', color: '#aaa', fontStyle: 'italic' }}>from: {incoming.fromSpanTitle}</span>
         ) : (
-          <select
+          <TargetCombobox
             value={ci.targetSpanId}
-            onChange={(e) =>
-              dispatch({ type: 'UPDATE_CAUSAL_IMPACT', spanId: ownerSpanId, impactId: ci.id, updates: { targetSpanId: e.target.value } })
+            spans={otherSpans}
+            onSelect={(targetSpanId) =>
+              dispatch({ type: 'UPDATE_CAUSAL_IMPACT', spanId: ownerSpanId, impactId: ci.id, updates: { targetSpanId } })
             }
-          >
-            <option value="">-- Target --</option>
-            {otherSpans.map((s) => (
-              <option key={s.id} value={s.id}>{s.title}</option>
-            ))}
-          </select>
+          />
         )}
         <select
           value={attachmentSelectValue(ci.sourceAttachment)}
