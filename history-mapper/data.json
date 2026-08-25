@@ -1,6 +1,65 @@
 {
   "spans": [
     {
+      "id": "37c18649-e5cd-4eeb-a0ce-277a41c8ed70",
+      "title": "Real wages in Britain, the US, and Germany ~double. Normal people have disposable income for the first time ever.",
+      "startYear": 1850,
+      "endYear": 1914,
+      "spanType": "Economics",
+      "subEvents": [],
+      "causalImpacts": [
+        {
+          "id": "54b5890c-9d54-4c23-9016-6947c3d1c088",
+          "targetSpanId": "555a46fd-4d87-4553-bc1d-fd0f8dab95b5",
+          "sourceAttachment": "middle",
+          "targetAttachment": "middle",
+          "annotation": "It only becomes profitable to advertise to the masses when their wages are appreciably above subsistence"
+        }
+      ]
+    },
+    {
+      "id": "555a46fd-4d87-4553-bc1d-fd0f8dab95b5",
+      "title": "Era of mass advertising",
+      "startYear": 1920,
+      "endYear": "ongoing",
+      "spanType": "Culture",
+      "subEvents": [],
+      "causalImpacts": [
+        {
+          "id": "d466763b-4506-4326-b7b3-779af932d124",
+          "targetSpanId": "2c41fc33-fb98-4331-badc-87cdaae1a3d4",
+          "sourceAttachment": "middle",
+          "targetAttachment": "middle",
+          "annotation": ""
+        },
+        {
+          "id": "e2c06f78-9da1-4aa0-a866-3c99b7efe3e3",
+          "targetSpanId": "",
+          "sourceAttachment": "middle",
+          "targetAttachment": "middle",
+          "annotation": ""
+        }
+      ]
+    },
+    {
+      "id": "af9dd8ef-a881-4f41-9699-b0d656283919",
+      "title": "The era of social media",
+      "startYear": 2012,
+      "endYear": "ongoing",
+      "spanType": "Culture",
+      "subEvents": [],
+      "causalImpacts": []
+    },
+    {
+      "id": "49849a0c-4e33-4541-ade9-a3ffe105bf71",
+      "title": "The main wave of Ellis Island Immigration to the US",
+      "startYear": 1880,
+      "endYear": 1924,
+      "spanType": "Demographics",
+      "subEvents": [],
+      "causalImpacts": []
+    },
+    {
       "id": "0919486b-89f4-4c16-8b6b-4e0dbb2153a4",
       "title": "The English Civil War",
       "startYear": 1642,
@@ -67,7 +126,7 @@
       "title": "SRI and then Xerox PARC are developing the idioms of the personal computer",
       "startYear": 1962,
       "endYear": 1972,
-      "spanType": "Politics",
+      "spanType": "Technology",
       "subEvents": [
         {
           "id": "e8f9f0b3-8964-4dc9-9b87-cc60bfca4e87",
@@ -2817,6 +2876,13 @@
           "sourceAttachment": "middle",
           "targetAttachment": "middle",
           "annotation": "Dustin Moskovitz cofounder of facebook, funds OpenPhilanthropy (and through OP much of the EA movement)"
+        },
+        {
+          "id": "977da379-7ab1-4bc7-9500-a3a2ac07a4c4",
+          "targetSpanId": "af9dd8ef-a881-4f41-9699-b0d656283919",
+          "sourceAttachment": "middle",
+          "targetAttachment": "middle",
+          "annotation": ""
         }
       ]
     },
@@ -2892,7 +2958,15 @@
           "label": "Rebranded to \"X\""
         }
       ],
-      "causalImpacts": []
+      "causalImpacts": [
+        {
+          "id": "803f2974-b126-4e56-8e77-86aaa3d69e32",
+          "targetSpanId": "af9dd8ef-a881-4f41-9699-b0d656283919",
+          "sourceAttachment": "middle",
+          "targetAttachment": "middle",
+          "annotation": ""
+        }
+      ]
     },
     {
       "id": "43eefd45-a801-49a9-8a36-a9ef7f47bb94",
@@ -2912,7 +2986,15 @@
           "label": "Half of all Americans own a smartphone"
         }
       ],
-      "causalImpacts": []
+      "causalImpacts": [
+        {
+          "id": "2f2577c5-0d5e-4b51-be46-1003be52647f",
+          "targetSpanId": "af9dd8ef-a881-4f41-9699-b0d656283919",
+          "sourceAttachment": "middle",
+          "targetAttachment": "middle",
+          "annotation": ""
+        }
+      ]
     },
     {
       "id": "8a7878af-21d7-44ee-82ab-d5ff8259b585",
