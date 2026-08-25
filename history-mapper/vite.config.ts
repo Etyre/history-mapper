@@ -1,12 +1,12 @@
-import { defineConfig } from 'vite'
+import { defineConfig, loadEnv } from 'vite'
 import react from '@vitejs/plugin-react'
 import fs from 'node:fs'
 import path from 'node:path'
 import type { Plugin } from 'vite'
 
-const DATA_FILE = path.resolve(import.meta.dirname, 'data.json')
-
-function dataApiPlugin(): Plugin {
+// Timeline content lives in a single JSON file, kept separate from the app code.
+// Override with HISTORY_MAPPER_DATA (env var or .env file) to point at your own timeline.
+function dataApiPlugin(DATA_FILE: string): Plugin {
   return {
     name: 'data-api',
     configureServer(server) {
@@ -119,6 +119,10 @@ function fullReloadOnTsChange(): Plugin {
 }
 
 // https://vite.dev/config/
-export default defineConfig({
-  plugins: [react(), dataApiPlugin(), fullReloadOnTsChange()],
+export default defineConfig(({ mode }) => {
+  const env = loadEnv(mode, import.meta.dirname, 'HISTORY_MAPPER_')
+  const dataFile = path.resolve(import.meta.dirname, env.HISTORY_MAPPER_DATA || 'data.json')
+  return {
+    plugins: [react(), dataApiPlugin(dataFile), fullReloadOnTsChange()],
+  }
 })

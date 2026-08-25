@@ -1,73 +1,101 @@
-# React + TypeScript + Vite
+# History Mapper
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A tool for building timeline visualizations of historical events: spans on a
+vertical year axis, with causal arrows between them, plus a spreadsheet-like
+editor for the underlying data. The visualization can be exported as a single
+standalone HTML file for embedding on any site.
 
-Currently, two official plugins are available:
+## Code vs. data
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+The app is deliberately split so you can use the software with your own
+timeline:
 
-## React Compiler
+| Path            | What it is                                                     |
+|-----------------|----------------------------------------------------------------|
+| `src/`          | The application code. Contains no timeline content.            |
+| `data.json`     | The timeline content (the "database"). One JSON file.          |
+| `vite.config.ts`| Dev server + a tiny file-backed API that reads/writes the data file. |
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Nothing in `src/` knows about any particular historical event. Swap the data
+file and you have a different timeline.
 
-## Expanding the ESLint configuration
+## Running it
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm install
+npm run dev        # http://localhost:5173
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Edits made in the UI are saved straight back to the data file, and the app
+polls the file every 2s so external edits (a text editor, a script, an AI
+assistant) show up live.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## Making your own timeline
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+Pick one:
+
+1. **Start empty.** Delete or rename `data.json`. The app starts with no spans;
+   add some and a fresh `data.json` is written.
+2. **Point at a different file.** Set `HISTORY_MAPPER_DATA` (relative to this
+   folder, or absolute) either in the environment or in a `.env` file:
+
+   ```bash
+   cp .env.example .env
+   # edit .env → HISTORY_MAPPER_DATA=my-timeline.json
+   ```
+
+   This lets you keep several timelines side by side and switch between them.
+3. **Import/Export JSON** from the UI to move a timeline in or out.
+
+The bundled `data.json` is one particular timeline (US/Western history with a
+focus on economics, technology, and culture). Feel free to use it, fork it, or
+ignore it.
+
+## Data format
+
+```jsonc
+{
+  "spans": [
+    {
+      "id": "uuid",
+      "title": "The Cold War",
+      "startYear": 1947,
+      "endYear": 1991,              // or "ongoing"
+      "spanType": "Politics",       // Economics | Technology | Politics | Culture | Subculture | Demographics
+      "tags": ["geopolitics"],      // optional
+      "continuesAs": "other-uuid",  // optional: span this transitions into
+      "subEvents": [
+        { "id": "uuid", "date": 1962, "label": "Cuban Missile Crisis" }
+      ],
+      "causalImpacts": [
+        {
+          "id": "uuid",
+          "targetSpanId": "other-uuid",
+          "sourceAttachment": "end",     // "start" | "middle" | "end" | <year>
+          "targetAttachment": "start",   // "start" | "middle" | "end" | <year>
+          "annotation": "Shown on hover",
+          "bidirectional": false          // optional
+        }
+      ]
+    }
+  ]
+}
 ```
+
+Span colors are derived from `spanType` (see `src/utils/colors.ts`).
+
+## Exporting a standalone page
+
+Click **Export Standalone HTML** in the app header. The result is a single
+self-contained `.html` file with the current timeline baked in — no server
+needed.
+
+## Dev-server API
+
+The Vite plugin in `vite.config.ts` exposes a small API against the data file,
+handy for scripts:
+
+- `GET  /api/data` — whole state
+- `POST /api/data` — replace whole state
+- `POST /api/data/spans` — add one span
+- `PATCH /api/data/spans/:id` — merge updates into one span
