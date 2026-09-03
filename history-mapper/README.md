@@ -13,7 +13,8 @@ timeline:
 | Path            | What it is                                                     |
 |-----------------|----------------------------------------------------------------|
 | `src/`          | The application code. Contains no timeline content.            |
-| `data.json`     | The timeline content (the "database"). One JSON file.          |
+| `data.json`     | The timeline content (the "database"). One JSON file. Ships as a small sample. |
+| `timelines/`    | Other timelines, selectable via `HISTORY_MAPPER_DATA` (see below). |
 | `vite.config.ts`| Dev server + a tiny file-backed API that reads/writes the data file. |
 
 Nothing in `src/` knows about any particular historical event. Swap the data
@@ -47,9 +48,11 @@ Pick one:
    This lets you keep several timelines side by side and switch between them.
 3. **Import/Export JSON** from the UI to move a timeline in or out.
 
-The bundled `data.json` is one particular timeline (US/Western history with a
-focus on economics, technology, and culture). Feel free to use it, fork it, or
-ignore it.
+The bundled `data.json` is a six-span sample that exercises every feature
+(sub-events, arrows, a bidirectional arrow, and a `continuesAs` chain). The
+author's own timeline (US/Western history with a focus on economics,
+technology, and culture) lives in `timelines/western-history.json`; point
+`HISTORY_MAPPER_DATA` at it to use it. Feel free to fork it or ignore it.
 
 ## Data format
 
